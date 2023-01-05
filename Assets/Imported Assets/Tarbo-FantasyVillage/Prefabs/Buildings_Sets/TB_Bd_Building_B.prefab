@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 4531016125659098}
   - component: {fileID: 33810640097448192}
   - component: {fileID: 23943237585458266}
+  - component: {fileID: 6743990046333308552}
   m_Layer: 0
   m_Name: TB_Bd_WoodRoom_Small
   m_TagString: Untagged
@@ -355,6 +356,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6743990046333308552
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362350187644790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2dc51dc3230b72440915f3bccf61db72, type: 3}
 --- !u!1 &1366077402382954
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +464,7 @@ GameObject:
   - component: {fileID: 4609179422807076}
   - component: {fileID: 33149920060414350}
   - component: {fileID: 23947816143026024}
+  - component: {fileID: 1076925941607844122}
   m_Layer: 0
   m_Name: TB_Bd_Wood_Short
   m_TagString: Untagged
@@ -521,6 +537,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1076925941607844122
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402963876894824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 6069a60119e71bd499c318411e995aa2, type: 3}
 --- !u!1 &1566285979850772
 GameObject:
   m_ObjectHideFlags: 0

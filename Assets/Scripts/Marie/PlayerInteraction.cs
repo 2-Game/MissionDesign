@@ -6,7 +6,7 @@ public class PlayerInteraction : MonoBehaviour
     private PlayerInteractionAnim _anim;
     private Inventory _inventory;
     private InteractionType _possibleInteraction = InteractionType.None;
-    private KeyItem _possiblePickable;
+    private QuestItem _possiblePickable;
     private Interactive _possibleInteractive;
 
     private void Start()
@@ -68,7 +68,7 @@ public class PlayerInteraction : MonoBehaviour
             if (other.transform.CompareTag("Pickable"))
             {
                 SetInteraction(InteractionType.Pickup);
-                _possiblePickable = other.GetComponentInChildren<KeyItem>();
+                _possiblePickable = other.GetComponentInChildren<QuestItem>();
             }
             else if (other.transform.CompareTag("Interactive"))
             {

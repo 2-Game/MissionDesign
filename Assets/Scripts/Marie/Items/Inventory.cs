@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,8 +6,9 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
     
-    private List<KeyItemData> _foundKeys = new List<KeyItemData>();
-    [SerializeField] private List<KeyItem> usableItems;
+    private List<ItemData> items = new List<ItemData>();
+    
+    [SerializeField] private List<QuestItem> usableItems;
     [SerializeField] private Transform hand;
 
     private int objectInHand = -1;
@@ -16,37 +18,37 @@ public class Inventory : MonoBehaviour
         Instance = this;
     }
 
-    public void RemoveFromInventory(KeyItemData keyItem)
+    public void RemoveFromInventory(ItemData keyItem)
     {
-        if (_foundKeys.Contains(keyItem))
+        if (items.Contains(keyItem))
         {
-            _foundKeys.Remove(keyItem);
-            int place = FindItemInList(keyItem.ID);
+            items.Remove(keyItem);
+            int place = FindItemInList(keyItem.UID);
             if (place != -1)
             {
-                KeyItem key = usableItems[place];
+                QuestItem item = usableItems[place];
                 usableItems.RemoveAt(place);
-                Destroy(key.gameObject);
+                Destroy(item.gameObject);
             }
         }
     }
-    public void PickupKeyItem(KeyItemData keyItem)
+    public void PickupKeyItem(ItemData questItem)
     {
-        if (!_foundKeys.Contains(keyItem))
+        if (!items.Contains(questItem))
         {
-            GameObject keyInstance = Instantiate(keyItem.prefab, hand);
-            _foundKeys.Add(keyItem);
-            usableItems.Add(keyInstance.GetComponent<KeyItem>());
+            GameObject keyInstance = Instantiate(questItem.prefab, hand);
+            items.Add(questItem);
+            usableItems.Add(keyInstance.GetComponent<QuestItem>());
             //Utilise le dernier trouvé
             HoldItem(usableItems.Count-1);
         }
     }
 
-    private int FindItemInList(string id)
+    private int FindItemInList(Guid id)
     {
         for (int item = 0; item < usableItems.Count; item++)
         {
-            if (usableItems[item].GetComponent<KeyItem>().data.ID == id)
+            if (usableItems[item].GetComponent<QuestItem>().data.UID == id)
             {
                 return item;
             }
@@ -83,16 +85,16 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool IsItemFound(KeyItemData key)
+    public bool IsItemFound(ItemData key)
     {
         //Empty ID means no necessary key item
         //true if the id is found in the list, false otherwise
-        return key==null|| _foundKeys.Contains(key);
+        return key==null|| items.Contains(key);
     }
 
-    public bool HasEveryItem(List<KeyItemData> keys)
+    public bool HasEveryItem(List<ItemData> keys)
     {
-        foreach (KeyItemData key in keys)
+        foreach (ItemData key in keys)
         {
             if (!IsItemFound(key))
             {

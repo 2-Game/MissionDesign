@@ -694,7 +694,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9abd531dc805c984494c5ef16efaeff6, type: 2}
+  - {fileID: 2100000, guid: bbb3a29423c5fec47aadfa9ffe376067, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1204,7 +1204,7 @@ Camera:
   m_GameObject: {fileID: 5827981052822675474}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1400,6 +1400,7 @@ GameObject:
   - component: {fileID: 5827981051850980577}
   - component: {fileID: 2379108509749108829}
   - component: {fileID: 5193466511680588591}
+  - component: {fileID: 9067731528134505115}
   - component: {fileID: 4182090956826818636}
   - component: {fileID: 5827981051850980579}
   - component: {fileID: 5827981051850980580}
@@ -1537,11 +1538,56 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 561de0fa-aaaa-43e5-abdf-d61a8c30cf44
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a1506cd-6f2d-468b-a73a-21deeb162fc8
+    m_ActionName: Menu/Switch[/Keyboard/rightArrow,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a78bf29e-b907-40e5-a58f-21ce1908c4ae
+    m_ActionName: Menu/Go[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a53da98f-7a78-4f6c-8170-49449d822f28
+    m_ActionName: Menu/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 85796d16-ef36-4811-9dca-b61d1b861e3d
+    m_ActionName: Player/InventorySwitch[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: QuestsPanel, Assembly-CSharp
+        m_MethodName: OpenClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ae2e7a92-8538-447b-8022-4709605a2f5b
+    m_ActionName: Player/QuestPanel[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &9067731528134505115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6638389628579548449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fc33970079b49a2a3548cb603efacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 200
 --- !u!114 &4182090956826818636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,7 +1631,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.29707533
-  m_Height: 1.8290582
+  m_Height: 1.4
   m_Direction: 1
   m_Center: {x: -0.037763476, y: 0.90221775, z: 0}
 --- !u!95 &5234601054610720881

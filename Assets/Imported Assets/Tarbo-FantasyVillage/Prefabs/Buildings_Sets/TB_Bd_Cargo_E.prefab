@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 4594282727100540}
   - component: {fileID: 33945549968647644}
   - component: {fileID: 23602846169920208}
+  - component: {fileID: 7090830777726130545}
   m_Layer: 0
   m_Name: TB_Bd_WoodHouse
   m_TagString: Untagged
@@ -199,6 +200,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7090830777726130545
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386123523407246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 765f7dfecc2af1c4a98ca671676015c0, type: 3}
 --- !u!1 &1416361488362048
 GameObject:
   m_ObjectHideFlags: 0

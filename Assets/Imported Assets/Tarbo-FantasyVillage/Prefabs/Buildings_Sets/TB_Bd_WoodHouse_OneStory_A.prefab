@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 4980746944259552}
   - component: {fileID: 33406756250189954}
   - component: {fileID: 23053899879458200}
+  - component: {fileID: 1578049910588653668}
   m_Layer: 0
   m_Name: TB_Bd_Chimney_A
   m_TagString: Untagged
@@ -249,6 +250,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1578049910588653668
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548500966541726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2b66893e36cf54c4a97b33fcff2d7eb7, type: 3}
 --- !u!1 &1665575343811426
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +678,7 @@ GameObject:
   - component: {fileID: 4486266733824748}
   - component: {fileID: 33753084877330384}
   - component: {fileID: 23534779913705902}
+  - component: {fileID: 8829358259251956750}
   m_Layer: 0
   m_Name: TB_Bd_WoodHouse
   m_TagString: Untagged
@@ -735,3 +751,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8829358259251956750
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977990764792742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 765f7dfecc2af1c4a98ca671676015c0, type: 3}

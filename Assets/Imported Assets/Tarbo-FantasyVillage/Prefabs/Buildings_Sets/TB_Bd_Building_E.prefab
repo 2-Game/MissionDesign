@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 4012349786075894}
   - component: {fileID: 33857552058592488}
   - component: {fileID: 23223918355026110}
+  - component: {fileID: 126060703831962201}
   m_Layer: 0
   m_Name: TB_Bd_SWRoom_Small
   m_TagString: Untagged
@@ -236,6 +237,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &126060703831962201
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407970982343662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 55830fae02782e84c8ae9c7a970a5f1a, type: 3}
 --- !u!1 &1424577406765550
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +262,7 @@ GameObject:
   - component: {fileID: 4540557277888156}
   - component: {fileID: 33445357690379072}
   - component: {fileID: 23027151321722022}
+  - component: {fileID: 3749296534222571523}
   m_Layer: 0
   m_Name: TB_Bd_SWHouse_Door
   m_TagString: Untagged
@@ -319,6 +335,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3749296534222571523
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424577406765550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 63dab7745a03eb845a15e6ea3c26da1f, type: 3}
 --- !u!1 &1593184089675184
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +559,7 @@ GameObject:
   - component: {fileID: 4445792729596912}
   - component: {fileID: 33642243935821650}
   - component: {fileID: 23929907098861804}
+  - component: {fileID: 3489280343187725650}
   m_Layer: 0
   m_Name: TB_Bd_Wood_Med
   m_TagString: Untagged
@@ -601,6 +632,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3489280343187725650
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784497271863500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: b3d1cae99cef4884c88c8b7f9e49a8c2, type: 3}
 --- !u!1 &1855265250312586
 GameObject:
   m_ObjectHideFlags: 0

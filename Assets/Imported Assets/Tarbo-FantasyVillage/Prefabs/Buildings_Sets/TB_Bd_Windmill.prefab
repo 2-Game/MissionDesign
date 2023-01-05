@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 4855872197632534}
   - component: {fileID: 33387992900797496}
   - component: {fileID: 23178089883721110}
+  - component: {fileID: 3521123502848905978}
   m_Layer: 0
   m_Name: TB_Bd_Wood_Tall
   m_TagString: Untagged
@@ -605,6 +606,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3521123502848905978
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365293287884766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: f71860e4bb7597244b98a9e16928b90e, type: 3}
 --- !u!1 &1387843978485130
 GameObject:
   m_ObjectHideFlags: 0

@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 4060204139977382}
   - component: {fileID: 33751715239084788}
   - component: {fileID: 23259535835385044}
+  - component: {fileID: 4363148462268099737}
   m_Layer: 0
   m_Name: TB_Bd_Wood_Tall
   m_TagString: Untagged
@@ -199,6 +200,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4363148462268099737
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305240435449184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: f71860e4bb7597244b98a9e16928b90e, type: 3}
 --- !u!1 &1357594666022908
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +507,7 @@ GameObject:
   - component: {fileID: 4072807505712780}
   - component: {fileID: 33584001294508682}
   - component: {fileID: 23816561811693996}
+  - component: {fileID: 2260673015793785456}
   m_Layer: 0
   m_Name: TB_Bd_SWHouse_Door
   m_TagString: Untagged
@@ -564,6 +580,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2260673015793785456
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726928511557080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 63dab7745a03eb845a15e6ea3c26da1f, type: 3}
 --- !u!1 &1744664396165190
 GameObject:
   m_ObjectHideFlags: 0

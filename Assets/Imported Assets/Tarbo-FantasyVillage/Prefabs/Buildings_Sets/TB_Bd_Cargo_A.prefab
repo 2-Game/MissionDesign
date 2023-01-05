@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 4545035985206900}
   - component: {fileID: 33729538343816192}
   - component: {fileID: 23806960945410082}
+  - component: {fileID: 574966170846794669}
   m_Layer: 0
   m_Name: TB_Bd_House
   m_TagString: Untagged
@@ -365,6 +366,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &574966170846794669
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573487630096066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 60e761c7a56845e44bb353f47e75905d, type: 3}
 --- !u!1 &1667877706214200
 GameObject:
   m_ObjectHideFlags: 0

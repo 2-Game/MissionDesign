@@ -868,6 +868,7 @@ GameObject:
   - component: {fileID: 4133446071914774}
   - component: {fileID: 33349014554213180}
   - component: {fileID: 23296533703208034}
+  - component: {fileID: 8652433882957009186}
   m_Layer: 0
   m_Name: TB_Bd_WoodHouse
   m_TagString: Untagged
@@ -940,6 +941,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8652433882957009186
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709290606626240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 765f7dfecc2af1c4a98ca671676015c0, type: 3}
 --- !u!1 &1811766508012290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1049,7 @@ GameObject:
   - component: {fileID: 4972459768800480}
   - component: {fileID: 33227618237614974}
   - component: {fileID: 23387412422540218}
+  - component: {fileID: 5011486399854248638}
   m_Layer: 0
   m_Name: TB_Bd_BellTower
   m_TagString: Untagged
@@ -1106,6 +1122,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5011486399854248638
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873523891069374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 0f9a053da2d635144a53625bd0d2c056, type: 3}
 --- !u!1 &1911149558968306
 GameObject:
   m_ObjectHideFlags: 0

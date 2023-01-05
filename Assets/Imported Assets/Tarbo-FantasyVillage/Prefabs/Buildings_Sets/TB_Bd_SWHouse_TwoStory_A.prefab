@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4070793986842084}
   - component: {fileID: 33401901210706196}
   - component: {fileID: 23182219114103288}
+  - component: {fileID: 4361150482385617110}
   m_Layer: 0
   m_Name: TB_Bd_SWRoom_Big_Open
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4361150482385617110
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006395797314136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: e50bdfbedf870414cb0259a2b404c4ea, type: 3}
 --- !u!1 &1020742599436574
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +434,7 @@ GameObject:
   - component: {fileID: 4440971949687674}
   - component: {fileID: 33345235617660498}
   - component: {fileID: 23019537073267258}
+  - component: {fileID: 963995325400922817}
   m_Layer: 0
   m_Name: TB_Bd_Ext_Big
   m_TagString: Untagged
@@ -491,6 +507,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &963995325400922817
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306765892353812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: f5bf92044f8d48c418791b9fabb9b42e, type: 3}
 --- !u!1 &1341792589837622
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +532,7 @@ GameObject:
   - component: {fileID: 4919562754696304}
   - component: {fileID: 33782202419777196}
   - component: {fileID: 23211139760593828}
+  - component: {fileID: 7570750866676544668}
   m_Layer: 0
   m_Name: TB_Bd_Chimney_C
   m_TagString: Untagged
@@ -574,6 +605,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7570750866676544668
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341792589837622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 7635a55d2bbf5c44da33361d497f5468, type: 3}
 --- !u!1 &1344642648250906
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +879,7 @@ GameObject:
   - component: {fileID: 4482331820964002}
   - component: {fileID: 33451794789644798}
   - component: {fileID: 23412225258224588}
+  - component: {fileID: 3360175182181160444}
   m_Layer: 0
   m_Name: TB_Bd_SWHouse_Door
   m_TagString: Untagged
@@ -906,6 +952,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3360175182181160444
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783694472269188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 63dab7745a03eb845a15e6ea3c26da1f, type: 3}
 --- !u!1 &1810507985509902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1060,7 @@ GameObject:
   - component: {fileID: 4075052721788856}
   - component: {fileID: 33714910581860400}
   - component: {fileID: 23921828475708562}
+  - component: {fileID: 5886016836844001646}
   m_Layer: 0
   m_Name: TB_Bd_SWHouse
   m_TagString: Untagged
@@ -1072,6 +1133,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5886016836844001646
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843778992619342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: a4d3749f74aa205459d49480a1b55efb, type: 3}
 --- !u!1 &1914542949994648
 GameObject:
   m_ObjectHideFlags: 0
