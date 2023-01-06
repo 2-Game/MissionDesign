@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public static PlayerInteraction Instance;
     private PlayerInteractionAnim _anim;
     private Inventory _inventory;
     private InteractionType _possibleInteraction = InteractionType.None;
@@ -11,6 +12,9 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
+        if (Instance) Destroy(this);
+        else Instance = this;
+
         _anim = GetComponent<PlayerInteractionAnim>();
         _inventory = Inventory.Instance;
     }
@@ -49,7 +53,7 @@ public class PlayerInteraction : MonoBehaviour
         if (_inventory.HasEveryItem(_possibleInteractive.requiredItems))
         {
             _possibleInteractive.OnInteraction();
-            if (_possibleInteractive.onlyOnce)
+            if (_possibleInteractive && _possibleInteractive.onlyOnce)
             {
                 DisableInteractive();
             }
@@ -73,6 +77,7 @@ public class PlayerInteraction : MonoBehaviour
             else if (other.transform.CompareTag("Interactive"))
             {
                 Interactive interactive = other.GetComponent<Interactive>();
+                if(interactive == null) return;
                 //if interaction doesn't need key object or interaction key object is in inventory
                 bool hasRequiredItems = _inventory.HasEveryItem(interactive.requiredItems);
                 
@@ -96,20 +101,17 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (!PlayerInteractionAnim.AnimationInProgress)
         {
-            if (other.transform.CompareTag("Pickable"))
+            if (other.transform.CompareTag("Pickable") || other.transform.CompareTag("Interactive") || other.transform.CompareTag("NPC"))
             {
-                if (_possibleInteraction == InteractionType.Pickup)
-                {
-                    SetInteraction(InteractionType.None);
-                    _possiblePickable = null;
-                }
-            }
-            else if (other.transform.CompareTag("Interactive"))
-            {
-                SetInteraction(InteractionType.None);
-                _possibleInteractive = null;
+                StopInteractive();
             }
         }
+    }
+
+    public void StopInteractive()
+    {
+        SetInteraction(InteractionType.None);
+        _possibleInteractive = null;
     }
     
     private void DisableInteractive()

@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class QuestData : MonoBehaviour
+[CreateAssetMenu(menuName = "Quest System/Quest")]
+public class QuestData : ScriptableObject
 {
-    
+    public string title;
 }

@@ -6,7 +6,7 @@ public class InteractionHelper : MonoBehaviour
     public static InteractionHelper Instance;
     
     public GameObject interactionCue;
-    public string interactionText, pickupText, failedText;
+    public string interactionText, pickupText, failedText, talkText;
 
     private void Awake()
     {
@@ -21,6 +21,9 @@ public class InteractionHelper : MonoBehaviour
             if (interaction == InteractionType.Pickup)
             {
                 interactionCue.GetComponentInChildren<TextMeshProUGUI>().text = pickupText;
+            }else if (interaction == InteractionType.Talk)
+            {
+                interactionCue.GetComponentInChildren<TextMeshProUGUI>().text = talkText;
             }
             else if (interaction == InteractionType.FailedAction)
             {

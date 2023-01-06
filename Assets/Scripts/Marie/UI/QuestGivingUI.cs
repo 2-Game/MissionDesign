@@ -16,12 +16,19 @@ public class QuestGivingUI : MonoBehaviour
     
     void Start()
     {
-        
+        if (Instance) Destroy(this);
+        else Instance = this;
+
+        accept.onClick.AddListener(AcceptQuest);
+        later.onClick.AddListener(RefuseQuest);
     }
 
-    void SetupQuest(QuestData quest)
+    public void SetupQuest(QuestData quest)
     {
+        Time.timeScale = 0;
         currentQuest = quest;
+        questPanel.SetActive(true);
+        title.text = quest.title;
         //Setting up the text components of the UI
     }
 
@@ -30,10 +37,12 @@ public class QuestGivingUI : MonoBehaviour
         //Add to quest list
         //Check to NPC that quest is activated
         questPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     void RefuseQuest()
     {
         questPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }

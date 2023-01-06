@@ -7,7 +7,8 @@ public enum InteractionType
     PushButton,
     OpenChest,
     FailedAction,
-    Pickup
+    Pickup,
+    Talk
 }
 
 public class PlayerInteractionAnim : MonoBehaviour
