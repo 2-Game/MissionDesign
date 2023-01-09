@@ -1946,32 +1946,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 40c5bbef11baff048ba5e13d12bf9aac, type: 3}
---- !u!114 &43027548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43027541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48dbc34161b97451dbe68651b18aa7f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 78de5404eb190ab40a0815ed256d55d1, type: 2}
---- !u!135 &43027549
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43027541}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9307039
-  m_Center: {x: -0.03608711, y: 0.464373, z: 0.5081366}
 --- !u!1 &43464511
 GameObject:
   m_ObjectHideFlags: 0
@@ -89028,7 +89002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273578453440412, guid: 48ae80f4214c8ca4f838b49e1186b042, type: 3}
       propertyPath: m_TagString
-      value: Pickable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4048559725503850, guid: 48ae80f4214c8ca4f838b49e1186b042, type: 3}
       propertyPath: m_RootOrder
