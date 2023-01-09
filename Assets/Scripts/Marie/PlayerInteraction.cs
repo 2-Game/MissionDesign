@@ -33,7 +33,7 @@ public class PlayerInteraction : MonoBehaviour
             if (_possibleInteraction == InteractionType.Pickup && _possiblePickable && IsPickableNeeded())
             {
                 Invoke("Pickup", 2f);
-                QuestManager.Instance.Notify();
+                
             }
             else if (_possibleInteraction != InteractionType.Pickup)
             {
@@ -59,11 +59,17 @@ public class PlayerInteraction : MonoBehaviour
         return false;
     }
 
+    private void Notify()
+    {
+        QuestManager.Instance.Notify();
+    }
+
     private void Pickup()
     {
         _inventory.PickupQuestItem(_possiblePickable.item);
         _possiblePickable.gameObject.SetActive(false);
         SetInteraction(InteractionType.None);
+        Notify();
     }
 
     private void Interact()

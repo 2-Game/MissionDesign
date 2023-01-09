@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Fetch blue book
   m_EditorClassIdentifier: 
   title: Fetch Blue Book
+  description: To achieve this cure, I need the grimoire from the witch a little
+    down the street. She has put it on the table, can you bring it to me?
+  shortDescription: Find the Grimoire
   requirements:
   - item: {fileID: 11400000, guid: 11e1b82869eb5ed42bf63fe7ed97b0d4, type: 2}
     quantity: 1

@@ -1,9 +1,10 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestPanel : MonoBehaviour
 {
-    public TextMeshProUGUI title, progress;
+    public TextMeshProUGUI title, description, progress;
     public Sprite completeQuest;
     private QuestData trackedQuest;
     private int max = 0;
@@ -13,6 +14,7 @@ public class QuestPanel : MonoBehaviour
         trackedQuest = quest;
         title.text = quest.title;
         SetTotalRequirements();
+        description.text = quest.shortDescription;
         progress.text = " 0/" + max;
     }
 
@@ -21,18 +23,15 @@ public class QuestPanel : MonoBehaviour
         int amount = 0;
         foreach (QuestItem item in trackedQuest.requirements)
         {
-            int index = Inventory.Instance.items.FindIndex(i=> i.item.Equals(item.item));
-            if (index != -1)
-            {
-                amount += Inventory.Instance.items[index].quantity;
-                Debug.Log(amount+" ITEMS FOUND");
-            }
-            else
-            {
-                Debug.Log("NO ITEM FOUND");
-            }
+            int qtt = Inventory.Instance.GetItemQuantity(item);
+            amount += qtt;
+            
         }
         progress.text = amount +" /" + max;
+        if (Inventory.Instance.HasEveryItem(trackedQuest.requirements))
+        {
+            Complete();
+        }
     }
 
     public void SetTotalRequirements()
@@ -41,5 +40,10 @@ public class QuestPanel : MonoBehaviour
         {
             max += item.quantity;
         }
+    }
+
+    public void Complete()
+    {
+        GetComponent<Image>().sprite = completeQuest;
     }
 }
