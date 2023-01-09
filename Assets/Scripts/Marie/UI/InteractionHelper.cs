@@ -20,7 +20,7 @@ public class InteractionHelper : MonoBehaviour
             interactionCue.SetActive(true);
             if (interaction == InteractionType.Pickup)
             {
-                interactionCue.GetComponentInChildren<TextMeshProUGUI>().text = string.Format(pickupText);
+                interactionCue.GetComponentInChildren<TextMeshProUGUI>().text = pickupText;
             }else if (interaction == InteractionType.Talk)
             {
                 interactionCue.GetComponentInChildren<TextMeshProUGUI>().text = talkText;

@@ -15,7 +15,7 @@ public class QuestPanel : MonoBehaviour
         title.text = quest.title;
         SetTotalRequirements();
         description.text = quest.shortDescription;
-        progress.text = " 0/" + max;
+        progress.text = "0 / " + max;
     }
 
     public void Notify()
@@ -25,9 +25,8 @@ public class QuestPanel : MonoBehaviour
         {
             int qtt = Inventory.Instance.GetItemQuantity(item);
             amount += qtt;
-            
         }
-        progress.text = amount +" /" + max;
+        progress.text = amount +" / " + max;
         if (Inventory.Instance.HasEveryItem(trackedQuest.requirements))
         {
             Complete();
