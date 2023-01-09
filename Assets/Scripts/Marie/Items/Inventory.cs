@@ -15,12 +15,13 @@ public class Inventory : MonoBehaviour
         Instance = this;
     }
 
-    public void RemoveFromInventory(ItemData qItem)
+    public void RemoveFromInventory(ItemData qItem, int quantity = 0)
     {
         int found = items.FindIndex(q => q.item.Equals(qItem));
         if (found >= 0)
         {
-            items.RemoveAt(found);
+            if (quantity == 0) items.RemoveAt(found);
+            else items[found].quantity -= quantity;
         }
     }
     public void PickupQuestItem(ItemData questItem)

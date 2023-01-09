@@ -9,6 +9,10 @@ public class QuestData : ScriptableObject
 {
     public string title, description, shortDescription;
     public List<QuestItem> requirements = new List<QuestItem>();
+
+    [Header("Rewards")]
+    public int moneyReward;
+    public QuestItem itemReward;
 }
 
 

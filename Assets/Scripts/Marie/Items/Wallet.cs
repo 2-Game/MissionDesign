@@ -21,7 +21,7 @@ public class Wallet : MonoBehaviour
 
     private void Start()
     {
-        MoneyUI.Instance.UpdateMoney();
+        ;
     }
 
 
@@ -33,12 +33,14 @@ public class Wallet : MonoBehaviour
     public void EarnMoney(int amount)
     {
         money += amount;
+        MoneyUI.Instance.UpdateMoney();
     }
 
     public void SpendMoney(int amount)
     {
         if(CanSpend(amount))
             money -= amount;
+        MoneyUI.Instance.UpdateMoney();
     }
 
     public bool CanSpend(int amount)

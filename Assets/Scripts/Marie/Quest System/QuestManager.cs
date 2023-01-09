@@ -29,6 +29,7 @@ public class QuestManager : MonoBehaviour
     public void CompleteQuest(QuestData quest)
     {
         questsProgress.Remove(quest);
+        questVisulization.Remove(quest);
         if (questVisulization.ContainsKey(quest))
         {
             Destroy(questVisulization[quest]);
