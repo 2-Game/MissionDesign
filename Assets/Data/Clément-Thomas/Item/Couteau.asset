@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: New Quest Data
+  m_Script: {fileID: 11500000, guid: 613e4fd3f6faf417690fed546a2c211c, type: 3}
+  m_Name: Couteau
   m_EditorClassIdentifier: 
-  title: 
-  description: 
-  shortDescription: 
-  requirements: []
+  label: Knife
+  icon: {fileID: 0}
