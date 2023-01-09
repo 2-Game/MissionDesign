@@ -100371,6 +100371,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e2423fdc0b1e5f94d9f0eeac75554cec, type: 2}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
+      propertyPath: quests.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: e2423fdc0b1e5f94d9f0eeac75554cec, type: 2}
+    - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: requiredItems.Array.size
       value: 0
       objectReference: {fileID: 0}
