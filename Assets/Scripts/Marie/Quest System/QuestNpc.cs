@@ -45,7 +45,7 @@ public class QuestNpc : Interactive
             Inventory.Instance.RemoveFromInventory(required.item);
         }
         QuestManager.Instance.CompleteQuest(quests[current]);
-        Wallet.Instance.EarnMoney(100);
+        
         waitForObject = false;
         requiredItems.Clear();
         current++;

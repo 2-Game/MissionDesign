@@ -24,12 +24,12 @@ public class Inventory : MonoBehaviour
             else items[found].quantity -= quantity;
         }
     }
-    public void PickupQuestItem(ItemData questItem)
+    public void PickupQuestItem(ItemData questItem, int quantity = 1)
     {
         int found = items.FindIndex(q => q.item.Equals(questItem));
         if (found < 0)
         {
-            items.Add(new QuestItem(questItem));
+            items.Add(new QuestItem(questItem, quantity));
         }
         else
         {
