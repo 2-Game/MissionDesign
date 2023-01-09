@@ -15,7 +15,7 @@ public class QuestPanel : MonoBehaviour
         title.text = quest.title;
         SetTotalRequirements();
         description.text = quest.shortDescription;
-        progress.text = "0 / " + max;
+        Notify();
     }
 
     public void Notify()
