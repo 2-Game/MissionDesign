@@ -40,9 +40,16 @@ public class QuestNpc : Interactive
     void FinishQuest()
     {
         //Dialogue end quest
+        foreach (QuestItem required in quests[current].requirements)
+        {
+            Inventory.Instance.RemoveFromInventory(required.item);
+        }
 
+        waitForObject = false;
+        requiredItems.Clear();
         current++;
         gaveQuest = false;
+
         if(current == quests.Count)
         {
             Destroy(this);

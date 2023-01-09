@@ -60,4 +60,15 @@ public class Inventory : MonoBehaviour
 
         return true;
     }
+
+    public bool HasEvery(QuestItem requiredItem)
+    {
+        int index = GetItemIndex(requiredItem.item);
+        if (index == -1 || items[index].quantity < requiredItem.quantity)
+        {
+            return false;
+        }
+
+        return true;
+    }
 }

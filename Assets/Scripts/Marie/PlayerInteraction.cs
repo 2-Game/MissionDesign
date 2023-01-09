@@ -30,15 +30,33 @@ public class PlayerInteraction : MonoBehaviour
         if (_possibleInteraction != InteractionType.None && ctx.started)
         {
             _anim.PlayAnimation(_possibleInteraction);
-            if (_possibleInteraction == InteractionType.Pickup)
+            if (_possibleInteraction == InteractionType.Pickup && _possiblePickable && IsPickableNeeded())
             {
                 Invoke("Pickup", 2f);
+                QuestManager.Instance.Notify();
             }
-            else
+            else if (_possibleInteraction != InteractionType.Pickup)
             {
                 Invoke("Interact", 1f);
             }
         }
+    }
+
+    private bool IsPickableNeeded()
+    {
+        foreach (QuestData quest in QuestManager.Instance.questsProgress)
+        {
+            foreach (QuestItem item in quest.requirements)
+            {
+                if (_possiblePickable.item.Equals(item.item)
+                    && !Inventory.Instance.HasEvery(item))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     private void Pickup()

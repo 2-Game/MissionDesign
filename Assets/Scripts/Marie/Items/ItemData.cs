@@ -8,6 +8,7 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public Guid UID;
+    public string label;
     public Sprite icon;
     
     private void OnValidate()

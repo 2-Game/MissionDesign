@@ -10,8 +10,7 @@ public class QuestManager : MonoBehaviour
     public GameObject questPanelPrefab;
     public Transform questParent;
     
-    
-    private List<QuestData> questsProgress = new List<QuestData>();
+    public List<QuestData> questsProgress = new List<QuestData>();
     private Dictionary<QuestData, GameObject> questVisulization 
         = new Dictionary<QuestData, GameObject>();
 
@@ -25,6 +24,7 @@ public class QuestManager : MonoBehaviour
     {
         questsProgress.Add(quest);
         GameObject panel = Instantiate(questPanelPrefab, questParent);
+        panel.GetComponent<QuestPanel>().SetupQuest(quest);
         questVisulization.Add(quest, panel);
     }
 
@@ -42,6 +42,7 @@ public class QuestManager : MonoBehaviour
         foreach (GameObject quest in questVisulization.Values)
         {
             QuestPanel panel = quest.GetComponent<QuestPanel>();
+            panel.Notify();
         }
     }
 }

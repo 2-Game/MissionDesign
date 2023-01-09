@@ -13,15 +13,26 @@ public class QuestPanel : MonoBehaviour
         trackedQuest = quest;
         title.text = quest.title;
         SetTotalRequirements();
-        progress.text = " 0/" + quest.requirements;
+        progress.text = " 0/" + max;
     }
 
     public void Notify()
     {
+        int amount = 0;
         foreach (QuestItem item in trackedQuest.requirements)
         {
-            if(Inventory.Instance.items.Contains(item)) max += item.quantity;
+            int index = Inventory.Instance.items.FindIndex(i=> i.item.Equals(item.item));
+            if (index != -1)
+            {
+                amount += Inventory.Instance.items[index].quantity;
+                Debug.Log(amount+" ITEMS FOUND");
+            }
+            else
+            {
+                Debug.Log("NO ITEM FOUND");
+            }
         }
+        progress.text = amount +" /" + max;
     }
 
     public void SetTotalRequirements()

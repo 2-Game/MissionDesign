@@ -24411,7 +24411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.21426794, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
+  m_AnchoredPosition: {x: 10.0000305, y: -10}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511163151
@@ -29082,6 +29082,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2005792758}
     m_Modifications:
+    - target: {fileID: 1453118905378372, guid: 2d52eba4f2a968b46af480de17f3ec85, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4683955847079872, guid: 2d52eba4f2a968b46af480de17f3ec85, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -60279,7 +60283,7 @@ MonoBehaviour:
   interactionCue: {fileID: 1127524462}
   interactionText: '[E] to interact'
   pickupText: '[E] to pick up'
-  failedText: I still need something
+  failedText: I still need something...
   talkText: '[E] to talk'
 --- !u!4 &1296301734
 Transform:
@@ -74056,6 +74060,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8524fb18b3a37c646b80d86e106a5266, type: 3}
+--- !u!1 &1600715905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1453118905378372, guid: 2d52eba4f2a968b46af480de17f3ec85, type: 3}
+  m_PrefabInstance: {fileID: 633484196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1600715908
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600715905}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39
+  m_Center: {x: 0.00000385195, y: 0.42001265, z: -0.015967596}
+--- !u!114 &1600715909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600715905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48dbc34161b97451dbe68651b18aa7f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 11e1b82869eb5ed42bf63fe7ed97b0d4, type: 2}
 --- !u!1001 &1601201796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83533,6 +83568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questPanelPrefab: {fileID: 4018165999806248098, guid: 47436d211f40544f6a37a44091860077, type: 3}
   questParent: {fileID: 1840078473}
+  firstQuest: {fileID: 0}
 --- !u!1 &1807883260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1918960778801420, guid: e3b5b0158043ca946b38d2a3aa22ddab, type: 3}
@@ -87947,7 +87983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.20057504}
-  m_AnchoredPosition: {x: 5, y: 5.000061}
+  m_AnchoredPosition: {x: 5, y: 5.000122}
   m_SizeDelta: {x: -29.999992, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1903215898
@@ -98491,7 +98527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 0.20057504}
-  m_AnchoredPosition: {x: 0, y: 5.000061}
+  m_AnchoredPosition: {x: 0, y: 5.000122}
   m_SizeDelta: {x: -20, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112979860
@@ -100293,15 +100329,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 35cab031524dff34f8bd62a92e606671, type: 2}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
+      propertyPath: quests.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: e2423fdc0b1e5f94d9f0eeac75554cec, type: 2}
+    - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: requiredItems.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
+      propertyPath: requiredItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 78de5404eb190ab40a0815ed256d55d1, type: 2}
+    - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
+      propertyPath: requiredItems.Array.data[0].quantity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4485911666976370823, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_Name
