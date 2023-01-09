@@ -15372,7 +15372,7 @@ PrefabInstance:
     - target: {fileID: 5193466511680588591, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1488660190}
     - target: {fileID: 5193466511680588591, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15602,6 +15602,32 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1ddc03cad041d974fb521ffe619d0b06, type: 3}
+--- !u!114 &329437846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329437839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48dbc34161b97451dbe68651b18aa7f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 5ba93590324477046b3bc9c86b24fbcc, type: 2}
+--- !u!135 &329437847
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329437839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.42
+  m_Center: {x: 0, y: 0.24, z: 0}
 --- !u!1001 &329627760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52636,15 +52662,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4049241769803896, guid: 63b80031e68845544bbf42d492d6aae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.13
+      value: -16.02
       objectReference: {fileID: 0}
     - target: {fileID: 4049241769803896, guid: 63b80031e68845544bbf42d492d6aae6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 4049241769803896, guid: 63b80031e68845544bbf42d492d6aae6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.46
+      value: -6.17
       objectReference: {fileID: 0}
     - target: {fileID: 4049241769803896, guid: 63b80031e68845544bbf42d492d6aae6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -69179,6 +69205,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4685259298893600, guid: e11083df9856a6847bba9a1ac487d829, type: 3}
   m_PrefabInstance: {fileID: 897566249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1488660190 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5827981052822675476, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
+  m_PrefabInstance: {fileID: 327085177}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1490352478
 PrefabInstance:
@@ -100933,7 +100964,7 @@ PrefabInstance:
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 9335e0c69f07f154a98c1d445532639e, type: 2}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: requiredItems.Array.size
       value: 0
