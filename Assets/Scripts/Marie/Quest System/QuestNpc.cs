@@ -8,18 +8,20 @@ public class QuestNpc : Interactive
 
     public override void OnInteraction()
     {
+        transform.LookAt(Inventory.Instance.transform.position);
         if (gaveQuest) ThanksMessage();
-        else GiveQuest();
+        else if (quests.Count > 0 && current < quests.Count)
+        {
+            QuestGivingUI.Instance.SetupQuest(quests[current], this);
+        }
         PlayerInteraction.Instance.StopInteractive();
     }
 
 
-    void GiveQuest()
+    public void GiveQuest()
     {
         if (quests.Count > 0 && current < quests.Count)
-        {
-            QuestGivingUI.Instance.SetupQuest(quests[current]);
-            
+        {            
             gaveQuest = true;
             waitForObject = true;
             //Setting up requirements to finish quests
@@ -33,7 +35,7 @@ public class QuestNpc : Interactive
 
     void ThanksMessage()
     {
-        Debug.Log("Thanks");
+        QuestGivingUI.Instance.ThankYou();
         FinishQuest();
     }
 
