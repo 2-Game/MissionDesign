@@ -15336,6 +15336,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1590243107}
     m_Modifications:
     - target: {fileID: 5193466511680588591, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193466511680588591, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1807651028}
@@ -24411,7 +24415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.21426794, y: 1}
-  m_AnchoredPosition: {x: 10.0000305, y: -10}
+  m_AnchoredPosition: {x: 9.9999695, y: -10}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511163151
@@ -83568,7 +83572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questPanelPrefab: {fileID: 4018165999806248098, guid: 47436d211f40544f6a37a44091860077, type: 3}
   questParent: {fileID: 1840078473}
-  firstQuest: {fileID: 0}
+  questsProgress: []
 --- !u!1 &1807883260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1918960778801420, guid: e3b5b0158043ca946b38d2a3aa22ddab, type: 3}
