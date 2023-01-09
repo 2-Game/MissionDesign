@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
+  m_Name: A-L Water Quest
+  m_EditorClassIdentifier: 
+  title: Get Water
+  description: The water in the river is poisened, go get some in the well at the
+    intersection.
+  shortDescription: go get water at the well
+  requirements:
+  - item: {fileID: 11400000, guid: 5ba93590324477046b3bc9c86b24fbcc, type: 2}
+    quantity: 1
+  moneyReward: 5
+  itemReward:
+    item: {fileID: 0}
+    quantity: 0
