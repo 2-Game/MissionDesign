@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: TC_LostObject
   description: Retrouver l'object perdu du marchant
-  shortDescription: 
+  shortDescription: Retrouver l'object perdu du marcha
   requirements:
   - item: {fileID: 11400000, guid: 27a832dda6c06f64fbebed6830607a62, type: 2}
     quantity: 1
