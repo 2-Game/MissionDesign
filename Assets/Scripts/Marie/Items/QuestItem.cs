@@ -1,8 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class QuestItem : MonoBehaviour
+[Serializable]
+public class QuestItem
 {
-    public ItemData data;
+    public ItemData item;
+    public int quantity = 0;
+
+    public QuestItem(ItemData data, int qtt = 1)
+    {
+        item = data;
+        quantity = qtt;
+    }
 }

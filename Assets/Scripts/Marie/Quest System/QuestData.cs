@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,4 +8,7 @@ using UnityEngine.UI;
 public class QuestData : ScriptableObject
 {
     public string title;
+    public List<QuestItem> requirements = new List<QuestItem>();
 }
+
+

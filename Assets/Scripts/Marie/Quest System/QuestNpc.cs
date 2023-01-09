@@ -23,6 +23,11 @@ public class QuestNpc : Interactive
             gaveQuest = true;
             waitForObject = true;
             //Setting up requirements to finish quests
+            foreach (QuestItem item in quests[current].requirements)
+            {
+                requiredItems.Add(item);
+            }
+            QuestManager.Instance.TakeQuest(quests[current]);
         }
     }
 

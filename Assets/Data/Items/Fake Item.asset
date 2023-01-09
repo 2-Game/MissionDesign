@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: Fake
+  m_Script: {fileID: 11500000, guid: 613e4fd3f6faf417690fed546a2c211c, type: 3}
+  m_Name: Fake Item
   m_EditorClassIdentifier: 
-  title: Super fake quest
-  requirements:
-  - item: {fileID: 11400000, guid: 78de5404eb190ab40a0815ed256d55d1, type: 2}
-    quantity: 1
+  icon: {fileID: 0}

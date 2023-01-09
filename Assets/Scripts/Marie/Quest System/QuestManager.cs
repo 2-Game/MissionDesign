@@ -1,18 +1,47 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static QuestManager Instance;
+
+    public GameObject questPanelPrefab;
+    public Transform questParent;
+    
+    
+    private List<QuestData> questsProgress = new List<QuestData>();
+    private Dictionary<QuestData, GameObject> questVisulization 
+        = new Dictionary<QuestData, GameObject>();
+
+    public void Awake()
     {
-        
+        if (Instance) Destroy(this);
+        else Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeQuest(QuestData quest)
     {
-        
+        questsProgress.Add(quest);
+        GameObject panel = Instantiate(questPanelPrefab, questParent);
+        questVisulization.Add(quest, panel);
+    }
+
+    public void CompleteQuest(QuestData quest)
+    {
+        questsProgress.Remove(quest);
+        if (questVisulization.ContainsKey(quest))
+        {
+            Destroy(questVisulization[quest]);
+        }
+    }
+
+    public void Notify()
+    {
+        foreach (GameObject quest in questVisulization.Values)
+        {
+            QuestPanel panel = quest.GetComponent<QuestPanel>();
+        }
     }
 }

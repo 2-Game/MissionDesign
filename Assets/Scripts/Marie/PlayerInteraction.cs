@@ -7,7 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     private PlayerInteractionAnim _anim;
     private Inventory _inventory;
     private InteractionType _possibleInteraction = InteractionType.None;
-    private QuestItem _possiblePickable;
+    private Pickable _possiblePickable;
     private Interactive _possibleInteractive;
 
     private void Start()
@@ -43,7 +43,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Pickup()
     {
-        _inventory.PickupKeyItem(_possiblePickable.data);
+        _inventory.PickupQuestItem(_possiblePickable.item);
         _possiblePickable.gameObject.SetActive(false);
         SetInteraction(InteractionType.None);
     }
@@ -65,14 +65,14 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (!PlayerInteractionAnim.AnimationInProgress)
         {
             if (other.transform.CompareTag("Pickable"))
             {
                 SetInteraction(InteractionType.Pickup);
-                _possiblePickable = other.GetComponentInChildren<QuestItem>();
+                _possiblePickable = other.GetComponentInChildren<Pickable>();
             }
             else if (other.transform.CompareTag("Interactive"))
             {

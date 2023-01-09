@@ -6,97 +6,53 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
     
-    private List<ItemData> items = new List<ItemData>();
-    
-    [SerializeField] private List<QuestItem> usableItems;
-    [SerializeField] private Transform hand;
+    public List<QuestItem> items = new List<QuestItem>();
 
-    private int objectInHand = -1;
 
     private void Start()
     {
         Instance = this;
     }
 
-    public void RemoveFromInventory(ItemData keyItem)
+    public void RemoveFromInventory(ItemData qItem)
     {
-        if (items.Contains(keyItem))
+        int found = items.FindIndex(q => q.item.Equals(qItem));
+        if (found >= 0)
         {
-            items.Remove(keyItem);
-            int place = FindItemInList(keyItem.UID);
-            if (place != -1)
-            {
-                QuestItem item = usableItems[place];
-                usableItems.RemoveAt(place);
-                Destroy(item.gameObject);
-            }
+            items.RemoveAt(found);
         }
     }
-    public void PickupKeyItem(ItemData questItem)
+    public void PickupQuestItem(ItemData questItem)
     {
-        if (!items.Contains(questItem))
+        int found = items.FindIndex(q => q.item.Equals(questItem));
+        if (found < 0)
         {
-            GameObject keyInstance = Instantiate(questItem.prefab, hand);
-            items.Add(questItem);
-            usableItems.Add(keyInstance.GetComponent<QuestItem>());
-            //Utilise le dernier trouvé
-            HoldItem(usableItems.Count-1);
+            items.Add(new QuestItem(questItem));
+        }
+        else
+        {
+            items[found].quantity++;
         }
     }
 
-    private int FindItemInList(Guid id)
-    {
-        for (int item = 0; item < usableItems.Count; item++)
-        {
-            if (usableItems[item].GetComponent<QuestItem>().data.UID == id)
-            {
-                return item;
-            }
-        }
-        
-        //Easier method would be
-        //return usableItems.FindIndex(item => item.GetComponent<KeyItem>()?.ID == id);
-
-        return -1;
-    }
-
-    private void HoldItem(int number)
-    {
-        if (number < -1 || number >= usableItems.Count)
-        {
-            //Index out of bounds, nothing can be done
-            return;
-        }
-        if (objectInHand != -1)
-        {
-            usableItems[objectInHand].gameObject.SetActive(false);
-        }
-
-        objectInHand = number;
-        usableItems[objectInHand].gameObject.SetActive(true);
-    }
-
-    public void NextItem()
-    {
-        if (usableItems.Count != 0)
-        {
-            int next = ((objectInHand+1)%usableItems.Count)-1;
-            HoldItem(next);
-        }
-    }
-
-    public bool IsItemFound(ItemData key)
+    public bool IsItemFound(ItemData questItem)
     {
         //Empty ID means no necessary key item
         //true if the id is found in the list, false otherwise
-        return key==null|| items.Contains(key);
+        return questItem==null || GetItemIndex(questItem)!= -1;
     }
 
-    public bool HasEveryItem(List<ItemData> keys)
+    public int GetItemIndex(ItemData questItem)
     {
-        foreach (ItemData key in keys)
+        return items.FindIndex(q => q.item.Equals(questItem));
+    }
+
+    public bool HasEveryItem(List<QuestItem> requiredItems)
+    {
+        foreach (QuestItem item in requiredItems)
         {
-            if (!IsItemFound(key))
+            int index = GetItemIndex(item.item);
+            if (index == -1 || items[index].quantity < item.quantity)
             {
                 return false;
             }

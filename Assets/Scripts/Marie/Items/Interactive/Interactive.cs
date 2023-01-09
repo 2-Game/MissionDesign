@@ -8,7 +8,7 @@ public class Interactive : MonoBehaviour
     public bool onlyOnce = true;
 
     [Header("Condition")] 
-    public List<ItemData> requiredItems;
+    public List<QuestItem> requiredItems;
 
     public bool waitForObject;
     
