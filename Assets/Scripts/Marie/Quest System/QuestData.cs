@@ -12,6 +12,7 @@ public class QuestData : ScriptableObject
 
     [Header("Rewards")]
     public int moneyReward;
+    public bool hasItemReward;
     public QuestItem itemReward;
 }
 

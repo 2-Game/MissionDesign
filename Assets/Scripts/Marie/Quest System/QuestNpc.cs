@@ -42,7 +42,7 @@ public class QuestNpc : Interactive
         //Dialogue end quest
         foreach (QuestItem required in quests[current].requirements)
         {
-            Inventory.Instance.RemoveFromInventory(required.item);
+            Inventory.Instance.RemoveFromInventory(required.item, required.quantity);
         }
         QuestManager.Instance.CompleteQuest(quests[current]);
         
