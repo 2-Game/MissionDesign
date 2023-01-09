@@ -10,17 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: Fetch purple flower
+  m_Name: A-L Quest to talk to smith
   m_EditorClassIdentifier: 
-  title: Find purple flowers
-  description: I need a very special flower to brew a remedy. It is purple and only
-    grows by the pond next to the water wheel. Would you be kind and get two for
-    me?
-  shortDescription: Fetch 2 purple flowers from the pond
-  requirements:
-  - item: {fileID: 11400000, guid: 78de5404eb190ab40a0815ed256d55d1, type: 2}
-    quantity: 2
-  moneyReward: 100
+  title: A-L Quest blacksmith
+  description: Go to the blacksmith and ask for a sword to fight in the incoming
+    battle.
+  shortDescription: Go to the Blacksmith and get a sword
+  requirements: []
+  moneyReward: 0
   itemReward:
     item: {fileID: 0}
     quantity: 0

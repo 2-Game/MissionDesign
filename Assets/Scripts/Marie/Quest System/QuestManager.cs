@@ -29,13 +29,17 @@ public class QuestManager : MonoBehaviour
     public void CompleteQuest(QuestData quest)
     {
         Wallet.Instance.EarnMoney(quest.moneyReward);
-        Inventory.Instance.PickupQuestItem(quest.itemReward.item, quest.itemReward.quantity);
+        if (quest.itemReward.quantity != 0 || quest.itemReward.item != null)
+        {
+            Inventory.Instance.PickupQuestItem(quest.itemReward.item, quest.itemReward.quantity);
+        }
         questsProgress.Remove(quest);
-        questVisulization.Remove(quest);
         if (questVisulization.ContainsKey(quest))
         {
             Destroy(questVisulization[quest]);
+            questVisulization.Remove(quest);
         }
+        
 
     }
 

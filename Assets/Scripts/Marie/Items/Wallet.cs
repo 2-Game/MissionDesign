@@ -21,7 +21,7 @@ public class Wallet : MonoBehaviour
 
     private void Start()
     {
-        ;
+        MoneyUI.Instance.UpdateMoney();
     }
 
 

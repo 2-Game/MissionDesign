@@ -24,6 +24,6 @@ public class ItemData : ScriptableObject
 
     public bool Equals(ItemData data)
     {
-        return UID == data.UID;
+        return data != null && UID == data.UID;
     }
 }

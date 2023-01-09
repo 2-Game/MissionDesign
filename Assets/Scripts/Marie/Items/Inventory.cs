@@ -17,11 +17,11 @@ public class Inventory : MonoBehaviour
 
     public void RemoveFromInventory(ItemData qItem, int quantity = 0)
     {
-        int found = items.FindIndex(q => q.item.Equals(qItem));
+        int found = items.FindIndex(q => q.item != null && q.item.Equals(qItem));
         if (found >= 0)
         {
-            if (quantity == 0) items.RemoveAt(found);
-            else items[found].quantity -= quantity;
+            items[found].quantity -= quantity;
+            if (items[found].quantity <= 0) items.RemoveAt(found);
         }
     }
     public void PickupQuestItem(ItemData questItem, int quantity = 1)
@@ -77,13 +77,8 @@ public class Inventory : MonoBehaviour
 
     public int GetItemQuantity(QuestItem item)
     {
-        Debug.Log($"LOOKING FOR {item.item.label}");
         if(!IsItemFound(item.item)) return 0;
         int index = GetItemIndex(item.item);
-        if (index == -1)
-        {
-            return 0;
-        }
         return items[index].quantity;
 
     }
