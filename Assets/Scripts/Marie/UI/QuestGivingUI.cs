@@ -29,6 +29,7 @@ public class QuestGivingUI : MonoBehaviour
         currentQuest = quest;
         questPanel.SetActive(true);
         title.text = quest.title;
+        description.text = quest.description;
         //Setting up the text components of the UI
     }
 

@@ -363,8 +363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: {fileID: 8808491572762903066}
+  description: {fileID: 4018699480537037049}
   progress: {fileID: 9086564560179284732}
-  completeQuest: {fileID: 0}
+  completeQuest: {fileID: 21300000, guid: ba5c1c80ca0e643649aee457a6fd7369, type: 3}
 --- !u!1 &6175540407505449070
 GameObject:
   m_ObjectHideFlags: 0

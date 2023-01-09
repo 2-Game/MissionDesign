@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Quest System/Quest")]
 public class QuestData : ScriptableObject
 {
-    public string title;
+    public string title, description, shortDescription;
     public List<QuestItem> requirements = new List<QuestItem>();
 }
 

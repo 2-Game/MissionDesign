@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -70,5 +71,19 @@ public class Inventory : MonoBehaviour
         }
 
         return true;
+    }
+
+
+    public int GetItemQuantity(QuestItem item)
+    {
+        Debug.Log($"LOOKING FOR {item.item.label}");
+        if(!IsItemFound(item.item)) return 0;
+        int index = GetItemIndex(item.item);
+        if (index == -1)
+        {
+            return 0;
+        }
+        return items[index].quantity;
+
     }
 }
