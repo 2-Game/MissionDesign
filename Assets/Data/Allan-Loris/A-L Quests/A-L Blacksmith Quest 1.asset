@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: A-L Quest 1
+  m_Name: A-L Blacksmith Quest 1
   m_EditorClassIdentifier: 
-  title: A-L Quest blacksmith
-  description: Go to the blacksmith and ask for a sword to fight in the incoming
-    battle.
-  shortDescription: Go to the Blacksmith and get a sword
+  title: Blacsmith
+  description: you must gather wood for the smith so he may run his forge and forge
+    you a blade from the legends.
+  shortDescription: Gather wood the blacksmith.
   requirements: []
   moneyReward: 0
   itemReward:
-    item: {fileID: 0}
-    quantity: 0
+    item: {fileID: 11400000, guid: c2f0185982cf61e47aef28cf84a3adbf, type: 2}
+    quantity: 1
