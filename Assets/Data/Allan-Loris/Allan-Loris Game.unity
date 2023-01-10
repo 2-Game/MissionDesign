@@ -102742,7 +102742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4485911666976370823, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_Name
-      value: Eris
+      value: Eris 1st Npc
       objectReference: {fileID: 0}
     - target: {fileID: 4485911666976370823, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_TagString
