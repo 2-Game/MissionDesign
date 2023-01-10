@@ -19,3 +19,7 @@ MonoBehaviour:
   requirements:
   - item: {fileID: 11400000, guid: 11e1b82869eb5ed42bf63fe7ed97b0d4, type: 2}
     quantity: 1
+  moneyReward: 10
+  itemReward:
+    item: {fileID: 0}
+    quantity: 0
