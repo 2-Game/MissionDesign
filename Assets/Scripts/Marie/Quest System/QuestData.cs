@@ -9,7 +9,7 @@ public class QuestData : ScriptableObject
 {
     public string title, shortDescription;
     [TextArea] public string description;
-    public string thankYouMessage;
+    [TextArea] public string thankYouMessage;
 
     public List<QuestItem> requirements = new List<QuestItem>();
 

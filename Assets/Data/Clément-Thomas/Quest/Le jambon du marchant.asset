@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Le jambon du marchant
   m_EditorClassIdentifier: 
   title: 'Trouvez le jambon '
+  shortDescription: Retrouvez le jambon perdu du marchant
   description: "Ta pris ton temps pour trouver ce grimoire. Tout ca ma donner faim,
     je voudrai bien un bon jambon frais qui provient de la boucherie du village.
     Tu peux me l\u2019apporter s\u2019il te plait.   "
-  shortDescription: Retrouvez le jambon perdu du marchant
-  thankYouMessage: coucou
+  thankYouMessage: "A merci pour ton aide, mais\u2026"
   requirements:
   - item: {fileID: 11400000, guid: 27a832dda6c06f64fbebed6830607a62, type: 2}
     quantity: 1
