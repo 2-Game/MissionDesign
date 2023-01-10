@@ -24245,7 +24245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.21426794, y: 1}
-  m_AnchoredPosition: {x: 9.9999695, y: -10}
+  m_AnchoredPosition: {x: 9.999939, y: -10}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511163151
@@ -88136,7 +88136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.20057504}
-  m_AnchoredPosition: {x: 5, y: 5.000122}
+  m_AnchoredPosition: {x: 5, y: 5.000244}
   m_SizeDelta: {x: -29.999992, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1903215898
@@ -98744,7 +98744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 0.20057504}
-  m_AnchoredPosition: {x: 0, y: 5.000122}
+  m_AnchoredPosition: {x: 0, y: 5.000244}
   m_SizeDelta: {x: -20, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112979860
@@ -100668,7 +100668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.data[0]
@@ -100682,6 +100682,10 @@ PrefabInstance:
       propertyPath: quests.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 66a11d3bc4565294fa3a52fd3c6c1b6a, type: 2}
+    - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
+      propertyPath: quests.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0988afd94d6376d43b883d2e5ff81ec4, type: 2}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: requiredItems.Array.size
       value: 0
@@ -100728,3 +100732,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3822140223263369789, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
   m_PrefabInstance: {fileID: 3060069657632949221}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3060069657632949231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3060069657632949222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e0d73adad18c746a8fdb56b3db5162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 2
+  onlyOnce: 1
+  requiredItems: []
+  waitForObject: 0
+  quests: []
+  _data: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}

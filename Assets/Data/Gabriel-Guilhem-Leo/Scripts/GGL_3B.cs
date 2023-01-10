@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class GGL_3B : QuestNpc
 {
-    private bool gaveQuest = false;
-    private int current = 0;
+    public ItemData _data;
 
-    public void GiveQuest2()
+    /*public override void GiveQuest()
     {
         if (quests.Count > 0 && current < quests.Count)
         {
@@ -18,7 +17,12 @@ public class GGL_3B : QuestNpc
             {
                 requiredItems.Add(item);
             }
+            Debug.Log("dkekfzoke");
+            if (current == 4)
+            {
+                Inventory.Instance.AddToInventory(_data);
+            }
             QuestManager.Instance.TakeQuest(quests[current]);
         }
-    }
+    }*/
 }
