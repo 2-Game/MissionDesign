@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Fetch purple flower
   m_EditorClassIdentifier: 
   title: Find purple flowers
+  shortDescription: Fetch 2 purple flowers from the pond
   description: I need a very special flower to brew a remedy. It is purple and only
     grows by the pond next to the water wheel. Would you be kind and get two for
     me?
-  shortDescription: Fetch 2 purple flowers from the pond
   thankYouMessage: Thank you, here is your reward.
+  reward: 15 Gold Coins
   requirements:
   - item: {fileID: 11400000, guid: 78de5404eb190ab40a0815ed256d55d1, type: 2}
     quantity: 2

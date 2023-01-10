@@ -16,6 +16,11 @@ public class PlayerInteraction : MonoBehaviour
         else Instance = this;
 
         _anim = GetComponent<PlayerInteractionAnim>();
+        Invoke("SetInventory", 0.1f);
+    }
+
+    private void SetInventory()
+    {
         _inventory = Inventory.Instance;
     }
 

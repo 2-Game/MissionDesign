@@ -37,7 +37,9 @@ public class QuestGivingUI : MonoBehaviour
         questPanel.SetActive(true);
         title.text = quest.title;
         description.text = quest.description;
-        
+
+        reward.text = quest.reward;
+
         accept.Select();
         //Setting up the text components of the UI
     }
