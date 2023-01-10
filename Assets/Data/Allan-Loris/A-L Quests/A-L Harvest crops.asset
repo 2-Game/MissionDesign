@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: A-L Quest to talk to smith
+  m_Name: A-L Harvest crops
   m_EditorClassIdentifier: 
-  title: Talk to the smith
-  description: Go to the blacksmith and ask for a sword to protect yourself.
-  shortDescription: Go to the Blacksmith and get a sword
+  title: Harvest carrots
+  description: Would you help me harvest my crops.
+  shortDescription: Harvest Carrots in the farm
   requirements: []
-  moneyReward: 0
+  moneyReward: 5
   itemReward:
     item: {fileID: 0}
     quantity: 0
