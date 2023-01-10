@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: A-L Harvest crops
   m_EditorClassIdentifier: 
   title: Harvest carrots
-  description: Would you help me harvest my crops.
-  shortDescription: Harvest Carrots in the farm
+  shortDescription: harvest carrots at the farm
+  description: Would you help me harvest the carrots in my farm.
   thankYouMessage: Thank you, here is your reward.
-  requirements: []
-  moneyReward: 5
+  reward: 10 Gold Coins
+  requirements:
+  - item: {fileID: 11400000, guid: 1fa5327ac2e85ef4286bdd9f714d869a, type: 2}
+    quantity: 10
+  moneyReward: 10
   itemReward:
     item: {fileID: 0}
     quantity: 0

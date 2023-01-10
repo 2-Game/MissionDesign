@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: A-L Blacksmith Quest 1
   m_EditorClassIdentifier: 
   title: Gather wood
+  shortDescription: Gather 8 wood for the blacksmith.
   description: you must gather wood for the smith so he may run his forge and forge
     you a blade from the legends, this will cost you 5 Gold
-  shortDescription: Gather 4 wood the blacksmith.
   thankYouMessage: Thank you, here is your sword.
+  reward: A legendary sword
   requirements:
   - item: {fileID: 11400000, guid: e8f303d72118bef49b411a81553e1246, type: 2}
-    quantity: 4
+    quantity: 8
   moneyReward: -5
   itemReward:
     item: {fileID: 11400000, guid: c2f0185982cf61e47aef28cf84a3adbf, type: 2}
