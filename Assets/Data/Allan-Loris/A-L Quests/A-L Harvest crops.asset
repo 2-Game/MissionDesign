@@ -15,6 +15,7 @@ MonoBehaviour:
   title: Harvest carrots
   description: Would you help me harvest my crops.
   shortDescription: Harvest Carrots in the farm
+  thankYouMessage: Thank you, here is your reward.
   requirements: []
   moneyReward: 5
   itemReward:

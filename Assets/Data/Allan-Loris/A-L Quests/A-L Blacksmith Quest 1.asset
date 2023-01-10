@@ -16,6 +16,7 @@ MonoBehaviour:
   description: you must gather wood for the smith so he may run his forge and forge
     you a blade from the legends, this will cost you 5 Gold
   shortDescription: Gather 4 wood the blacksmith.
+  thankYouMessage: Thank you, here is your sword.
   requirements:
   - item: {fileID: 11400000, guid: e8f303d72118bef49b411a81553e1246, type: 2}
     quantity: 4
