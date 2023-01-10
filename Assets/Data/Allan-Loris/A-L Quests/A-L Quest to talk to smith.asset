@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: A-L Quest to talk to smith
   m_EditorClassIdentifier: 
-  title: A-L Quest blacksmith
+  title: Talk to the smith
   description: Go to the blacksmith and ask for a sword to protect yourself.
   shortDescription: Go to the Blacksmith and get a sword
   requirements: []
