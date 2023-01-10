@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
+  m_Name: La peche
+  m_EditorClassIdentifier: 
+  title: Un ami pour la vie.
+  shortDescription: "P\xEAcher les 4 poissons"
+  description: "\u201CHey j\u2019aurais besoin de ton aide, j\u2019arrive pas \xE0
+    trouver des poissons, petit indice les poison aime bien rester \xE0 c\xF4t\xE9
+    du pont et tu ponton. Si tu arrives \xE0 p\xEAcher 4 poissons, reviens me voir.\u201D\r\n"
+  thankYouMessage: "HOOO ta p\xEAcher des gros poissons, pour te remercier je te
+    passe 100 gold et je t\u2019invite \xE0 manger chez moi. Je vais te faire ma
+    sp\xE9cialit\xE9 mais pour cela j\u2019ai besoin de\u2026 "
+  requirements:
+  - item: {fileID: 11400000, guid: 28b910eaa80a4f548be567c781879402, type: 2}
+    quantity: 4
+  moneyReward: 100
+  itemReward:
+    item: {fileID: 0}
+    quantity: 0

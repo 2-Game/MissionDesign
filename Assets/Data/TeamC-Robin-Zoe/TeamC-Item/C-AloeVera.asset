@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 613e4fd3f6faf417690fed546a2c211c, type: 3}
-  m_Name: BigPlant
+  m_Name: C-AloeVera
   m_EditorClassIdentifier: 
-  label: 
+  label: Plant
   icon: {fileID: 0}

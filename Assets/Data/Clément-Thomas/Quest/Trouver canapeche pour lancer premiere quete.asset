@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
+  m_Name: Trouver canapeche pour lancer premiere quete
+  m_EditorClassIdentifier: 
+  title: Canapeche
+  shortDescription: Trouver la canapeche chez le forgeron
+  description: "*La qu\xEAte ne peut pas se lancer si le joueur n\u2019a pas la canne
+    \xE0 p\xEAche*\r\n"
+  thankYouMessage: "*Vous avez maintenant la canne \xE0 p\xEAche*"
+  requirements:
+  - item: {fileID: 11400000, guid: 0f150ec2215731241a98a9b4ccb9284a, type: 2}
+    quantity: 1
+  moneyReward: 25
+  itemReward:
+    item: {fileID: 0}
+    quantity: 0

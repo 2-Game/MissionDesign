@@ -1412,7 +1412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6299300708754610075
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1d43ee1259449c0ad05b489e79deee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 5
+  _movementSpeed: 10
   _rotationSpeed: 100
 --- !u!114 &5827981051850980577
 MonoBehaviour:
@@ -1600,10 +1600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179336769c2914d419661f52b3e2408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usableItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  hand: {fileID: 0}
+  items: []
 --- !u!54 &5827981051850980579
 Rigidbody:
   m_ObjectHideFlags: 0
