@@ -30052,7 +30052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &648606904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30094,7 +30094,7 @@ MonoBehaviour:
   reward: {fileID: 1903215898}
   accept: {fileID: 1893907835}
   later: {fileID: 1077125532}
-  welcome: {fileID: 0}
+  welcome: {fileID: 1588110654}
 --- !u!1 &648918360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1673557959651474, guid: c83acbbc98c0a0c418b581b14aee9a27, type: 3}
@@ -72526,7 +72526,7 @@ GameObject:
   - component: {fileID: 1536101449}
   - component: {fileID: 1536101448}
   m_Layer: 5
-  m_Name: AcceptTxt
+  m_Name: welcomeTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72572,7 +72572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I accept
+  m_text: You're welcome
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c761efcb81074d97823019458ab3d24, type: 2}
   m_sharedMaterial: {fileID: 8305988679900343083, guid: 9c761efcb81074d97823019458ab3d24, type: 2}
@@ -75083,7 +75083,7 @@ GameObject:
   - component: {fileID: 1588110655}
   - component: {fileID: 1588110654}
   m_Layer: 5
-  m_Name: AcceptBtn
+  m_Name: YourWelcometBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84200,7 +84200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1773139430
 RectTransform:
   m_ObjectHideFlags: 0
