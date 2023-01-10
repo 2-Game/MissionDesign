@@ -18,7 +18,7 @@ public class QuestNpc : Interactive
     }
 
 
-    public void GiveQuest()
+    public virtual void GiveQuest()
     {
         if (quests.Count > 0 && current < quests.Count)
         {            
