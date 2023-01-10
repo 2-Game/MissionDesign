@@ -6,7 +6,7 @@ public class GGL_3B : QuestNpc
 {
     public ItemData _data;
 
-    /*public override void GiveQuest()
+    public override void GiveQuest()
     {
         if (quests.Count > 0 && current < quests.Count)
         {
@@ -17,12 +17,11 @@ public class GGL_3B : QuestNpc
             {
                 requiredItems.Add(item);
             }
-            Debug.Log("dkekfzoke");
-            if (current == 4)
+            if (current == 3)
             {
-                Inventory.Instance.AddToInventory(_data);
+                Inventory.Instance.AddToInventory(_data,3);
             }
             QuestManager.Instance.TakeQuest(quests[current]);
         }
-    }*/
+    }
 }
