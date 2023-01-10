@@ -11,6 +11,8 @@ public class QuestData : ScriptableObject
     [TextArea] public string description;
     [TextArea] public string thankYouMessage;
 
+    [TextArea] public string reward;
+
     public List<QuestItem> requirements = new List<QuestItem>();
 
     [Header("Rewards")]
