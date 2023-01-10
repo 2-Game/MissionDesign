@@ -15,6 +15,7 @@ MonoBehaviour:
   title: Trouver le couteau
   description: 
   shortDescription: Retrouvez le couteau pour couper le jambon
+  thankYouMessage: 'whs le s '
   requirements:
   - item: {fileID: 11400000, guid: 5741744d4f6c90148996f5fcd1a4b327, type: 2}
     quantity: 0

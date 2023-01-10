@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class QuestGivingUI : MonoBehaviour
@@ -9,7 +10,7 @@ public class QuestGivingUI : MonoBehaviour
     public static QuestGivingUI Instance;
     
     [SerializeField] private GameObject questPanel, thankYouPanel; 
-    [SerializeField] private TextMeshProUGUI title, description, reward;
+    [SerializeField] private TextMeshProUGUI title, description, reward, thankYou;
     [SerializeField] private Button accept, later, welcome;
     private QuestNpc npc;
 
@@ -38,7 +39,8 @@ public class QuestGivingUI : MonoBehaviour
         questPanel.SetActive(true);
         title.text = quest.title;
         description.text = quest.description;
-        
+        thankYou.text = quest.thankYouMessage;
+        accept.Select();
         //Setting up the text components of the UI
     }
 
@@ -61,7 +63,9 @@ public class QuestGivingUI : MonoBehaviour
 
     public void ThankYou()
     {
+
         thankYouPanel.SetActive(true);
         Time.timeScale = 0;
+        welcome.Select();
     }
 }
