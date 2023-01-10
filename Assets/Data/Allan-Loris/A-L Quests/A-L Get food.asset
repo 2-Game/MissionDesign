@@ -16,11 +16,11 @@ MonoBehaviour:
   shortDescription: Get provisions.
   description: Go get some food at the butcher next to the well.
   thankYouMessage: Very well, now off you go.
-  reward: 5 Gold Coins
+  reward: 20 Gold Coins
   requirements:
   - item: {fileID: 11400000, guid: 5e22c4127b9fbd946aa1669a87040245, type: 2}
     quantity: 1
-  moneyReward: 5
+  moneyReward: 20
   itemReward:
     item: {fileID: 0}
     quantity: 0
