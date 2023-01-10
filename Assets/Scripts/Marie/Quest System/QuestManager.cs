@@ -31,7 +31,7 @@ public class QuestManager : MonoBehaviour
         Wallet.Instance.EarnMoney(quest.moneyReward);
         if (quest.itemReward.quantity != 0 || quest.itemReward.item != null)
         {
-            Inventory.Instance.PickupQuestItem(quest.itemReward.item, quest.itemReward.quantity);
+            Inventory.Instance.AddToInventory(quest.itemReward.item, quest.itemReward.quantity);
         }
         questsProgress.Remove(quest);
         if (questVisulization.ContainsKey(quest))

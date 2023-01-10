@@ -35,7 +35,7 @@ public class QuestNpc : Interactive
 
     void ThanksMessage()
     {
-        QuestGivingUI.Instance.ThankYou();
+        QuestGivingUI.Instance.ThankYou(quests[current]);
         FinishQuest();
     }
 

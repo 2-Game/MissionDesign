@@ -66,7 +66,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Pickup()
     {
-        _inventory.PickupQuestItem(_possiblePickable.item);
+        _inventory.AddToInventory(_possiblePickable.item);
         _possiblePickable.gameObject.SetActive(false);
         SetInteraction(InteractionType.None);
         Notify();

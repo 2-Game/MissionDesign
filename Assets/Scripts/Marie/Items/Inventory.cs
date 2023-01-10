@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
             if (items[found].quantity <= 0) items.RemoveAt(found);
         }
     }
-    public void PickupQuestItem(ItemData questItem, int quantity = 1)
+    public void AddToInventory(ItemData questItem, int quantity = 1)
     {
         int found = items.FindIndex(q => q.item.Equals(questItem));
         if (found < 0)

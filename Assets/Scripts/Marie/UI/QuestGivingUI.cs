@@ -14,7 +14,6 @@ public class QuestGivingUI : MonoBehaviour
     [SerializeField] private Button accept, later, welcome;
     private QuestNpc npc;
 
-    private QuestData currentQuest;
     
     void Start()
     {
@@ -34,12 +33,11 @@ public class QuestGivingUI : MonoBehaviour
     public void SetupQuest(QuestData quest, QuestNpc giver)
     {
         Time.timeScale = 0;
-        currentQuest = quest;
         npc = giver;
         questPanel.SetActive(true);
         title.text = quest.title;
         description.text = quest.description;
-        thankYou.text = quest.thankYouMessage;
+        
         accept.Select();
         //Setting up the text components of the UI
     }
@@ -61,9 +59,9 @@ public class QuestGivingUI : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void ThankYou()
+    public void ThankYou(QuestData quest)
     {
-
+        thankYou.text = quest.thankYouMessage;
         thankYouPanel.SetActive(true);
         Time.timeScale = 0;
         welcome.Select();
