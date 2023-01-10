@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: A-L Quest to talk to smith
   m_EditorClassIdentifier: 
   title: A-L Quest blacksmith
-  description: Go to the blacksmith and ask for a sword to fight in the incoming
-    battle.
+  description: Go to the blacksmith and ask for a sword to protect yourself.
   shortDescription: Go to the Blacksmith and get a sword
   requirements: []
   moneyReward: 0
