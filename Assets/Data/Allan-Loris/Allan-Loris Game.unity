@@ -15430,7 +15430,11 @@ PrefabInstance:
       objectReference: {fileID: 1807651028}
     - target: {fileID: 5827981051850980578, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: _movementSpeed
-      value: 8
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827981051850980578, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
+      propertyPath: _rotationSpeed
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_RootOrder
@@ -15482,7 +15486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067731528134505115, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: money
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
