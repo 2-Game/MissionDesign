@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public List<QuestItem> items = new List<QuestItem>();
 
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }
