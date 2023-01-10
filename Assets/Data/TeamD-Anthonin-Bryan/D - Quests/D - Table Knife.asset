@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
+  m_Name: D - Table Knife
+  m_EditorClassIdentifier: 
+  title: Prepare the table
+  description: Hey ! Could you help me ? I would like to make a good meal for tonight
+    but i may run out of time if i continue alone ... I'll need you to prepare my
+    fish and find me a tablecloth for my dining table. Unfortunately i have no tools
+    to prepare the fish, you'll have to find one on your side... I'm counting on
+    you !
+  shortDescription: Dory need your help for her table
+  requirements:
+  - item: {fileID: 11400000, guid: f14a96f5f9eadbd4a8c9bfcf599df94d, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 9b75a20a9a9f0a845b8aec372ee6a6b2, type: 2}
+    quantity: 1
+  moneyReward: 100
+  itemReward:
+    item: {fileID: 0}
+    quantity: 0
