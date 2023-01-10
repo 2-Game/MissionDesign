@@ -29163,8 +29163,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.82
-  m_Center: {x: 0.15, y: 1.15, z: 1.08}
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 1.15, z: 0}
 --- !u!1001 &623962895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30172,6 +30172,7 @@ MonoBehaviour:
   title: {fileID: 1427806335}
   description: {fileID: 1754722406}
   reward: {fileID: 1903215898}
+  thankYou: {fileID: 1924480972}
   accept: {fileID: 1893907835}
   later: {fileID: 1077125532}
   welcome: {fileID: 1588110654}
@@ -103254,7 +103255,7 @@ PrefabInstance:
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 9335e0c69f07f154a98c1d445532639e, type: 2}
+      objectReference: {fileID: 11400000, guid: f2124f2b54bd19b4fab374be3b2da16e, type: 2}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: requiredItems.Array.size
       value: 0
@@ -103294,8 +103295,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.82
-  m_Center: {x: 0.15, y: 1.15, z: 1.08}
+  m_Radius: 1.2
+  m_Center: {x: 0, y: 1.15, z: 0}
 --- !u!4 &3060069657632949224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3822140223263369789, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
