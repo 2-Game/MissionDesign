@@ -13,18 +13,20 @@ MonoBehaviour:
   m_Name: D - Table Knife
   m_EditorClassIdentifier: 
   title: Prepare the table
+  shortDescription: 1 Tablecloth & 1 Sharp Knife
   description: Hey ! Could you help me ? I would like to make a good meal for tonight
     but i may run out of time if i continue alone ... I'll need you to prepare my
     fish and find me a tablecloth for my dining table. Unfortunately i have no tools
     to prepare the fish, you'll have to find one on your side... I'm counting on
     you !
-  shortDescription: Dory need your help for her table
+  thankYouMessage: "Ah, you finally found a tablecloth ! I don\u2019t mind you putting
+    it on the dining table next to us. "
   requirements:
   - item: {fileID: 11400000, guid: f14a96f5f9eadbd4a8c9bfcf599df94d, type: 2}
     quantity: 1
   - item: {fileID: 11400000, guid: 9b75a20a9a9f0a845b8aec372ee6a6b2, type: 2}
     quantity: 1
-  moneyReward: 100
+  moneyReward: 50
   itemReward:
     item: {fileID: 0}
     quantity: 0
