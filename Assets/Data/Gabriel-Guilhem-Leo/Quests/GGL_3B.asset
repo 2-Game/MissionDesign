@@ -16,13 +16,7 @@ MonoBehaviour:
   shortDescription: "Donne objet \xE0 LOREM IPSUM"
   description: Lorem Ipsum
   thankYouMessage: Thanks for saving the village !
-  requirements:
-  - item: {fileID: 0}
-    quantity: 0
-  - item: {fileID: 0}
-    quantity: 0
-  - item: {fileID: 0}
-    quantity: 0
+  requirements: []
   moneyReward: 60
   itemReward:
     item: {fileID: 0}

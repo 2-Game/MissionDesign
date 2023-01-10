@@ -3,8 +3,8 @@ using UnityEngine;
 public class QuestNpc : Interactive
 {
     public List<QuestData> quests = new List<QuestData>();
-    private bool gaveQuest = false;
-    private int current = 0;
+    protected bool gaveQuest = false;
+    protected int current = 0;
 
     public override void OnInteraction()
     {

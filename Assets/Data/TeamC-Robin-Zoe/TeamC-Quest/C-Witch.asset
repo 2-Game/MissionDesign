@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: C-Witch
   m_EditorClassIdentifier: 
-  title: 
+  title: Les 3 champi
   shortDescription: 
   description: 
   thankYouMessage: 
-  requirements: []
-  moneyReward: 0
+  reward: 
+  requirements:
+  - item: {fileID: 11400000, guid: 306c2734d772c134185750c7e095182b, type: 2}
+    quantity: 3
+  moneyReward: 150
   itemReward:
-    item: {fileID: 0}
-    quantity: 0
+    item: {fileID: 11400000, guid: c5f9660e4638ecc47ae45c9a3b03e708, type: 2}
+    quantity: 1
