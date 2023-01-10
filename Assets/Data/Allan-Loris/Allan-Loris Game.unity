@@ -1394,7 +1394,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00050024106, y: 0, z: 0.08922858}
 --- !u!114 &23254914
 MonoBehaviour:
@@ -30060,7 +30060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &648606904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30628,6 +30628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -30708,7 +30712,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00047353818, y: 0, z: 0.08917899}
 --- !u!114 &656545016
 MonoBehaviour:
@@ -34961,6 +34965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Bucket_Water_B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1500792612909318, guid: e1ee1327da8389a4cbeb30003154bfa5, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4111468193720132, guid: e1ee1327da8389a4cbeb30003154bfa5, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -35034,7 +35042,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.74
   m_Center: {x: 0, y: 0.24, z: 0}
 --- !u!64 &751861969
 MeshCollider:
@@ -40535,6 +40543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -40615,7 +40627,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00048879697, y: 0, z: 0.08924765}
 --- !u!114 &870648007
 MonoBehaviour:
@@ -48457,6 +48469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -48537,7 +48553,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00065664365, y: 0, z: 0.08923239}
 --- !u!114 &1037476192
 MonoBehaviour:
@@ -55116,6 +55132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -55196,7 +55216,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00051931455, y: 0, z: 0.08922095}
 --- !u!114 &1184876973
 MonoBehaviour:
@@ -58759,6 +58779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -58839,7 +58863,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00063757016, y: 0, z: 0.089201875}
 --- !u!114 &1249207616
 MonoBehaviour:
@@ -72383,6 +72407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -72463,7 +72491,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00065664365, y: 0, z: 0.08919806}
 --- !u!114 &1535655138
 MonoBehaviour:
@@ -74560,6 +74588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -74640,7 +74672,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.00063375547, y: 0, z: 0.08928198}
 --- !u!114 &1577381312
 MonoBehaviour:
@@ -84212,7 +84244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1773139430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -97928,6 +97960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -98008,7 +98044,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.5
   m_Center: {x: 0.0005498321, y: 0, z: 0.08927054}
 --- !u!114 &2054064741
 MonoBehaviour:
@@ -100339,6 +100375,10 @@ PrefabInstance:
     - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_Name
       value: TB_Env_Trunk_Long_C (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170284270551362, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 4270625599549766, guid: ba817f4070d192b47a8526d39174c70e, type: 3}
       propertyPath: m_RootOrder
