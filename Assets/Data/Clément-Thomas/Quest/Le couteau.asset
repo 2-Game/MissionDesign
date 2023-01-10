@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Le couteau
   m_EditorClassIdentifier: 
   title: Trouver le couteau
-  description: 
   shortDescription: Retrouvez le couteau pour couper le jambon
-  thankYouMessage: 'whs le s '
+  description: "J\u2019ai besoin de couteau pour manger mon jambon, va \xE0 ma forge
+    pour r\xE9cup\xE9rer mon couteau. \r\n"
+  thankYouMessage: "Ah merci pour ton aide. Pour la peine je te passe ma canne \xE0
+    p\xEAche. Comme \xE7a tu pourras t'amuser \xE0 p\xEAcher les poissons autour
+    du lac. \n\nReward 25 gold + canne \xE0 p\xEAche"
   requirements:
   - item: {fileID: 11400000, guid: 5741744d4f6c90148996f5fcd1a4b327, type: 2}
-    quantity: 0
+    quantity: 1
   moneyReward: 100
   itemReward:
-    item: {fileID: 0}
-    quantity: 0
+    item: {fileID: 11400000, guid: 0f150ec2215731241a98a9b4ccb9284a, type: 2}
+    quantity: 1
