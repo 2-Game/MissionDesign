@@ -10,14 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: Druid
+  m_Name: C-Druid
   m_EditorClassIdentifier: 
-  title: 
+  title: Healing Potion
+  shortDescription: Get 3 plants.
   description: 
-  shortDescription: 
-  thankYouMessage: 
-  requirements: []
-  moneyReward: 0
+  thankYouMessage: Thank you for this beautiful plant, here some money for you !
+  requirements:
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  moneyReward: 150
   itemReward:
     item: {fileID: 0}
     quantity: 0
