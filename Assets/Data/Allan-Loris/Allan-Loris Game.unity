@@ -592,6 +592,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 589327684}
     m_Modifications:
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2279,6 +2283,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -7544,6 +7552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 52
@@ -9720,6 +9732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -11558,6 +11574,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -20397,6 +20417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -23706,7 +23730,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &492399895 stripped
 GameObject:
@@ -27216,7 +27240,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &574027742
 PrefabInstance:
@@ -32408,7 +32432,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &694610516
 PrefabInstance:
@@ -40138,6 +40162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -42082,12 +42110,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 35cab031524dff34f8bd62a92e606671, type: 2}
+      objectReference: {fileID: 11400000, guid: cc068de4b999caf4a9f54b58c0fca1b5, type: 2}
     - target: {fileID: 4401000874884499288, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: quests.Array.data[1]
       value: 
@@ -42114,7 +42142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4485911666976370823, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_Name
-      value: Eris 1st Npc (1)
+      value: Ernest Npc (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4485911666976370823, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_TagString
@@ -46566,7 +46594,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &991885971
 PrefabInstance:
@@ -47902,6 +47930,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -50700,7 +50732,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1077125530
 GameObject:
@@ -55381,7 +55413,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1181485248 stripped
 Transform:
@@ -59039,6 +59071,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -69187,6 +69223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -69618,7 +69658,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1480345432 stripped
 GameObject:
@@ -69649,7 +69689,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1480494125
 PrefabInstance:
@@ -71949,6 +71989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -72592,6 +72636,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -74240,7 +74288,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1556431748 stripped
 Transform:
@@ -80401,6 +80449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 50
@@ -81133,7 +81185,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1704364735
 PrefabInstance:
@@ -81282,6 +81334,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -82026,6 +82082,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -84915,6 +84975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TB_Prop_Carrot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -86708,7 +86772,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1830930806 stripped
 GameObject:
@@ -89140,7 +89204,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1883588482 stripped
 GameObject:
@@ -89316,6 +89380,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -90403,7 +90471,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1899237751
 PrefabInstance:
@@ -90484,6 +90552,10 @@ PrefabInstance:
     - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_Name
       value: TB_Prop_Carrot (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418948133421300, guid: e455c9077f35b004293f621b8d592640, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4838481529208364, guid: e455c9077f35b004293f621b8d592640, type: 3}
       propertyPath: m_RootOrder
@@ -90625,7 +90697,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1903215896
 GameObject:
@@ -96754,7 +96826,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2016116102 stripped
 GameObject:
@@ -98750,7 +98822,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2056004282 stripped
 GameObject:
@@ -98781,7 +98853,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2056175655
 PrefabInstance:
@@ -101174,7 +101246,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2107715918
 PrefabInstance:

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: A-L Harvest crops
+  m_Name: A-L Sell Crops
   m_EditorClassIdentifier: 
-  title: Harvest carrots
-  shortDescription: the harvest carrots at the farm
-  description: Would you help me harvest my carrots at my farm.
-  thankYouMessage: Thank you, here is your reward.
+  title: Sold Carrots
+  shortDescription: 
+  description: 
+  thankYouMessage: 
   requirements:
   - item: {fileID: 11400000, guid: 1fa5327ac2e85ef4286bdd9f714d869a, type: 2}
     quantity: 10
-  moneyReward: 7
+  moneyReward: 15
   itemReward:
-    item: {fileID: 11400000, guid: 1fa5327ac2e85ef4286bdd9f714d869a, type: 2}
-    quantity: 10
+    item: {fileID: 0}
+    quantity: 0
