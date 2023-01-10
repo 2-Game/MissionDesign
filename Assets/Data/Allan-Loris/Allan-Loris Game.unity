@@ -30087,11 +30087,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questPanel: {fileID: 1367843738}
+  thankYouPanel: {fileID: 0}
   title: {fileID: 1427806335}
   description: {fileID: 1754722406}
   reward: {fileID: 1903215898}
   accept: {fileID: 1893907835}
   later: {fileID: 1077125532}
+  welcome: {fileID: 0}
 --- !u!1 &648918360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1673557959651474, guid: c83acbbc98c0a0c418b581b14aee9a27, type: 3}
@@ -50383,7 +50385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1077125531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50402,7 +50404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 260.1025, y: -20.697144}
+  m_AnchoredPosition: {x: 260.1025, y: -20.69709}
   m_SizeDelta: {x: 159.795, y: 41.39418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077125532
@@ -88978,8 +88980,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 170, y: -20.697144}
-  m_SizeDelta: {x: 340, y: 41.39418}
+  m_AnchoredPosition: {x: 79.8975, y: -20.69709}
+  m_SizeDelta: {x: 159.795, y: 41.39418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893907835
 MonoBehaviour:
@@ -89492,7 +89494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.20057504}
-  m_AnchoredPosition: {x: 5, y: 5.0000305}
+  m_AnchoredPosition: {x: 5, y: 5}
   m_SizeDelta: {x: -29.999992, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1903215898
@@ -100191,7 +100193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 0.20057504}
-  m_AnchoredPosition: {x: 0, y: 5.0000305}
+  m_AnchoredPosition: {x: 0, y: 5}
   m_SizeDelta: {x: -20, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112979860
