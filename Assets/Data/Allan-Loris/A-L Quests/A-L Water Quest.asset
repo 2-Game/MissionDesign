@@ -19,6 +19,7 @@ MonoBehaviour:
     It''s
     right at the intersection.'
   thankYouMessage: Thank you.
+  reward: 5 gold Coins
   requirements:
   - item: {fileID: 11400000, guid: 5ba93590324477046b3bc9c86b24fbcc, type: 2}
     quantity: 1

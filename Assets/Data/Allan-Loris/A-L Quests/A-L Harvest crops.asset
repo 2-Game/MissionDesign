@@ -16,6 +16,7 @@ MonoBehaviour:
   shortDescription: harvest carrots at the farm
   description: Would you help me harvest the carrots in my farm.
   thankYouMessage: Thank you, here is your reward.
+  reward: 10 Gold Coins
   requirements:
   - item: {fileID: 11400000, guid: 1fa5327ac2e85ef4286bdd9f714d869a, type: 2}
     quantity: 10
