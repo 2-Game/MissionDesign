@@ -17,6 +17,7 @@ MonoBehaviour:
     grows by the pond next to the water wheel. Would you be kind and get two for
     me?
   shortDescription: Fetch 2 purple flowers from the pond
+  thankYouMessage: yo les bg !
   requirements:
   - item: {fileID: 11400000, guid: 78de5404eb190ab40a0815ed256d55d1, type: 2}
     quantity: 2

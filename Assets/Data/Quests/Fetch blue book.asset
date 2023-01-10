@@ -16,6 +16,7 @@ MonoBehaviour:
   description: To achieve this cure, I need the grimoire from the witch down the
     street. She has put it on the table, could you bring it to me?
   shortDescription: Find the Grimoire
+  thankYouMessage: question
   requirements:
   - item: {fileID: 11400000, guid: 11e1b82869eb5ed42bf63fe7ed97b0d4, type: 2}
     quantity: 1
