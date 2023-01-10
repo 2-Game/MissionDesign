@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: Le jambon du marchant
   m_EditorClassIdentifier: 
-  title: 'Trouvez le jambon '
+  title: "Le casse cro\xFBte de midi"
   shortDescription: Retrouvez le jambon perdu du marchant
   description: "Ta pris ton temps pour trouver ce grimoire. Tout ca ma donner faim,
     je voudrai bien un bon jambon frais qui provient de la boucherie du village.
