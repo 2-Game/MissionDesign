@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: C-Peasant
   m_EditorClassIdentifier: 
-  title: 
+  title: "Le bl\xE9"
   shortDescription: 
   description: 
   thankYouMessage: 
-  requirements: []
+  reward: 
+  requirements:
+  - item: {fileID: 11400000, guid: 9d19d4a584a60ee479b9a10f600d00bf, type: 2}
+    quantity: 5
   moneyReward: 0
   itemReward:
-    item: {fileID: 0}
-    quantity: 0
+    item: {fileID: 11400000, guid: 876b9402014a0f44a9f63a11db054449, type: 2}
+    quantity: 1

@@ -16,8 +16,11 @@ MonoBehaviour:
   shortDescription: 
   description: 
   thankYouMessage: 
-  requirements: []
+  reward: 
+  requirements:
+  - item: {fileID: 11400000, guid: 876b9402014a0f44a9f63a11db054449, type: 2}
+    quantity: 1
   moneyReward: 0
   itemReward:
-    item: {fileID: 0}
-    quantity: 0
+    item: {fileID: 11400000, guid: 0aa2af0952117804bbe516370904e811, type: 2}
+    quantity: 1

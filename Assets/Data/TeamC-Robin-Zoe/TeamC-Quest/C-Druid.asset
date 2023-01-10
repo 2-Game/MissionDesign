@@ -16,13 +16,14 @@ MonoBehaviour:
   shortDescription: Get 3 plants.
   description: 
   thankYouMessage: Thank you for this beautiful plant, here some money for you !
+  reward: 
   requirements:
-  - item: {fileID: 0}
-    quantity: 0
-  - item: {fileID: 0}
-    quantity: 0
-  - item: {fileID: 0}
-    quantity: 0
+  - item: {fileID: 11400000, guid: 95a1e465899cd2f47853d17022214c12, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: e85bf0ff18986944dbb92866865a0b19, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 79323b5a373cf2c4680467d53e358688, type: 2}
+    quantity: 1
   moneyReward: 150
   itemReward:
     item: {fileID: 0}
