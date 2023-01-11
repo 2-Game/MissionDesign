@@ -19,7 +19,10 @@ MonoBehaviour:
     2 of them and put the fish on a plate.\r\nGood stuff !\r\nWith this knife you
     can prepare my fish easily !\r\nYou can find my morning crop on the bridge.\r\nWhen
     you\u2019re ready please bring 2 of them and put the fish on a plate.\r\n"
-  thankYouMessage: 
+  thankYouMessage: "Thank you so much for your help !\r\nWith this, the New Year\u2019s
+    Eve dinner will be fantastic !\r\nDon\u2019t hesitate to come by tonight, you\u2019ll
+    be welcome !\r\n"
+  reward: 
   requirements: []
   moneyReward: 50
   itemReward:
