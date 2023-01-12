@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3638980195991404869, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3822140223263369789, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -90,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4485911666976370823, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_Name
-      value: Bertrand
+      value: Bertrand Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4485911666976370823, guid: 737d023d9032a55489052336e0c50d9d, type: 3}
       propertyPath: m_TagString

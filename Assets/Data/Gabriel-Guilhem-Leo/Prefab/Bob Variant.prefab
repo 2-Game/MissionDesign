@@ -56,9 +56,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7458316627836775846, guid: 87524966abb254447b2fbc99c2bc7eb9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7728223846675668068, guid: 87524966abb254447b2fbc99c2bc7eb9, type: 3}
       propertyPath: m_Name
-      value: Bob
+      value: Bob Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
