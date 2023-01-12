@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class GGL_CureNpc : Interactive
 {
-    public ItemData needItem;
+    public Collider interactionCollider;
     public override void OnInteraction()
     {
-        if (Inventory.Instance.IsItemFound(needItem))
+        if (Inventory.Instance.IsItemFound(requiredItems[0].item))
         {
-            Inventory.Instance.RemoveFromInventory(needItem);
+            Inventory.Instance.RemoveFromInventory(requiredItems[0].item);
+            if (onlyOnce) interactionCollider.enabled = false;
         }
     }
 }
