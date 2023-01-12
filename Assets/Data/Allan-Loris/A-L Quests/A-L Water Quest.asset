@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Get Water
   shortDescription: go get water at the well
-  description: 'The water in the river is poisoned, go get some in the well.
+  description: 'The water in the river is poisoned, please go get some in the well.
 
     It''s
     right at the intersection.'
