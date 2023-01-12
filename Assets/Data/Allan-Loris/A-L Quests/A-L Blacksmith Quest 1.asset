@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: A-L Blacksmith Quest 1
   m_EditorClassIdentifier: 
   title: Gather wood
-  shortDescription: Gather 8 wood and 2 steel ingots for the blacksmith.
-  description: 'you must gather wood and steel for the smith so he may run his forge
-    and forge you a blade from the legends, this will cost you 5 Gold.
+  shortDescription: Gather 3 stacks of wood and 2 steel ingots for the blacksmith.
+  description: 'you must gather stacks of wood and steel for the smith so he may
+    run his forge and forge you a blade from the legends, this will cost you 10 Gold.
 
-    The steel
-    ingots are behind you on the table.
+    The
+    steel ingots are behind you on the table.
 
-    The wood is right after the bridge behind
-    you.'
+    The wood is right after the bridge
+    behind you.'
   thankYouMessage: Thank you, here is your sword, go have a chat with Ernesto at
     the board.
   reward: A legendary sword
@@ -30,7 +30,7 @@ MonoBehaviour:
     quantity: 8
   - item: {fileID: 11400000, guid: 44507da062a78c4419d193732a0e9721, type: 2}
     quantity: 2
-  moneyReward: -5
+  moneyReward: -10
   itemReward:
     item: {fileID: 11400000, guid: c2f0185982cf61e47aef28cf84a3adbf, type: 2}
     quantity: 1
