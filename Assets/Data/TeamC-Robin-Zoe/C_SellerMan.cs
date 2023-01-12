@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
-public class C_QuestNPC : QuestNpc
+public class C_SellerMan : Interactive
 {
     public int necessaryGold;
+    public QuestItem soldItem;
 
     public override void OnInteraction()
     {
         if (Wallet.Instance.CanSpend(necessaryGold))
         {
-            base.OnInteraction();
+            Wallet.Instance.SpendMoney(necessaryGold);
+            Inventory.Instance.AddToInventory(soldItem.item, soldItem.quantity);
+            QuestManager.Instance.Notify();
         }
         else
         {
@@ -17,10 +20,4 @@ public class C_QuestNPC : QuestNpc
     }
 
 
-    public override void FinishQuest()
-    {
-        //Dialogue end quest
-        Wallet.Instance.SpendMoney(necessaryGold);
-        base.FinishQuest();
-    }
 }
