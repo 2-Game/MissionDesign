@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: D - Fish
   m_EditorClassIdentifier: 
   title: Fish & Table Preparation
-  shortDescription: Get some fishes
+  shortDescription: Get fishes and prepare the plate
   description: "Good stuff !\r\nWith this knife you can prepare my fish easily !\r\nYou
     can find my morning crop on the bridge.\r\nWhen you\u2019re ready please bring
-    2 of them and put the fish on a plate.\r\nGood stuff !\r\nWith this knife you
-    can prepare my fish easily !\r\nYou can find my morning crop on the bridge.\r\nWhen
-    you\u2019re ready please bring 2 of them and put the fish on a plate.\r\n"
+    me some fishes and put them on a plate, after that put the plate on the table
+    we prepared before.\r\n\n"
   thankYouMessage: "Thank you so much for your help !\r\nWith this, the New Year\u2019s
     Eve dinner will be fantastic !\r\nDon\u2019t hesitate to come by tonight, you\u2019ll
-    be welcome !\r\n"
+    be welcome !\nYou can go help Dante the Farmer, if you have some times left.\r\n"
   reward: 
-  requirements: []
+  requirements:
+  - item: {fileID: 11400000, guid: 2df493d2806caeb4c8e7c3c6e7e24f2f, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 8b403efe2595b2041a99925b062841a0, type: 2}
+    quantity: 2
   moneyReward: 50
   itemReward:
-    item: {fileID: 0}
-    quantity: 0
+    item: {fileID: 11400000, guid: 25c0290e3d4b9ac4ebea8f6ddcf632ba, type: 2}
+    quantity: 1

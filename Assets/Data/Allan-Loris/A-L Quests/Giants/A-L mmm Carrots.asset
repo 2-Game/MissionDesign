@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: mmm Carrots
   shortDescription: 
-  description: 
-  thankYouMessage: 'mmm Carrots '
+  description: Yum-Yum
+  thankYouMessage: mmmmmmmmmm
   reward: Find out for yourself (-)
   requirements:
   - item: {fileID: 11400000, guid: 1fa5327ac2e85ef4286bdd9f714d869a, type: 2}
@@ -23,4 +23,4 @@ MonoBehaviour:
   moneyReward: -10
   itemReward:
     item: {fileID: 11400000, guid: e8f303d72118bef49b411a81553e1246, type: 2}
-    quantity: 8
+    quantity: 3

@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: C-Witch
   m_EditorClassIdentifier: 
   title: Les 3 champi
-  shortDescription: 
-  description: 
-  thankYouMessage: 
-  reward: 
+  shortDescription: Get 3 red mushrooms
+  description: "Bonjour. Oui effectivement je sais bien qui \xE0 cette information.
+    \nJ'accepte de vous l'a donner si vous me ramenez 3 champignons rouges derri\xE8re
+    le puit, apr\xE8s le lac."
+  thankYouMessage: "Merci bien. J'avais vraiment besoin de ces champignons. \nJe
+    peux vous dire que le paysan a exactement l'information que vous recherchez. "
+  reward: "Qui \xE0 l'information."
   requirements:
   - item: {fileID: 11400000, guid: 306c2734d772c134185750c7e095182b, type: 2}
     quantity: 3

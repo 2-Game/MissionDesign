@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Harvest carrots
   shortDescription: harvest carrots at the farm
-  description: Help me harvest the carrots in my farm please ?
+  description: Please harvest 10 carrots in my farm.
   thankYouMessage: Thank you, here is your reward, why don't you go see the smith
     Edward over there, he might need some help.
   reward: 10 Gold Coins

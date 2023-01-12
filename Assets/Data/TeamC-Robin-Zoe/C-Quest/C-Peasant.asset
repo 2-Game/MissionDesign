@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: C-Peasant
   m_EditorClassIdentifier: 
   title: "Le bl\xE9"
-  shortDescription: 
-  description: 
-  thankYouMessage: 
-  reward: 
+  shortDescription: Get 5 Wheats.
+  description: "Bonjour ...... Oui c'est bel et bien moi qui poss\xE8de l'ingredient
+    secret \xE9tant donn\xE9 que c'est moi qui ai cr\xE9\xE9 cette recette.\n\nSi
+    tu souhaite avoir mon pr\xE9cieux ingr\xE9dient secret, va me chercher 5 bl\xE9s.\nLe
+    fermier pourra certainement t'aider."
+  thankYouMessage: "Ha ! Je vais enfin pouvoir faire mes petits pains !\nOh oui j'oubliais
+    ! Tiens voici mon ingr\xE9dient ! "
+  reward: "L'ingr\xE9dient secret"
   requirements:
   - item: {fileID: 11400000, guid: 9d19d4a584a60ee479b9a10f600d00bf, type: 2}
     quantity: 5
