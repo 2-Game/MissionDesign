@@ -42,7 +42,7 @@ public class PlayerInteraction : MonoBehaviour
                 if (!isPickingUp)
                 {
                     isPickingUp = true;
-                    Invoke("Pickup", 2f);
+                    Invoke("Pickup", 1f);
                 }
                 
             }
