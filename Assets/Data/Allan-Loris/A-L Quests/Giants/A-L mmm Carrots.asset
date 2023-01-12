@@ -15,7 +15,7 @@ MonoBehaviour:
   title: mmm Carrots
   shortDescription: 
   description: Yum-Yum
-  thankYouMessage: mmm Carrots
+  thankYouMessage: mmmmmmmmmm
   reward: Find out for yourself (-)
   requirements:
   - item: {fileID: 11400000, guid: 1fa5327ac2e85ef4286bdd9f714d869a, type: 2}
