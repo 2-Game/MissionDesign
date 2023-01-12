@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(menuName = "Quest System/Quest")]
+[CreateAssetMenu(menuName = "Quest System/C_Quest")]
 public class C_QuestData : ScriptableObject
 {
     public string title, shortDescription;
