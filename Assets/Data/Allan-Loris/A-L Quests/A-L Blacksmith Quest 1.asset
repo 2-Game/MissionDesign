@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: A-L Blacksmith Quest 1
   m_EditorClassIdentifier: 
-  title: Gather wood
-  shortDescription: Gather 3 stacks of wood and 2 steel ingots for the blacksmith.
+  title: Gather wood & steel
+  shortDescription: 3 stacks of wood & 2 steel ingots
   description: 'you must gather stacks of wood and steel for the smith so he may
     run his forge and forge you a blade from the legends, this will cost you 10 Gold.
 
