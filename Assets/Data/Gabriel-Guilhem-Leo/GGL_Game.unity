@@ -39070,6 +39070,10 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 863354752}
+  thankYouPanel: {fileID: 1368068031}
+  thankYou: {fileID: 1176343879}
+  welcome: {fileID: 2130252186}
+  thankYouMessage: Merci !
 --- !u!1001 &863483001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65616,6 +65620,10 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 1425993675}
+  thankYouPanel: {fileID: 1368068031}
+  thankYou: {fileID: 1176343879}
+  welcome: {fileID: 2130252186}
+  thankYouMessage: Merci !
 --- !u!135 &1425993675 stripped
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 4632254416664773984, guid: 87524966abb254447b2fbc99c2bc7eb9, type: 3}
@@ -76235,6 +76243,10 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 1654723648}
+  thankYouPanel: {fileID: 1368068031}
+  thankYou: {fileID: 1176343879}
+  welcome: {fileID: 2130252186}
+  thankYouMessage: Merci !
 --- !u!1001 &1655524571
 PrefabInstance:
   m_ObjectHideFlags: 0
