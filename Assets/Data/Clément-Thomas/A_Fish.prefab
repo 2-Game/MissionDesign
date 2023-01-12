@@ -207,7 +207,6 @@ GameObject:
   - component: {fileID: 6153958828953158644}
   - component: {fileID: -6568124384002558540}
   - component: {fileID: -1049045831421236610}
-  - component: {fileID: 6256575552515263702}
   m_Layer: 0
   m_Name: A_Fish
   m_TagString: Pickable
@@ -231,7 +230,7 @@ Transform:
   - {fileID: 2863154168852492012}
   - {fileID: 6671006874405660023}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &-6568124384002558540
 SphereCollider:
@@ -259,26 +258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 28b910eaa80a4f548be567c781879402, type: 2}
---- !u!95 &6256575552515263702
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6761524904484462429}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 30c12219bb280b84d8650da93bc7a9fb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7360175083429394571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,15 +300,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5046205826225992908, guid: de44fba227ab15540b98446dfe071fb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -180
+      value: -66.581
       objectReference: {fileID: 0}
     - target: {fileID: 5046205826225992908, guid: de44fba227ab15540b98446dfe071fb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: -163.074
       objectReference: {fileID: 0}
     - target: {fileID: 5046205826225992908, guid: de44fba227ab15540b98446dfe071fb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180
+      value: -93.41
       objectReference: {fileID: 0}
     - target: {fileID: 5047684953693398856, guid: de44fba227ab15540b98446dfe071fb0, type: 3}
       propertyPath: m_Name

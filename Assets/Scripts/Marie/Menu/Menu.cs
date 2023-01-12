@@ -8,16 +8,6 @@ public class Menu : MonoBehaviour
     public GameObject spotLight;
     public LayerMask selectable;
     public Transform position1, position2;
-
-    private void Start()
-    {
-        if (PlayerPrefs.HasKey("Character"))
-        {
-            selectedCharacter = PlayerPrefs.GetInt("Character") == 0;
-        }
-        spotLight.transform.position = selectedCharacter ? position1.position : position2.position;
-    }
-
     public void SwitchCharacter()
     {
         selectedCharacter = !selectedCharacter;

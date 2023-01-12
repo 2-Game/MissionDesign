@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: GGL_3B
   m_EditorClassIdentifier: 
-  title: Curing the village
-  shortDescription: Give 3 cures to 3 villagers.
-  description: 'Perfect ! The cure works and can heal the villagers. Quick ! Bring
-    these three potions to the sick villagers : Bermuda the wizard farmer, Bob the
-    bard and Bertrand the pit dweller.'
-  thankYouMessage: 'Thank you so much adventurer. You saved the village ! '
-  reward: 
+  title: Bernardo Getrudo Gaelum
+  shortDescription: "Donne objet \xE0 LOREM IPSUM"
+  description: Lorem Ipsum
+  thankYouMessage: Thanks for saving the village !
   requirements: []
-  moneyReward: 50
+  moneyReward: 60
   itemReward:
     item: {fileID: 0}
     quantity: 0
