@@ -16,7 +16,7 @@ MonoBehaviour:
   shortDescription: Give a cure to 3 villagers.
   description: 'Perfect ! The cure works and can heal the villagers. Quick ! Bring
     these three potions to the sick villagers : Bermuda the wizard farmer, Bob the
-    bard and Bertrand the pit digger.'
+    pit digger and Bertrand the bard.'
   thankYouMessage: 'Thank you so much adventurer. You saved the village ! '
   reward: 50 gold coins
   requirements: []
