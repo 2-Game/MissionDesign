@@ -22,7 +22,7 @@ public class C_SpawnAxe : MonoBehaviour
 
     void CheckAxe()
     {
-        if (Inventory.Instance.HasEvery(axeItem)
+        if (Inventory.Instance.HasEvery(axeItem))
         {
             Instantiate(axe, womanHand.transform);
             Instantiate(axe, manHand.transform);

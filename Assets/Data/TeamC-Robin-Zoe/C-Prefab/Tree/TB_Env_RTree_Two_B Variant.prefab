@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1363814033929038, guid: 99599cb109226124db1a352039df7095, type: 3}
       propertyPath: m_Name
-      value: TB_Env_RTree_Two_B
+      value: TB_Env_RTree_Two_B Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4483154779166446, guid: 99599cb109226124db1a352039df7095, type: 3}
       propertyPath: m_RootOrder
@@ -59,3 +59,26 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 99599cb109226124db1a352039df7095, type: 3}
+--- !u!1 &7127028055023099896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1363814033929038, guid: 99599cb109226124db1a352039df7095, type: 3}
+  m_PrefabInstance: {fileID: 7128232979862465718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2191402737397268934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7127028055023099896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893b13c5033874188b8a664211b596ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 1
+  onlyOnce: 0
+  requiredItems:
+  - item: {fileID: 11400000, guid: 15bdc9ecead685c4e92725072705042b, type: 2}
+    quantity: 1
+  waitForObject: 1
