@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Healing Potion
   shortDescription: Get 3 plants.
-  description: 
-  thankYouMessage: Thank you for this beautiful plant, here some money for you !
-  reward: 
+  description: "Bonjour Aventuri\xE8re, pourrais-tu m'aider \xE0 r\xE9colter les
+    ingr\xE9dients n\xE9c\xE9ssaire \xE0 la cr\xE9ation de potions ? \nIl me faurait
+    une belladone, une aloe vera et une myosotis. Elles se trouvent dans un petit
+    champs sauvage, le long de la rivi\xE8re, \xE0 droite du pont."
+  thankYouMessage: "Merci pour ces plantes d'une grande qualit\xE9 m\xE9dicinal.\nTiens
+    pour toi, quelques pi\xE8ces d'or."
+  reward: 150 gold pieces
   requirements:
   - item: {fileID: 11400000, guid: 95a1e465899cd2f47853d17022214c12, type: 2}
     quantity: 1

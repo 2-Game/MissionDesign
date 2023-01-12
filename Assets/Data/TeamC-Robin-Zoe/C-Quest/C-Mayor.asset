@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: C-Mayor
   m_EditorClassIdentifier: 
   title: Info Recette
-  shortDescription: 
-  description: 
-  thankYouMessage: 
-  reward: 
+  shortDescription: Get the secret ingredient.
+  description: "Oh jeune aventuri\xE8re ! Tu dois m'aider.\nVoila maintenant 10 ans
+    qu'un clafouti exceptionnel est produit au village et j'aimerais savoir quel
+    est l'ingredient secret de ce d\xE9lice. Trouve moi ceci et je saurait te r\xE9compenser
+    ! \nVa voir la sorci\xE8re, il me semble qu'elle a des infos \xE0 propos de tout
+    \xE7a."
+  thankYouMessage: "COMMENT ????!! TU AS REUSSI ?\nComme promis, voici une r\xE9compense
+    \xE0 la hauteur de cette information, voici les cl\xE9s de la ville !"
+  reward: A "special" things.
   requirements:
   - item: {fileID: 11400000, guid: 876b9402014a0f44a9f63a11db054449, type: 2}
     quantity: 1
