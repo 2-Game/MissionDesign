@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613e4fd3f6faf417690fed546a2c211c, type: 3}
   m_Name: A-L Quest Water 1
   m_EditorClassIdentifier: 
-  label: A-L water bucket
+  label: water bucket
   icon: {fileID: 0}
