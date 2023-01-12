@@ -1408,11 +1408,11 @@ GameObject:
   - component: {fileID: 8034717958103794451}
   m_Layer: 0
   m_Name: Woman
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6299300708754610075
 Transform:
   m_ObjectHideFlags: 0
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 10
-  _rotationSpeed: 100
+  _rotationSpeed: 140
 --- !u!114 &5827981051850980577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,7 +1574,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 5827981052822675476}
 --- !u!114 &9067731528134505115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fc33970079b49a2a3548cb603efacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 200
+  money: 0
 --- !u!114 &4182090956826818636
 MonoBehaviour:
   m_ObjectHideFlags: 0
