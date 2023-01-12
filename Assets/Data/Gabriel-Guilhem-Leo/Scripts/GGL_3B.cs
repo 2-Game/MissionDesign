@@ -6,6 +6,7 @@ public class GGL_3B : QuestNpc
 {
     public ItemData _data;
     public Collider npc,npc2,npc3;
+    public Collider bofor;
 
     public override void GiveQuest()
     {
@@ -26,6 +27,27 @@ public class GGL_3B : QuestNpc
                 npc3.enabled = true;
             }
             QuestManager.Instance.TakeQuest(quests[current]);
+        }
+    }
+
+    public override void FinishQuest()
+    {
+        //Dialogue end quest
+        foreach (QuestItem required in quests[current].requirements)
+        {
+            Inventory.Instance.RemoveFromInventory(required.item, required.quantity);
+        }
+        QuestManager.Instance.CompleteQuest(quests[current]);
+
+        waitForObject = false;
+        requiredItems.Clear();
+        current++;
+        gaveQuest = false;
+
+        if (current == quests.Count)
+        {
+            Destroy(this);
+            bofor.enabled = true;
         }
     }
 }

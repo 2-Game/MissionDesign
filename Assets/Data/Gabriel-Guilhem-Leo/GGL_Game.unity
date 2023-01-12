@@ -39644,6 +39644,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 70181e04543a138498910fe80448d271, type: 3}
+--- !u!1 &875315350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8497807643916909947, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
+  m_PrefabInstance: {fileID: 2350109621426855990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &875842467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60631,6 +60636,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 636760025}
     m_Modifications:
+    - target: {fileID: 4955854093726700507, guid: dc10e59b6c6d03c40b7436dbf96bf4ed, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8358342397228449767, guid: dc10e59b6c6d03c40b7436dbf96bf4ed, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -60691,6 +60700,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8358342397228449767, guid: dc10e59b6c6d03c40b7436dbf96bf4ed, type: 3}
   m_PrefabInstance: {fileID: 1311808375}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1311808377 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 4955854093726700507, guid: dc10e59b6c6d03c40b7436dbf96bf4ed, type: 3}
+  m_PrefabInstance: {fileID: 1311808375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1311808378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8697889645697115485, guid: dc10e59b6c6d03c40b7436dbf96bf4ed, type: 3}
+  m_PrefabInstance: {fileID: 1311808375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1311808379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311808378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ae1be3e885dcd47b54cdef6126e0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 6
+  onlyOnce: 0
+  requiredItems: []
+  waitForObject: 0
+  quests:
+  - {fileID: 11400000, guid: 3e8679f99f113fb45ac98f00f1ff5367, type: 2}
+  _ingot: {fileID: 11400000, guid: 2fc0830e75fb9264eb95440cd3aa43be, type: 2}
+  _anvilCollider: {fileID: 2350109621426855993}
 --- !u!1 &1312133271 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1660082155953788, guid: 88da7eed78bf69343a5363cac6c0c220, type: 3}
@@ -100662,6 +100701,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1190856827}
     m_Modifications:
+    - target: {fileID: 952331016001782935, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 952331016001782935, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
+      propertyPath: m_Center.z
+      value: -0.97
+      objectReference: {fileID: 0}
     - target: {fileID: 8495667248966771935, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -100718,6 +100765,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8495667248966771935, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
   m_PrefabInstance: {fileID: 2350109621426855990}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &2350109621426855993 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 952331016001782935, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
+  m_PrefabInstance: {fileID: 2350109621426855990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2350109621426855996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875315350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d9f9c44c9f35d49a88a8250bddd41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 1
+  onlyOnce: 1
+  requiredItems:
+  - item: {fileID: 11400000, guid: 2fc0830e75fb9264eb95440cd3aa43be, type: 2}
+    quantity: 1
+  waitForObject: 0
+  _blade: {fileID: 11400000, guid: a76cfc092797ba84bbbb84d83a3c9457, type: 2}
+  _anvilCollider: {fileID: 2350109621426855993}
 --- !u!1001 &3060069657632949221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100874,6 +100946,7 @@ MonoBehaviour:
   npc: {fileID: 1425993675}
   npc2: {fileID: 1654723648}
   npc3: {fileID: 863354752}
+  bofor: {fileID: 1311808377}
 --- !u!1001 &4541697550297620860
 PrefabInstance:
   m_ObjectHideFlags: 0
