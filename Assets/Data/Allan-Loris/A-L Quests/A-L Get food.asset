@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Fetch Food
   shortDescription: Get provisions.
-  description: Go get some food at the butcher next to the well.
+  description: Go get some food at the butcher next to the pond.
   thankYouMessage: Very well, now off you go.
   reward: 20 Gold Coins
   requirements:
