@@ -39167,6 +39167,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6721903964433056151, guid: 98885bb33589b2b4da6c02744e551ff0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8520872580835776659, guid: 98885bb33589b2b4da6c02744e551ff0, type: 3}
       propertyPath: m_Name
       value: Bermuda Variant
@@ -39223,7 +39227,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8520872580835776659, guid: 98885bb33589b2b4da6c02744e551ff0, type: 3}
   m_PrefabInstance: {fileID: 863354749}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &863354751
+--- !u!135 &863354752 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 6721903964433056151, guid: 98885bb33589b2b4da6c02744e551ff0, type: 3}
+  m_PrefabInstance: {fileID: 863354749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &863354758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39236,10 +39245,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 6
-  onlyOnce: 0
-  requiredItems: []
+  onlyOnce: 1
+  requiredItems:
+  - item: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}
+    quantity: 1
   waitForObject: 0
-  needItem: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}
+  interactionCollider: {fileID: 863354752}
 --- !u!1001 &863483001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49518,7 +49529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 260.1025, y: -20.69709}
+  m_AnchoredPosition: {x: 260.1025, y: -20.697144}
   m_SizeDelta: {x: 159.795, y: 41.39418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077125532
@@ -53831,7 +53842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.23177558}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -5}
+  m_AnchoredPosition: {x: 0, y: -4.999954}
   m_SizeDelta: {x: -40, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176343879
@@ -65659,6 +65670,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4632254416664773984, guid: 87524966abb254447b2fbc99c2bc7eb9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6920900165179934430, guid: 87524966abb254447b2fbc99c2bc7eb9, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -65728,10 +65743,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 6
-  onlyOnce: 0
-  requiredItems: []
+  onlyOnce: 1
+  requiredItems:
+  - item: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}
+    quantity: 1
   waitForObject: 0
-  needItem: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}
+  interactionCollider: {fileID: 1425993675}
+--- !u!135 &1425993675 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 4632254416664773984, guid: 87524966abb254447b2fbc99c2bc7eb9, type: 3}
+  m_PrefabInstance: {fileID: 1425993672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1426106114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76248,6 +76270,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6374519222629818388, guid: 66871cc41f1c94247bf042247773b2d7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8322633456021960976, guid: 66871cc41f1c94247bf042247773b2d7, type: 3}
       propertyPath: m_Name
       value: Bob Variant
@@ -76304,7 +76330,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8322633456021960976, guid: 66871cc41f1c94247bf042247773b2d7, type: 3}
   m_PrefabInstance: {fileID: 1654723645}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1654723647
+--- !u!135 &1654723648 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 6374519222629818388, guid: 66871cc41f1c94247bf042247773b2d7, type: 3}
+  m_PrefabInstance: {fileID: 1654723645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1654723654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76317,10 +76348,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 6
-  onlyOnce: 0
-  requiredItems: []
+  onlyOnce: 1
+  requiredItems:
+  - item: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}
+    quantity: 1
   waitForObject: 0
-  needItem: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}
+  interactionCollider: {fileID: 1654723648}
 --- !u!1001 &1655524571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87632,7 +87665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 170, y: -20.69709}
+  m_AnchoredPosition: {x: 170, y: -20.697144}
   m_SizeDelta: {x: 340, y: 41.39418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893907835
@@ -88146,7 +88179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.20057504}
-  m_AnchoredPosition: {x: 5, y: 5.000244}
+  m_AnchoredPosition: {x: 5, y: 5}
   m_SizeDelta: {x: -29.999992, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1903215898
@@ -98750,7 +98783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 0.20057504}
-  m_AnchoredPosition: {x: 0, y: 5.000244}
+  m_AnchoredPosition: {x: 0, y: 5}
   m_SizeDelta: {x: -20, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112979860
@@ -99711,7 +99744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.23177558}
-  m_AnchoredPosition: {x: 0, y: 10}
+  m_AnchoredPosition: {x: 0, y: 10.000015}
   m_SizeDelta: {x: -40, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2130252186
@@ -100737,3 +100770,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66a11d3bc4565294fa3a52fd3c6c1b6a, type: 2}
   - {fileID: 11400000, guid: 0988afd94d6376d43b883d2e5ff81ec4, type: 2}
   _data: {fileID: 11400000, guid: adb2b0c694db2c643ad475fd9af5236c, type: 2}
+  npc: {fileID: 1425993675}
+  npc2: {fileID: 1654723648}
+  npc3: {fileID: 863354752}
