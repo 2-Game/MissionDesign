@@ -9,6 +9,7 @@ public class QuestNpc : Interactive
     public override void OnInteraction()
     {
         transform.LookAt(Inventory.Instance.transform.position);
+        Inventory.Instance.transform.LookAt(transform.position);
         if (gaveQuest) ThanksMessage();
         else if (quests.Count > 0 && current < quests.Count)
         {
