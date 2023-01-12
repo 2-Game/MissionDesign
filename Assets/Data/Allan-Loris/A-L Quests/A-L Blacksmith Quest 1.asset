@@ -27,7 +27,7 @@ MonoBehaviour:
   reward: A legendary sword
   requirements:
   - item: {fileID: 11400000, guid: e8f303d72118bef49b411a81553e1246, type: 2}
-    quantity: 8
+    quantity: 3
   - item: {fileID: 11400000, guid: 44507da062a78c4419d193732a0e9721, type: 2}
     quantity: 2
   moneyReward: -10
