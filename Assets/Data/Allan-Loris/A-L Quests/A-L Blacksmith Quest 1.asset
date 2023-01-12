@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Gather wood & steel
   shortDescription: 3 stacks of wood & 2 steel ingots
-  description: 'you must gather stacks of wood and steel for the smith so he may
-    run his forge and forge you a blade from the legends, this will cost you 10 Gold.
+  description: 'you must gather 3 stacks of wood and 2 steel ingot for the smith
+    so he may run his forge and forge you a blade from the legends, this will cost
+    you 10 Gold.
 
-    The
-    steel ingots are behind you on the table.
+    The steel ingots are behind you on the table.
 
-    The wood is right after the bridge
-    behind you.'
+    The wood
+    is right after the bridge behind you.'
   thankYouMessage: Thank you, here is your sword, go have a chat with Ernesto at
     the board.
   reward: A legendary sword

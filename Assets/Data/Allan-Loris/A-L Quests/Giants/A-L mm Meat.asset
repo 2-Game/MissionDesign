@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: mmm Meat
   shortDescription: 
-  description: 
+  description: Yummy
   thankYouMessage: mmmmmmmmmm
   reward: Find out for yourself (+)
   requirements:
   - item: {fileID: 11400000, guid: 5e22c4127b9fbd946aa1669a87040245, type: 2}
-    quantity: 1
+    quantity: 2
   moneyReward: 10
   itemReward:
     item: {fileID: 11400000, guid: 5ba93590324477046b3bc9c86b24fbcc, type: 2}
