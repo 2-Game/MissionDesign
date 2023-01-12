@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GGL_Handle
   m_EditorClassIdentifier: 
   title: A legendary sword (2)
-  shortDescription: 
+  shortDescription: Find a chest in front of a house in the other side of the river.
   description: Now that the blade has been made we need a fine and balanced handle
     for the sword. Fortunately, the handle has already been made and is in a chest
     in front of a house on the other side of the river. Use the bridge and then go
