@@ -12,18 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: Soupe au champi
   m_EditorClassIdentifier: 
-  title: Soupe au champignon
-  shortDescription: "Trouver les champignons pour le p\xEAcheur"
-  description: "J\u2019ai besoin de 2 champignons marron et 2 champignon rouge. Mais
-    je ne sais pas pourquoi les champignons autour du mare sont ultra bons.\u201D
-    \r\n"
-  thankYouMessage: 'Merci beacoup ! On va bien manger !
-
-
-    (reward 100 gold +
-    soupe au champignons)
-
-'
+  title: Mushroom soup
+  shortDescription: Find the mushrooms for the fisherman
+  description: "I need 2 brown and 2 red mushrooms. I dont no why, but mushrooms
+    around the lake are so tasty !\n Come back to see me after that.  \r\n"
+  thankYouMessage: "Thank you for this, I\u2019ll see you tonight to eat my special
+    dish.\n\n(reward 100 gold + soupe au champignons)\n"
+  reward: 100 golds and a good meal !
   requirements:
   - item: {fileID: 11400000, guid: c32a5548e3814aa47a43f015d4b2b98d, type: 2}
     quantity: 2

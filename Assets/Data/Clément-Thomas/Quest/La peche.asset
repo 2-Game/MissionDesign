@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: La peche
   m_EditorClassIdentifier: 
-  title: Un ami pour la vie.
-  shortDescription: "P\xEAcher les 4 poissons"
-  description: "\u201CHey j\u2019aurais besoin de ton aide, j\u2019arrive pas \xE0
-    trouver des poissons, petit indice les poison aime bien rester \xE0 c\xF4t\xE9
-    du pont et tu ponton. Si tu arrives \xE0 p\xEAcher 4 poissons, reviens me voir.\u201D\r\n"
-  thankYouMessage: "HOOO ta p\xEAcher des gros poissons, pour te remercier je te
-    passe 100 gold et je t\u2019invite \xE0 manger chez moi. Je vais te faire ma
-    sp\xE9cialit\xE9 mais pour cela j\u2019ai besoin de\u2026 "
+  title: A friend for life
+  shortDescription: Catch 4 fish
+  description: 'Hey I need your help, I can''t find any fish, I have a special tips
+    for you. Fishes are more often next to the fishing pontoon and the bridge. If
+    you can catch 4 fish, come back to see me.
+
+'
+  thankYouMessage: "HOO you catch 4 big fish. To thank you I give you 100 gold and
+    I  invite you to eat at my place. I\u2019m going to make my favorite dish but
+    \u2026"
+  reward: 100 gold + new quest !
   requirements:
   - item: {fileID: 11400000, guid: 28b910eaa80a4f548be567c781879402, type: 2}
     quantity: 4

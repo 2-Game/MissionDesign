@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: Le jambon du marchant
   m_EditorClassIdentifier: 
-  title: "Le casse cro\xFBte de midi"
-  shortDescription: Retrouvez le jambon perdu du marchant
-  description: "Ta pris ton temps pour trouver ce grimoire. Tout ca ma donner faim,
-    je voudrai bien un bon jambon frais qui provient de la boucherie du village.
-    Tu peux me l\u2019apporter s\u2019il te plait.   "
-  thankYouMessage: "A merci pour ton aide, mais\u2026"
+  title: Lunch break
+  shortDescription: Find the lost ham at the butchery
+  description: You take your time to find this grimoire. I am hungry, I want to eat
+    good ham frome to village butcher. Can you bring it to me please
+  thankYouMessage: "Thanks for your help but \u2026"
+  reward: New quest !
   requirements:
   - item: {fileID: 11400000, guid: 27a832dda6c06f64fbebed6830607a62, type: 2}
     quantity: 1
