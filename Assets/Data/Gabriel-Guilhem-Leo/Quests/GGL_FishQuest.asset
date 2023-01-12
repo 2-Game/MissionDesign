@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Fishy tester
   shortDescription: Fetch a fish near the river.
   description: Great ! Now that I have the potion ready, I need to test it. There
-    might be a "small" probability that I failed the cure. So testing on a Human
+    might be a "small" probability that I failed this cure. So testing it on a Human
     is not an option. Could you please find a fish ? There might be some near the
     river on the pontoon.
   thankYouMessage: Thank you adventurer ! Now, let's hope this cure works and that
