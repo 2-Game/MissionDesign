@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: C-Farmer
   m_EditorClassIdentifier: 
   title: Les 3 bois
-  shortDescription: 
-  description: 
-  thankYouMessage: 
-  reward: 
+  shortDescription: Get 3 woods
+  description: "Bien le bonjour, j'aimerais bien vous donner ce bl\xE9s, mais rendez
+    moi d'abord un service. Allez me chercher 3 buches d'arbre rond dans la f\xF4ret
+    apr\xE8s le pont."
+  thankYouMessage: "Merci bien ! Tenez, voici votre bl\xE9 !"
+  reward: 3 Log
   requirements:
   - item: {fileID: 11400000, guid: 96970eef1db323b4e83ab09a7775d74b, type: 2}
     quantity: 3

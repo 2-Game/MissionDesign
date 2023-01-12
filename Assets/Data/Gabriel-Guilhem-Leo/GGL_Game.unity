@@ -33420,6 +33420,22 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 931391473}
     m_Modifications:
+    - target: {fileID: -1601579266975719997, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+      propertyPath: m_Radius
+      value: 0.8663602
+      objectReference: {fileID: 0}
+    - target: {fileID: -1601579266975719997, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00000060025724
+      objectReference: {fileID: 0}
+    - target: {fileID: -1601579266975719997, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+      propertyPath: m_Center.y
+      value: 0.34693575
+      objectReference: {fileID: 0}
+    - target: {fileID: -1601579266975719997, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+      propertyPath: m_Center.z
+      value: -0.82448876
+      objectReference: {fileID: 0}
     - target: {fileID: 4877310813080136228, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
       propertyPath: m_Name
       value: GGL_Chest
@@ -39070,10 +39086,11 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 863354752}
+  _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
   thankYouPanel: {fileID: 1368068031}
   thankYou: {fileID: 1176343879}
   welcome: {fileID: 2130252186}
-  thankYouMessage: Merci !
+  thankYouMessage: Thank you young lad.
 --- !u!1001 &863483001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42602,6 +42619,7 @@ Transform:
   - {fileID: 1653836306}
   - {fileID: 1227356396}
   - {fileID: 745051399}
+  - {fileID: 4541697550297620861}
   m_Father: {fileID: 1658137870}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65620,10 +65638,11 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 1425993675}
+  _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
   thankYouPanel: {fileID: 1368068031}
   thankYou: {fileID: 1176343879}
   welcome: {fileID: 2130252186}
-  thankYouMessage: Merci !
+  thankYouMessage: Thank you sir !
 --- !u!135 &1425993675 stripped
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 4632254416664773984, guid: 87524966abb254447b2fbc99c2bc7eb9, type: 3}
@@ -76243,10 +76262,11 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 1654723648}
+  _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
   thankYouPanel: {fileID: 1368068031}
   thankYou: {fileID: 1176343879}
   welcome: {fileID: 2130252186}
-  thankYouMessage: Merci !
+  thankYouMessage: Finally ! Thank you adventurer !
 --- !u!1001 &1655524571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100854,3 +100874,71 @@ MonoBehaviour:
   npc: {fileID: 1425993675}
   npc2: {fileID: 1654723648}
   npc3: {fileID: 863354752}
+--- !u!1001 &4541697550297620860
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 931391473}
+    m_Modifications:
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.703003
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8529968
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.557
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4381595
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8988973
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 128.027
+      objectReference: {fileID: 0}
+    - target: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58962371344936139, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_Name
+      value: GGL_ChestOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 58962371344936139, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+--- !u!4 &4541697550297620861 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+  m_PrefabInstance: {fileID: 4541697550297620860}
+  m_PrefabAsset: {fileID: 0}

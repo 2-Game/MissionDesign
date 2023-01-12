@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1063851703219706, guid: 107b965b3762ed34d895147b04b4a61a, type: 3}
       propertyPath: m_Name
-      value: TB_Prop_Chest_A
+      value: GGL_Chest
       objectReference: {fileID: 0}
     - target: {fileID: 4943613905623436, guid: 107b965b3762ed34d895147b04b4a61a, type: 3}
       propertyPath: m_RootOrder
@@ -59,3 +59,21 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 107b965b3762ed34d895147b04b4a61a, type: 3}
+--- !u!1 &4877310813080136228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1063851703219706, guid: 107b965b3762ed34d895147b04b4a61a, type: 3}
+  m_PrefabInstance: {fileID: 4876404191742730206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &-1601579266975719997
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877310813080136228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.58984965
+  m_Center: {x: 0.000000057488, y: 0.3469345, z: -0.08571708}

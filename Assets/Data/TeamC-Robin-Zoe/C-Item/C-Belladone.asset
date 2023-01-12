@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613e4fd3f6faf417690fed546a2c211c, type: 3}
   m_Name: C-Belladone
   m_EditorClassIdentifier: 
-  label: Big Plant
+  label: Belladone
   icon: {fileID: 0}
