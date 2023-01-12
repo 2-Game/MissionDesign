@@ -10,6 +10,8 @@ public class PlayerInteraction : MonoBehaviour
     private Pickable _possiblePickable;
     private Interactive _possibleInteractive;
 
+
+    private bool isPickingUp = false;
     private void Start()
     {
         if (Instance) Destroy(this);
@@ -37,7 +39,11 @@ public class PlayerInteraction : MonoBehaviour
             _anim.PlayAnimation(_possibleInteraction);
             if (_possibleInteraction == InteractionType.Pickup && _possiblePickable && IsPickableNeeded())
             {
-                Invoke("Pickup", 2f);
+                if (!isPickingUp)
+                {
+                    isPickingUp = true;
+                    Invoke("Pickup", 2f);
+                }
                 
             }
             else if (_possibleInteraction != InteractionType.Pickup)
@@ -75,6 +81,7 @@ public class PlayerInteraction : MonoBehaviour
         _possiblePickable.gameObject.SetActive(false);
         SetInteraction(InteractionType.None);
         Notify();
+        isPickingUp = false;
     }
 
     private void Interact()

@@ -148,4 +148,5 @@ MonoBehaviour:
   onlyOnce: 0
   requiredItems: []
   waitForObject: 0
-  quests: []
+  quests:
+  - {fileID: 11400000, guid: 34d19d8857a146e49996a7676ced7e86, type: 2}

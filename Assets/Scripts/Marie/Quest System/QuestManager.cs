@@ -33,6 +33,7 @@ public class QuestManager : MonoBehaviour
         {
             Inventory.Instance.AddToInventory(quest.itemReward.item, quest.itemReward.quantity);
         }
+        Notify();
         questsProgress.Remove(quest);
         if (questVisulization.ContainsKey(quest))
         {
