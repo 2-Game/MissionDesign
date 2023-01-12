@@ -19,7 +19,8 @@ MonoBehaviour:
 
     The wood is right
     after the bridge behind you.'
-  thankYouMessage: Thank you, here is your sword, go talk to Ernesto at the board.
+  thankYouMessage: Thank you, here is your sword, go have a chat with Ernesto at
+    the board.
   reward: A legendary sword
   requirements:
   - item: {fileID: 11400000, guid: e8f303d72118bef49b411a81553e1246, type: 2}
