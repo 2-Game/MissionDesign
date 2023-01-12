@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: GGL_3B
   m_EditorClassIdentifier: 
   title: Curing the village
-  shortDescription: Give 3 cures to 3 villagers.
+  shortDescription: Give a cure to 3 villagers.
   description: 'Perfect ! The cure works and can heal the villagers. Quick ! Bring
     these three potions to the sick villagers : Bermuda the wizard farmer, Bob the
-    bard and Bertrand the pit dweller.'
+    bard and Bertrand the pit digger.'
   thankYouMessage: 'Thank you so much adventurer. You saved the village ! '
-  reward: 
+  reward: 50 gold coins
   requirements: []
   moneyReward: 50
   itemReward:
