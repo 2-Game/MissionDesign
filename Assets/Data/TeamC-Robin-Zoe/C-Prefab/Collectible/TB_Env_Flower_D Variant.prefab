@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 93dea56f5a389054dbdd6f788cfe9645, type: 3}
       propertyPath: m_Name
-      value: TB_Env_Flower_D
+      value: TB_Env_Flower_D Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93dea56f5a389054dbdd6f788cfe9645, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93dea56f5a389054dbdd6f788cfe9645, type: 3}
       propertyPath: m_RootOrder

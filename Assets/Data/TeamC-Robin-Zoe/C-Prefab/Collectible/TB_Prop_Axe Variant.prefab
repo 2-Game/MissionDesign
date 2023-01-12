@@ -10,11 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6241c8a34446dc0499e784c45581f08c, type: 3}
       propertyPath: m_Name
-      value: TB_Prop_Axe
+      value: TB_Prop_Axe Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6241c8a34446dc0499e784c45581f08c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6241c8a34446dc0499e784c45581f08c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6241c8a34446dc0499e784c45581f08c, type: 3}
       propertyPath: m_LocalPosition.x
