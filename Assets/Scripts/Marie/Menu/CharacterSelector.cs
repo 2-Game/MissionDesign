@@ -13,5 +13,6 @@ public class CharacterSelector : MonoBehaviour
         }
 
         characters[playerChoice].SetActive(true);
+        characters[(playerChoice+1)%2].SetActive(false);
     }
 }
