@@ -19,7 +19,9 @@ MonoBehaviour:
     pit digger and Bertrand the bard.'
   thankYouMessage: 'Thank you so much adventurer. You saved the village ! '
   reward: 50 gold coins
-  requirements: []
+  requirements:
+  - item: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
+    quantity: 3
   moneyReward: 50
   itemReward:
     item: {fileID: 0}

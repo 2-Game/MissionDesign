@@ -39070,6 +39070,7 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 863354752}
+  _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
   thankYouPanel: {fileID: 1368068031}
   thankYou: {fileID: 1176343879}
   welcome: {fileID: 2130252186}
@@ -65620,6 +65621,7 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 1425993675}
+  _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
   thankYouPanel: {fileID: 1368068031}
   thankYou: {fileID: 1176343879}
   welcome: {fileID: 2130252186}
@@ -76243,6 +76245,7 @@ MonoBehaviour:
     quantity: 1
   waitForObject: 0
   interactionCollider: {fileID: 1654723648}
+  _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
   thankYouPanel: {fileID: 1368068031}
   thankYou: {fileID: 1176343879}
   welcome: {fileID: 2130252186}
