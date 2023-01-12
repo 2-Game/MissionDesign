@@ -40,7 +40,7 @@ public class QuestNpc : Interactive
         FinishQuest();
     }
 
-    public virtual void FinishQuest()
+    void FinishQuest()
     {
         //Dialogue end quest
         foreach (QuestItem required in quests[current].requirements)
