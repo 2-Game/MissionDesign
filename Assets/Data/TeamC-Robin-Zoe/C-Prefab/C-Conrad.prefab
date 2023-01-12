@@ -146,6 +146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 6
   onlyOnce: 0
-  requiredItems: []
-  waitForObject: 0
-  quests: []
+  requiredItems:
+  - item: {fileID: 11400000, guid: 548d9f7c5b088364485756c37c5f2cf8, type: 2}
+    quantity: 1
+  waitForObject: 1
+  quests:
+  - {fileID: 11400000, guid: eb53754ddc3c571479cb2a92e8b5281c, type: 2}

@@ -132,3 +132,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1627164933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127186405953575443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f610ba77928434d88614f1f4f4fdae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 6
+  onlyOnce: 1
+  requiredItems:
+  - item: {fileID: 11400000, guid: 50aa7c110625ba84b8e2f3afe9e9bb06, type: 2}
+    quantity: 1
+  waitForObject: 1
+  necessaryGold: 300
+  soldItem:
+    item: {fileID: 11400000, guid: 15bdc9ecead685c4e92725072705042b, type: 2}
+    quantity: 1

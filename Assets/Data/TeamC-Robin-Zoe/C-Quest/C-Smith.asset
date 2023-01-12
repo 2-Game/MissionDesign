@@ -9,15 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aefe1be7ac70d840add433624909258, type: 3}
+  m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
   m_Name: C-Smith
   m_EditorClassIdentifier: 
-  title: 
+  title: Frogeron achat
   shortDescription: 
-  description: 
+  description: 'Bonjour jeune femme, si tu veux une hache ce sera 150 pieces
+
+'
   thankYouMessage: 
   reward: 
-  requirements: 150
+  requirements: []
   moneyReward: 0
   itemReward:
     item: {fileID: 11400000, guid: 15bdc9ecead685c4e92725072705042b, type: 2}
