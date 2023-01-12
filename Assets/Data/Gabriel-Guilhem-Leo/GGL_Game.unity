@@ -94124,9 +94124,25 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1590243107}
     m_Modifications:
+    - target: {fileID: 1602377088731746423, guid: 1420a16fb2d604d4e9ac0eb144e251e1, type: 3}
+      propertyPath: _movementSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602377088731746423, guid: 1420a16fb2d604d4e9ac0eb144e251e1, type: 3}
+      propertyPath: _rotationSpeed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 6216635786117356008, guid: 1420a16fb2d604d4e9ac0eb144e251e1, type: 3}
       propertyPath: m_Name
       value: Characters
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733008128647094112, guid: 1420a16fb2d604d4e9ac0eb144e251e1, type: 3}
+      propertyPath: _movementSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733008128647094112, guid: 1420a16fb2d604d4e9ac0eb144e251e1, type: 3}
+      propertyPath: _rotationSpeed
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 9176524191543591714, guid: 1420a16fb2d604d4e9ac0eb144e251e1, type: 3}
       propertyPath: m_RootOrder
