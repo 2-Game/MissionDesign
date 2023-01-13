@@ -47,7 +47,7 @@ public class GGL_3B : QuestNpc
         if (current == quests.Count)
         {
             Destroy(this);
-            bofor.enabled = true;
+            //bofor.enabled = true;
         }
     }
 }

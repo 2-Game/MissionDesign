@@ -21,7 +21,9 @@ MonoBehaviour:
     and forge it into a blade ?
   thankYouMessage: Excellent ! I didn't know you had that kind of skills !
   reward: 25 gold coins
-  requirements: []
+  requirements:
+  - item: {fileID: 11400000, guid: a76cfc092797ba84bbbb84d83a3c9457, type: 2}
+    quantity: 1
   moneyReward: 25
   itemReward:
     item: {fileID: 0}

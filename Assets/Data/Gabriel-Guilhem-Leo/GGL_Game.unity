@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.47884, g: 0.8001845, b: 0.90072787, a: 1}
+  m_IndirectSpecularColor: {r: 0.478863, g: 0.80019236, b: 0.90065247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29184,6 +29184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648606904}
   - component: {fileID: 648606905}
+  - component: {fileID: 648606906}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -29233,6 +29234,21 @@ MonoBehaviour:
   thankYou: {fileID: 1176343879}
   accept: {fileID: 1893907835}
   later: {fileID: 1077125532}
+  welcome: {fileID: 2130252186}
+--- !u!114 &648606906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648606903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a69cfc62b9ffb24da085a4a5ea93527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thankYouPanel: {fileID: 1368068031}
+  thankYou: {fileID: 1176343879}
   welcome: {fileID: 2130252186}
 --- !u!1 &648918360 stripped
 GameObject:
@@ -60638,7 +60654,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4955854093726700507, guid: dc10e59b6c6d03c40b7436dbf96bf4ed, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8358342397228449767, guid: dc10e59b6c6d03c40b7436dbf96bf4ed, type: 3}
       propertyPath: m_RootOrder
@@ -100757,6 +100773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GGL_Forge
       objectReference: {fileID: 0}
+    - target: {fileID: 8497807643916909947, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6c0605aafe129499d11e2996285495, type: 3}
@@ -100790,6 +100810,7 @@ MonoBehaviour:
   waitForObject: 0
   _blade: {fileID: 11400000, guid: a76cfc092797ba84bbbb84d83a3c9457, type: 2}
   _anvilCollider: {fileID: 2350109621426855993}
+  _thankYouMessage: The ingot has been transformed into a blade
 --- !u!1001 &3060069657632949221
 PrefabInstance:
   m_ObjectHideFlags: 0
