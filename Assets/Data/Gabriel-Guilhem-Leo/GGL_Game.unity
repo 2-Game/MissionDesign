@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.478863, g: 0.80019236, b: 0.90065247, a: 1}
+  m_IndirectSpecularColor: {r: 0.47884, g: 0.8001845, b: 0.90072787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -100785,7 +100785,8 @@ MonoBehaviour:
   waitForObject: 0
   _legendaryBlade: {fileID: 11400000, guid: bab758cf73a7e254babeecaf1ac42d19, type: 2}
   _workbenchCollider: {fileID: 1963532561146456888}
-  _thankYouMessage: Merci pour le craft !
+  _thankYouMessage: The Blade and the Handle has been assembled in the Legendary
+    Sword !
 --- !u!1001 &2350109621426855990
 PrefabInstance:
   m_ObjectHideFlags: 0
