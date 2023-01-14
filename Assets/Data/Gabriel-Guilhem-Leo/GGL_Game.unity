@@ -30042,6 +30042,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8f9d69cd77c6d7345a3253b6872e3675, type: 3}
+--- !u!1 &668313148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4545969086265904042, guid: 0d1aad39c55e24f4a9f39fe1a0658807, type: 3}
+  m_PrefabInstance: {fileID: 1963532561146456886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &668484322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33441,6 +33446,10 @@ PrefabInstance:
       value: 0.8663602
       objectReference: {fileID: 0}
     - target: {fileID: -1601579266975719997, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1601579266975719997, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
       propertyPath: m_Center.x
       value: 0.00000060025724
       objectReference: {fileID: 0}
@@ -33455,6 +33464,10 @@ PrefabInstance:
     - target: {fileID: 4877310813080136228, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
       propertyPath: m_Name
       value: GGL_Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877310813080136228, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
       objectReference: {fileID: 0}
     - target: {fileID: 4881312616511522386, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
       propertyPath: m_RootOrder
@@ -33508,6 +33521,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4881312616511522386, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
   m_PrefabInstance: {fileID: 745051398}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &745051400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4877310813080136228, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+  m_PrefabInstance: {fileID: 745051398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &745051401 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: -1601579266975719997, guid: 69a9ca433d5cfe94883f052ef976e186, type: 3}
+  m_PrefabInstance: {fileID: 745051398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &745051402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745051400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b4edde4be8af04eb3ba16598385743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 3
+  onlyOnce: 1
+  requiredItems: []
+  waitForObject: 0
+  _handle: {fileID: 11400000, guid: b6d86129dfa21c54b90d10746b9e932f, type: 2}
+  _chestCollider: {fileID: 745051401}
+  _chestClose: {fileID: 745051400}
+  _chestOpen: {fileID: 4541697550297620862}
 --- !u!4 &745151089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4848417874854976, guid: ac300b5e32d921a4ea3b90b8636954c3, type: 3}
@@ -39103,9 +39146,6 @@ MonoBehaviour:
   waitForObject: 0
   interactionCollider: {fileID: 863354752}
   _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
-  thankYouPanel: {fileID: 1368068031}
-  thankYou: {fileID: 1176343879}
-  welcome: {fileID: 2130252186}
   thankYouMessage: Thank you young lad.
 --- !u!1001 &863483001
 PrefabInstance:
@@ -53704,7 +53744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.23177558}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -4.999954}
+  m_AnchoredPosition: {x: 0, y: -4.999939}
   m_SizeDelta: {x: -40, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176343879
@@ -60744,8 +60784,15 @@ MonoBehaviour:
   waitForObject: 0
   quests:
   - {fileID: 11400000, guid: 3e8679f99f113fb45ac98f00f1ff5367, type: 2}
-  _ingot: {fileID: 11400000, guid: 2fc0830e75fb9264eb95440cd3aa43be, type: 2}
+  - {fileID: 11400000, guid: 6c06445d85e306f4ba0c3f3a66f6a46b, type: 2}
+  - {fileID: 11400000, guid: 372a9f5c3ccde964dbb68f68b492f558, type: 2}
+  _items:
+  - {fileID: 11400000, guid: 2fc0830e75fb9264eb95440cd3aa43be, type: 2}
+  - {fileID: 11400000, guid: a76cfc092797ba84bbbb84d83a3c9457, type: 2}
+  - {fileID: 11400000, guid: b6d86129dfa21c54b90d10746b9e932f, type: 2}
   _anvilCollider: {fileID: 2350109621426855993}
+  _chestCollider: {fileID: 745051401}
+  _workbenchCollider: {fileID: 1963532561146456888}
 --- !u!1 &1312133271 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1660082155953788, guid: 88da7eed78bf69343a5363cac6c0c220, type: 3}
@@ -65694,9 +65741,6 @@ MonoBehaviour:
   waitForObject: 0
   interactionCollider: {fileID: 1425993675}
   _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
-  thankYouPanel: {fileID: 1368068031}
-  thankYou: {fileID: 1176343879}
-  welcome: {fileID: 2130252186}
   thankYouMessage: Thank you sir !
 --- !u!135 &1425993675 stripped
 SphereCollider:
@@ -76318,9 +76362,6 @@ MonoBehaviour:
   waitForObject: 0
   interactionCollider: {fileID: 1654723648}
   _validCure: {fileID: 11400000, guid: fc99885708f3a8e4d8921314693c337c, type: 2}
-  thankYouPanel: {fileID: 1368068031}
-  thankYou: {fileID: 1176343879}
-  welcome: {fileID: 2130252186}
   thankYouMessage: Finally ! Thank you adventurer !
 --- !u!1001 &1655524571
 PrefabInstance:
@@ -100701,6 +100742,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GGL_CraftBench
       objectReference: {fileID: 0}
+    - target: {fileID: 4545969086265904042, guid: 0d1aad39c55e24f4a9f39fe1a0658807, type: 3}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937524376202950324, guid: 0d1aad39c55e24f4a9f39fe1a0658807, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1aad39c55e24f4a9f39fe1a0658807, type: 3}
@@ -100709,6 +100758,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4540876180538821806, guid: 0d1aad39c55e24f4a9f39fe1a0658807, type: 3}
   m_PrefabInstance: {fileID: 1963532561146456886}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1963532561146456888 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 8937524376202950324, guid: 0d1aad39c55e24f4a9f39fe1a0658807, type: 3}
+  m_PrefabInstance: {fileID: 1963532561146456886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963532561146456892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668313148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bab7eb0cc2d46b4d9af5437850cb632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 2
+  onlyOnce: 1
+  requiredItems:
+  - item: {fileID: 11400000, guid: a76cfc092797ba84bbbb84d83a3c9457, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: b6d86129dfa21c54b90d10746b9e932f, type: 2}
+    quantity: 1
+  waitForObject: 0
+  _legendaryBlade: {fileID: 11400000, guid: bab758cf73a7e254babeecaf1ac42d19, type: 2}
+  _workbenchCollider: {fileID: 1963532561146456888}
+  _thankYouMessage: Merci pour le craft !
 --- !u!1001 &2350109621426855990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101034,5 +101111,10 @@ PrefabInstance:
 --- !u!4 &4541697550297620861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 55435610689838107, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
+  m_PrefabInstance: {fileID: 4541697550297620860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4541697550297620862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 58962371344936139, guid: 302db1dcff8c7624ea053349d29ef04e, type: 3}
   m_PrefabInstance: {fileID: 4541697550297620860}
   m_PrefabAsset: {fileID: 0}

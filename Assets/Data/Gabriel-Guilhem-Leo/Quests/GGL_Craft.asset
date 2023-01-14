@@ -20,7 +20,9 @@ MonoBehaviour:
   thankYouMessage: It's... It's perfect. You are quite the blacksmith my friend.
     The village owes you a lot.
   reward: 50 gold coins
-  requirements: []
+  requirements:
+  - item: {fileID: 11400000, guid: bab758cf73a7e254babeecaf1ac42d19, type: 2}
+    quantity: 1
   moneyReward: 50
   itemReward:
     item: {fileID: 0}

@@ -21,7 +21,9 @@ MonoBehaviour:
   thankYouMessage: Thank you adventurer ! Only one more step ahead and we are done
     with this.
   reward: 35 gold coins
-  requirements: []
+  requirements:
+  - item: {fileID: 11400000, guid: b6d86129dfa21c54b90d10746b9e932f, type: 2}
+    quantity: 1
   moneyReward: 35
   itemReward:
     item: {fileID: 0}
