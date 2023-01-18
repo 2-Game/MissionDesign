@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a067d70ab102844989fcbcd83703c07a, type: 3}
-  m_Name: Soupe au champi
+  m_Name: CT_Soupe au champi
   m_EditorClassIdentifier: 
   title: Mushroom soup
   shortDescription: Find the mushrooms for the fisherman
