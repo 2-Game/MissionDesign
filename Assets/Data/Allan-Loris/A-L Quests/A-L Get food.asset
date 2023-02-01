@@ -20,7 +20,7 @@ MonoBehaviour:
   reward: 20 Gold Coins
   requirements:
   - item: {fileID: 11400000, guid: 5e22c4127b9fbd946aa1669a87040245, type: 2}
-    quantity: 4
+    quantity: 2
   moneyReward: 15
   itemReward:
     item: {fileID: 0}
