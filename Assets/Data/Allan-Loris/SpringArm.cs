@@ -4,6 +4,11 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+enum DeadZoneStatus
+{
+    In, Out, CatchingUp
+}
+
 public class SpringArm : MonoBehaviour
 {
     #region Rotation Settings
@@ -40,6 +45,18 @@ public class SpringArm : MonoBehaviour
     private Vector3 cameraPosition;
     #endregion
 
+    #region Camera Deadzone
+    [Space]
+    [Header("Camera DeadZone Settings \n")]
+    [Space]
+
+    [SerializeField] private bool cameraCanMove = true;
+    [SerializeField] private float circleSize = 2.0f;
+    [SerializeField] private float targetZoneSize = 0.1f;
+
+    private DeadZoneStatus deadZoneStatus = DeadZoneStatus.In;
+    #endregion
+
     #region Collision
     [Space]
     [Header("Collision Settings \n")]
@@ -69,15 +86,6 @@ public class SpringArm : MonoBehaviour
     private readonly Color collisionProbeColor = new Color(0.2f, 0.75f, 0.2f, 0.15f);
     #endregion
 
-    #region Camera Deadzone
-    [Space]
-    [Header("Camera DeadZone \n")]
-    [Space]
-
-    [SerializeField] private bool cameraCanMove = true;
-    [SerializeField] private int circleSize = 2;
-    #endregion
-
     void Start()
     {
         raycastPositions = new Vector3[collisionTestResolution];
@@ -103,6 +111,8 @@ public class SpringArm : MonoBehaviour
         {
            CheckCollisions();
         }
+        
+        CheckCamPlayerDistance();
 
         if (cameraCanMove)
         {
@@ -114,14 +124,38 @@ public class SpringArm : MonoBehaviour
            Rotate();
         }
 
-        if (cameraCanMove)
+        
+        //follow target with offSet
+        Vector3 targetPosition = Vector3.zero;
+        float distancetotarget = Vector3.Distance(transform.position, targetPosition + targetOffset);
+        if (distancetotarget > circleSize)
         {
-            //follow target with offSet
-            Vector3 targetPosition = target.position + targetOffset;
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmothTime);
+            deadZoneStatus = DeadZoneStatus.Out;
+            targetPosition = target.position + targetOffset;
         }
 
-        CheckCamPlayerDistance();
+        
+        else
+        {
+            switch (deadZoneStatus)
+            {
+                case DeadZoneStatus.In:
+                    targetPosition = transform.position;
+                    break;
+                case DeadZoneStatus.Out:
+                    targetPosition = transform.position + targetOffset;
+                    deadZoneStatus = DeadZoneStatus.CatchingUp;
+                    break;
+                case DeadZoneStatus.CatchingUp:
+                    targetPosition = transform.position + targetOffset;
+                    if (distancetotarget > circleSize)
+                    {
+                        deadZoneStatus = DeadZoneStatus.In;
+                    }
+                break;
+            }
+        }
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmothTime);
     }
 
     private void CheckCamPlayerDistance()
