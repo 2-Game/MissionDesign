@@ -1406,7 +1406,6 @@ GameObject:
   - component: {fileID: 5827981051850980580}
   - component: {fileID: 5234601054610720881}
   - component: {fileID: 8034717958103794451}
-  - component: {fileID: 6554688658298512456}
   m_Layer: 0
   m_Name: Woman
   m_TagString: Player
@@ -1748,25 +1747,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6554688658298512456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6638389628579548449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07aed3822fb6c864f9c292fcb523eb8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  womanHand: {fileID: 601579305468787935}
-  manHand: {fileID: 0}
-  axe: {fileID: 2455570333331720550, guid: 5ad9d68cdf05d3e489def25f000ebfe8, type: 3}
-  axeItem:
-    item: {fileID: 11400000, guid: 15bdc9ecead685c4e92725072705042b, type: 2}
-    quantity: 1
-  axeInInventory: 0
 --- !u!1 &6882169586864306495
 GameObject:
   m_ObjectHideFlags: 0
