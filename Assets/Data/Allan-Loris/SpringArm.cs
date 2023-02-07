@@ -9,6 +9,11 @@ enum DeadZoneStatus
     In, Out, CatchingUp
 }
 
+enum CameraStatus
+{
+    ThirdPerson, FirstPerson, Camera1
+}
+
 public class SpringArm : MonoBehaviour
 {
     #region Rotation Settings
@@ -85,6 +90,15 @@ public class SpringArm : MonoBehaviour
     private readonly Color collisionProbeColor = new Color(0.2f, 0.75f, 0.2f, 0.15f);
     #endregion
 
+    #region Camera Transition
+    [Space]
+    [Header("Camera Transition \n")]
+    [Space]
+
+    [SerializeField] private Transform Camera1;
+    private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
+    #endregion
+
     void Start()
     {
         raycastPositions = new Vector3[collisionTestResolution];
@@ -99,58 +113,94 @@ public class SpringArm : MonoBehaviour
 
     void Update()
     {
-        //if target is null get out / nullref check
+        //if target is null get out : nullref check
         if (!target)
         {
             return;
         }
 
-        //collision check
-        if (doCollisionTest)
-        {
-           CheckCollisions();
-        }
-        
-        CheckCamPlayerDistance();
-
-        if (cameraCanMove)
-        {
-            SetCameraTransform();
-        }
-
-        if (useControlRotation && Application.isPlaying)
-        {
-           Rotate();
-        }
-
-        //follow target with offSet
         Vector3 targetPosition = Vector3.zero;
-        float distancetotarget = Vector3.Distance(transform.position, targetPosition + targetOffset);
-        if (distancetotarget > circleSize)
+
+        if (Input.GetKey(KeyCode.Alpha1))
         {
-            deadZoneStatus = DeadZoneStatus.Out;
-            targetPosition = target.position + targetOffset;
+            cameraStatus = CameraStatus.FirstPerson;
+        } 
+        else 
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            cameraStatus = CameraStatus.Camera1;
+        }
+        else
+        if(Input.GetKey(KeyCode.Alpha3))
+        {
+            cameraStatus = CameraStatus.ThirdPerson;
         }
 
-        else
+        switch (cameraStatus)
         {
-            switch (deadZoneStatus)
-            {
-                case DeadZoneStatus.In:
-                    targetPosition = transform.position;
-                    break;
-                case DeadZoneStatus.Out:
-                    targetPosition = transform.position + targetOffset;
-                    deadZoneStatus = DeadZoneStatus.CatchingUp;
-                    break;
-                case DeadZoneStatus.CatchingUp:
-                    targetPosition = transform.position + targetOffset;
-                    if (distancetotarget > circleSize)
-                    {
-                        deadZoneStatus = DeadZoneStatus.In;
-                    }
+            case CameraStatus.Camera1:
+                targetPosition = Camera1.position;
+                transform.LookAt(target);
                 break;
-            }
+
+            case CameraStatus.FirstPerson:
+                targetArmLength = 0f;
+                cameraOffset = new Vector3(0f, 0, 0f);
+                targetOffset = new Vector3(0, 0f, 0);
+                break;
+
+            case CameraStatus.ThirdPerson:
+                targetArmLength = 3f;
+                cameraOffset = new Vector3(0.5f, 0, -0.3f);
+                targetOffset = new Vector3(0, 1.8f, 0);
+
+                //collision check
+                if (doCollisionTest)
+                {
+                    CheckCollisions();
+                }
+
+                CheckCamPlayerDistance();
+
+                if (cameraCanMove)
+                {
+                    SetCameraTransform();
+                }
+
+                if (useControlRotation && Application.isPlaying)
+                {
+                    Rotate();
+                }
+
+                //follow target with offSet
+                float distancetotarget = Vector3.Distance(transform.position, targetPosition + targetOffset);
+                if (distancetotarget > circleSize)
+                {
+                    deadZoneStatus = DeadZoneStatus.Out;
+                    targetPosition = target.position + targetOffset;
+                }
+
+                else
+                {
+                    switch (deadZoneStatus)
+                    {
+                        case DeadZoneStatus.In:
+                            targetPosition = transform.position;
+                            break;
+                        case DeadZoneStatus.Out:
+                            targetPosition = transform.position + targetOffset;
+                            deadZoneStatus = DeadZoneStatus.CatchingUp;
+                            break;
+                        case DeadZoneStatus.CatchingUp:
+                            targetPosition = transform.position + targetOffset;
+                            if (distancetotarget > circleSize)
+                            {
+                                deadZoneStatus = DeadZoneStatus.In;
+                            }
+                            break;
+                    }
+                }
+                break;
         }
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmothTime);
     }
@@ -275,9 +325,4 @@ public class SpringArm : MonoBehaviour
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
         }
     }
-
-    /*private void OnDrawGizmos()
-    {
-        Handles.CircleHandleCap(0, playerPosition, Quaternion.identity, circleSize, EventType.Repaint);
-    }*/
 }
