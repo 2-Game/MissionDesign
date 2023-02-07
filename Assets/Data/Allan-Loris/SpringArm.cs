@@ -67,7 +67,15 @@ public class SpringArm : MonoBehaviour
     [SerializeField] private bool showCollisionProbe;
 
     private readonly Color collisionProbeColor = new Color(0.2f, 0.75f, 0.2f, 0.15f);
+    #endregion
 
+    #region Camera Deadzone
+    [Space]
+    [Header("Camera DeadZone \n")]
+    [Space]
+
+    [SerializeField] private bool cameraCanMove = true;
+    [SerializeField] private int circleSize = 2;
     #endregion
 
     void Start()
@@ -85,23 +93,49 @@ public class SpringArm : MonoBehaviour
     void Update()
     {
         //if target is null get out / nullref check
-        if(!target)
+        if (!target)
+        {
             return;
+        }
 
         //collision check
         if (doCollisionTest)
-            CheckCollisions();
-        
-        SetCameraTransform();
+        {
+           CheckCollisions();
+        }
+
+        if (cameraCanMove)
+        {
+            SetCameraTransform();
+        }
 
         if (useControlRotation && Application.isPlaying)
         {
-            Rotate();
+           Rotate();
         }
 
-        //follow target with offSet
-        Vector3 targetPosition = target.position + targetOffset;
-        transform.position = Vector3.SmoothDamp(targetPosition, targetPosition, ref moveVelocity, movementSmothTime);
+        if (cameraCanMove)
+        {
+            //follow target with offSet
+            Vector3 targetPosition = target.position + targetOffset;
+            transform.position = Vector3.SmoothDamp(targetPosition, targetPosition, ref moveVelocity, movementSmothTime);
+        }
+
+        CheckCamPlayerDistance();
+    }
+
+    private void CheckCamPlayerDistance()
+    {
+        if (Vector3.Distance(transform.position, target.position + targetOffset) <= circleSize)
+        {
+            Debug.Log("Cam doesnt't move");
+            cameraCanMove = false;
+        }
+        else
+        {
+            Debug.Log("Cam moves");
+            cameraCanMove = true;
+        }
     }
 
     private void CheckCollisions()
@@ -208,7 +242,11 @@ public class SpringArm : MonoBehaviour
         if (showCollisionProbe)
         {
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
-
         }
     }
+
+    /*private void OnDrawGizmos()
+    {
+        Handles.CircleHandleCap(0, playerPosition, Quaternion.identity, circleSize, EventType.Repaint);
+    }*/
 }
