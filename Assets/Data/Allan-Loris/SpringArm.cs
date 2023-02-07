@@ -118,7 +118,7 @@ public class SpringArm : MonoBehaviour
         {
             //follow target with offSet
             Vector3 targetPosition = target.position + targetOffset;
-            transform.position = Vector3.SmoothDamp(targetPosition, targetPosition, ref moveVelocity, movementSmothTime);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmothTime);
         }
 
         CheckCamPlayerDistance();
