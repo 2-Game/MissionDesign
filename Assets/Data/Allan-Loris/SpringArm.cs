@@ -52,7 +52,6 @@ public class SpringArm : MonoBehaviour
 
     [SerializeField] private bool cameraCanMove = true;
     [SerializeField] private float circleSize = 2.0f;
-    [SerializeField] private float targetZoneSize = 0.1f;
 
     private DeadZoneStatus deadZoneStatus = DeadZoneStatus.In;
     #endregion
@@ -124,7 +123,6 @@ public class SpringArm : MonoBehaviour
            Rotate();
         }
 
-        
         //follow target with offSet
         Vector3 targetPosition = Vector3.zero;
         float distancetotarget = Vector3.Distance(transform.position, targetPosition + targetOffset);
@@ -134,7 +132,6 @@ public class SpringArm : MonoBehaviour
             targetPosition = target.position + targetOffset;
         }
 
-        
         else
         {
             switch (deadZoneStatus)
