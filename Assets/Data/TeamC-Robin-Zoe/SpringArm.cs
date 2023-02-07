@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEditor;
 
 public class SpringArm : MonoBehaviour
 {
@@ -56,11 +57,38 @@ public class SpringArm : MonoBehaviour
 
     #endregion
 
+    #region Debug
+
+    [Space]
+    [Header("Debugging \n-------------------------")]
+    [Space]
+
+    [SerializeField] private bool visualDebbuging = true;
+    [SerializeField] private Color springArmColor = new Color(0.75f, 0.2f, 0.2f, 0.75f);
+    [Range(1f, 10f)][SerializeField] private float springArmLineWidth = 6f;
+    [SerializeField] private bool showRaycasts;
+    [SerializeField] private bool showCollisionProbe;
+
+    private readonly Color collisionProbeColor = new Color(0.2f, 0.75f, 0.2f, 0.75f);
+
+    #endregion
+
+    #region Distance
+
+    [Space]
+    [Header("Distance Cam/Player \n-------------------------")]
+    [Space]
+
+    [SerializeField] private bool movementCamera;
+    [SerializeField] private int distance = 2;
+
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
         raycastPositions = new Vector3[collisiontestResolution];
         hits = new RaycastHit[collisiontestResolution];
+        movementCamera= true;
     }
 
     private void OnValidate()
@@ -80,15 +108,23 @@ public class SpringArm : MonoBehaviour
             CheckCollisions();
         }
 
-        SetCameraTransform();
+        if (movementCamera)
+        {
+            SetCameraTransform();
+
+        }
 
         if (useControlRotation && Application.isPlaying)
         {
             Rotate();
         }
 
-        Vector3 targetPosition = target.position + targetOffset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
+        if (movementCamera)
+        {
+            Vector3 targetPosition = target.position + targetOffset;
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
+        }
+        DistanceBetweenCamAndPlayer();
     }
 
     //Ca c'est de la documentation qu'on peut rajouter
@@ -167,6 +203,47 @@ public class SpringArm : MonoBehaviour
             Vector3 rayvastLocalEndPoint = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0) * collisionProbeSize;
             raycastPositions[i] = endPoint + (trans.rotation * rayvastLocalEndPoint);
             Physics.Linecast(trans.position, raycastPositions[i], out hits[i], collisionLayerMask);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (!visualDebbuging)
+        {
+            return;
+        }
+
+        Handles.color = springArmColor;
+        if (showRaycasts)
+        {
+            foreach(Vector3 raycastPosition in raycastPositions)
+            {
+                Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, raycastPosition);
+            }
+        }
+        else
+        {
+            Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, endPoint);
+        }
+        Handles.color = collisionProbeColor;
+
+        if (showCollisionProbe)
+        {
+            Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
+        }
+    }
+
+    private void DistanceBetweenCamAndPlayer()
+    {
+        if (Vector3.Distance(transform.position ,target.position + targetOffset) <= distance)
+        {
+            Debug.Log("Cam dont mouv");
+            movementCamera = false;
+        }
+        else
+        {
+            Debug.Log("Cam can move");
+            movementCamera= true;
         }
     }
 }
