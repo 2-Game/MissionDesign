@@ -57,10 +57,10 @@ public class SpringArm : MonoBehaviour
 
     #region Debug
     [Space]
-    [Header("Debuging \n")]
+    [Header("Debugging \n")]
     [Space]
 
-    [SerializeField] private bool visualDebuging = true;
+    [SerializeField] private bool visualDebugging = true;
     [SerializeField] private Color springArmColor = new Color(0.75f, 0.2f, 0.2f, 0.75f);
     [Range(1f, 10f)][SerializeField] private float springArmLineWidth = 6f;
     [SerializeField] private bool showRaycasts;
@@ -185,11 +185,11 @@ public class SpringArm : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (!visualDebuging)
+        if (!visualDebugging)
         {
             return;
         }
-         //Draws main linesTrace or LineTrace of RaycastPositions, useful for debuging
+         //Draws main linesTrace or LineTrace of RaycastPositions, useful for debugging
         Handles.color = springArmColor;
         if (showRaycasts)
         {
@@ -203,7 +203,7 @@ public class SpringArm : MonoBehaviour
             Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, endPoint);
         }
 
-        //Draws collisionProbe, usefull for debuging
+        //Draws collisionProbe, usefull for debugging
         Handles.color = collisionProbeColor;
         if (showCollisionProbe)
         {
