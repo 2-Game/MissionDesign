@@ -99395,6 +99395,25 @@ MonoBehaviour:
   minPitchValue: -90
   maxPitchValue: 90
   invertYaxis: 0
+  target: {fileID: 702000587}
+  movementSmoothTime: 0.2
+  targetOffset: {x: 0, y: 1.8, z: 0}
+  targetArmLenght: 3
+  cameraOffset: {x: 0.5, y: 0, z: -0.3}
+  sphereOffset: 0
+  deathZoneOffset: 1
+  visualDebugging: 1
+  springArmColor: {r: 0.75, g: 0.2, b: 0.2, a: 0.75}
+  springArmLineWidth: 6
+  showRaycasts: 1
+  showCollisionProbe: 1
+  doCollisionTest: 1
+  collisionTestResolution: 4
+  collisionProbeSize: 0.3
+  collisionSmoothTime: 0.05
+  collisionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!4 &2087872445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4694779549219892, guid: ac0a76609b4bd12438ef0ddd8572234e, type: 3}

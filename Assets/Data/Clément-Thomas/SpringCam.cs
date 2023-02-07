@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
+using System.Runtime.CompilerServices;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
+enum DeadZoneStatus
+{
+    In, Out, CatchingUp
+}
 
 public class SpringCam : MonoBehaviour
 {
@@ -18,6 +26,7 @@ public class SpringCam : MonoBehaviour
     [SerializeField] private float minPitchValue = -90;
     [SerializeField] private float maxPitchValue = 90;
     [SerializeField] private bool invertYaxis = false;
+
 
     // For mouse inputs
     private float pitch;
@@ -35,12 +44,19 @@ public class SpringCam : MonoBehaviour
     [SerializeField] private Vector3 targetOffset = new Vector3(0, 1.8f, 0);
     [SerializeField] private float targetArmLenght = 3f;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0.5f, 0, -0.3f);
+    [SerializeField] private bool sphereOffset;
+    [SerializeField] private float deadZoneSize = 2.0f;
+    [SerializeField] private float targetZoneSize = 0.1f;
+    private DeadZoneStatus deadZoneStatus = DeadZoneStatus.In;
+
 
     private Vector3 endPoint;
     private Vector3 cameraPosition;
 
     //refs for SmoothDamping
     private Vector3 moveVelocity;
+
+   
 
     #endregion
 
@@ -115,6 +131,9 @@ public class SpringCam : MonoBehaviour
 
     void Update()
     {
+
+        DistanceSphere();
+
         // if target is null, get out
         if (!target)
         {
@@ -137,11 +156,17 @@ public class SpringCam : MonoBehaviour
 
 
         // Follow the target applying targetOffset
-        Vector3 targetPosition = target.position + targetOffset;
-        transform.position = Vector3.SmoothDamp(transform.position,
-            targetPosition, ref moveVelocity, movementSmoothTime);
+        if (sphereOffset)
+        {
+            Vector3 targetPosition = target.position + targetOffset;
+            transform.position = Vector3.SmoothDamp(transform.position,
+                targetPosition, ref moveVelocity, movementSmoothTime);
+        }
+        
 
     }
+
+    
 
     /// <summary>
     /// Handle rotations
@@ -224,7 +249,7 @@ public class SpringCam : MonoBehaviour
         foreach (Transform child in trans)
         {
             child.position = Vector3.SmoothDamp(child.position,
-                cameraPosition, ref cameraVelocity, 0.2f);
+                cameraPosition, ref cameraVelocity, collisionSmoothTime);
         }
     }
 
@@ -255,8 +280,49 @@ public class SpringCam : MonoBehaviour
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
         }
     }
-}
-    
+
+    //chaque fram calucler distance spring arme et la cible, cree le bool pour dire si en dehors ou pas et activer le mouvement.
+    //chaque fram mesurer la distance, difference vecteur joueur et cam
+   
+
+    private void DistanceSphere()
+    {
+        Vector3 targetPosition = Vector3.zero;
+        float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
+
+        if (distanceToTarget > deadZoneSize)
+        {
+            sphereOffset = true;
+            deadZoneStatus = DeadZoneStatus.Out;
+        }
+        else
+        {
+            sphereOffset= false;
+
+            switch (deadZoneStatus)
+            {
+                case DeadZoneStatus.In:
+                    targetPosition = transform.position;
+                    break;
+                case DeadZoneStatus.Out:
+                    targetPosition = target.position + targetOffset;
+                    deadZoneStatus= DeadZoneStatus.CatchingUp;
+                    break;
+                case DeadZoneStatus.CatchingUp:
+                    targetPosition = target.position + targetOffset;
+                    if(distanceToTarget < targetZoneSize)
+                    {
+                        deadZoneStatus= DeadZoneStatus.In;
+                    }
+                    break;
+
+            }
+
+
+        }
+    }
+} 
+
 
 
 
