@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -52,6 +53,21 @@ public class SpringArm : MonoBehaviour
 
     private RaycastHit[] hits;
     private Vector3[] raycastPositions;
+    #endregion
+
+    #region Debug
+    [Space]
+    [Header("Debuging \n")]
+    [Space]
+
+    [SerializeField] private bool visualDebuging = true;
+    [SerializeField] private Color springArmColor = new Color(0.75f, 0.2f, 0.2f, 0.75f);
+    [Range(1f, 10f)][SerializeField] private float springArmLineWidth = 6f;
+    [SerializeField] private bool showRaycasts;
+    [SerializeField] private bool showCollisionProbe;
+
+    private readonly Color collisionProbeColor = new Color(0.2f, 0.75f, 0.2f, 0.15f);
+
     #endregion
 
     void Start()
@@ -167,4 +183,32 @@ public class SpringArm : MonoBehaviour
         transform.localRotation = Quaternion.Euler(pitch, yaw, 0f);
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        if (!visualDebuging)
+        {
+            return;
+        }
+         //Draws main linesTrace or LineTrace of RaycastPositions, useful for debuging
+        Handles.color = springArmColor;
+        if (showRaycasts)
+        {
+            foreach (Vector3 raycastPosition in raycastPositions)
+            {
+                Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, raycastPosition);
+            }
+        }
+        else
+        {
+            Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, endPoint);
+        }
+
+        //Draws collisionProbe, usefull for debuging
+        Handles.color = collisionProbeColor;
+        if (showCollisionProbe)
+        {
+            Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
+
+        }
+    }
 }
