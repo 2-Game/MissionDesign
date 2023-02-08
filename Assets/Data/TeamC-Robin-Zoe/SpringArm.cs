@@ -1,8 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEditor;
+using UnityEngine.UIElements;
+
+enum DeadZoneStatus
+{
+    In, Out, CatchingUp
+}
+
+enum CameraStatus
+{
+    ThirdPerson, FirstPerson, Camera1
+}
 
 public class SpringArm : MonoBehaviour
 {
@@ -12,15 +22,15 @@ public class SpringArm : MonoBehaviour
     [Space]
     [SerializeField] private bool useControlRotation = true;
     [SerializeField] private float mouseSensitivity = 500f;
-    [SerializeField][Range(-90.0f, 0)] private float minAngle = -90f;
-    [SerializeField][Range(0, 90.0f)] private float maxAngle = 90f;
+    [SerializeField] private bool invertYAxis;
+    [SerializeField] [Range(-90.0f, 0)] private float minAngle = -90f;
+    [SerializeField] [Range(0, 90.0f)] private float maxAngle = 90f;
 
     private float pitch;
     private float yaw;
-    private bool invertedAxeY;
     private int axeInt;
 
-    
+
     #endregion
 
     #region Follow Settings
@@ -38,6 +48,11 @@ public class SpringArm : MonoBehaviour
     private Vector3 endPoint;
     private Vector3 cameraPosition;
 
+    [SerializeField] private float deadZoneSize;
+    [SerializeField] private float targetZoneSize = 0.1f;
+    private DeadZoneStatus deadZoneStatus = DeadZoneStatus.In;
+
+
     #endregion
 
     #region Collisions
@@ -46,7 +61,7 @@ public class SpringArm : MonoBehaviour
     [Header("Collision Settings \n-------------------------")]
     [Space]
     [SerializeField] private bool doCollisionTest = true;
-    [Range(2, 20)][SerializeField] private int collisiontestResolution = 4;
+    [Range(2, 20)] [SerializeField] private int collisiontestResolution = 4;
     [SerializeField] private float collisionProbeSize = 0.3f;
     [SerializeField] private float collisionSmoothTime = 0.05f;
     [SerializeField] private LayerMask collisionLayerMask = ~0;
@@ -63,68 +78,103 @@ public class SpringArm : MonoBehaviour
     [Header("Debugging \n-------------------------")]
     [Space]
 
-    [SerializeField] private bool visualDebbuging = true;
+    [SerializeField] private bool visualDebugging = true;
     [SerializeField] private Color springArmColor = new Color(0.75f, 0.2f, 0.2f, 0.75f);
-    [Range(1f, 10f)][SerializeField] private float springArmLineWidth = 6f;
-    [SerializeField] private bool showRaycasts;
+    [Range(1f, 10f)] [SerializeField] private float springArmLineWidth = 6f;
+    [SerializeField] private bool showRayCasts;
     [SerializeField] private bool showCollisionProbe;
 
-    private readonly Color collisionProbeColor = new Color(0.2f, 0.75f, 0.2f, 0.75f);
+    private readonly Color collisionProbeColor = new Color(0.2f, 0.75f, 0.2f, 0.15f);
 
     #endregion
 
-    #region Distance
+    #region Camera Transition
 
     [Space]
-    [Header("Distance Cam/Player \n-------------------------")]
+    [Header("Camera Transition \n-------------------------")]
     [Space]
 
-    [SerializeField] private bool movementCamera;
-    [SerializeField] private int distance = 2;
+    [SerializeField] private Transform camera1;
+    private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
 
     #endregion
+
     // Start is called before the first frame update
     void Start()
     {
         raycastPositions = new Vector3[collisiontestResolution];
         hits = new RaycastHit[collisiontestResolution];
-        movementCamera= true;
     }
 
     private void OnValidate()
     {
-        raycastPositions= new Vector3[collisiontestResolution];
+        raycastPositions = new Vector3[collisiontestResolution];
         hits = new RaycastHit[collisiontestResolution];
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!target)
+        if (!target)
             return;
 
-        if(doCollisionTest)
+        Vector3 targetPosition = Vector3.zero;
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            CheckCollisions();
+            cameraStatus = CameraStatus.ThirdPerson;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            cameraStatus = CameraStatus.Camera1;
         }
 
-        if (movementCamera)
+        if (cameraStatus == CameraStatus.Camera1)
         {
+            targetPosition = camera1.position;
+            transform.LookAt(target);
+        }
+        else if (cameraStatus == CameraStatus.ThirdPerson)
+        {
+            if (doCollisionTest)
+            {
+                CheckCollisions();
+            }
             SetCameraTransform();
-
+            if (useControlRotation && Application.isPlaying)
+            {
+                Rotate();
+            }
         }
 
-        if (useControlRotation && Application.isPlaying)
+        float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
+        if (distanceToTarget > deadZoneSize)
         {
-            Rotate();
+            deadZoneStatus = DeadZoneStatus.Out;
+            targetPosition = target.position + targetOffset;
+        }
+        else
+        {
+            switch (deadZoneStatus)
+            {
+                case DeadZoneStatus.In:
+                    targetPosition = transform.position;
+                    break;
+                case DeadZoneStatus.Out:
+                    targetPosition = target.position + targetOffset;
+                    deadZoneStatus = DeadZoneStatus.CatchingUp;
+                    break;
+                case DeadZoneStatus.CatchingUp:
+                    targetPosition = target.position + targetOffset;
+                    if (distanceToTarget < targetZoneSize)
+                    {
+                        deadZoneStatus = DeadZoneStatus.In;
+                    }
+                    break;
+            }
         }
 
-        if (movementCamera)
-        {
-            Vector3 targetPosition = target.position + targetOffset;
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
-        }
-        DistanceBetweenCamAndPlayer();
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
     }
 
     //Ca c'est de la documentation qu'on peut rajouter
@@ -133,23 +183,15 @@ public class SpringArm : MonoBehaviour
     /// </summary>
     private void Rotate()
     {
-        /*if(invertedAxeY) 
-        {
-            axeInt = 1;
-        }
-        else
-        {
-            axeInt = -1;
-        }*/
         //Notation ternaire = faire ce if juste au dessu en une ligne pour avoir un retour de valeur, gauche si c'est true et droite si c'est false
-        axeInt = invertedAxeY? -1 : 1;
+        axeInt = invertYAxis ? -1 : 1;
         pitch -= Input.GetAxisRaw("Mouse Y") * mouseSensitivity * Time.deltaTime * axeInt;
         yaw += Input.GetAxisRaw("Mouse X") * mouseSensitivity * Time.deltaTime;
-        
+
         //Bloque la caméra verticalement pour pas qu'elle passe derrière le player
         pitch = Mathf.Clamp(pitch, minAngle, maxAngle);
 
-        transform.localRotation =Quaternion.Euler(pitch, yaw, 0f);
+        transform.localRotation = Quaternion.Euler(pitch, yaw, 0f);
     }
 
     private void SetCameraTransform()
@@ -187,7 +229,7 @@ public class SpringArm : MonoBehaviour
         Vector3 cameraVelocity = Vector3.zero;
         foreach (Transform child in trans)
         {
-            child.position = Vector3.SmoothDamp(child.position, cameraPosition, ref cameraVelocity, 0.2f);
+            child.position = Vector3.SmoothDamp(child.position, cameraPosition, ref cameraVelocity, collisionSmoothTime);
         }
     }
 
@@ -198,25 +240,23 @@ public class SpringArm : MonoBehaviour
     {
         Transform trans = transform;
 
-        for(int i = 0, angle = 0; i<collisiontestResolution; i++, angle += 360 / collisiontestResolution)
+        for (int i = 0, angle = 0; i < collisiontestResolution; i++, angle += 360 / collisiontestResolution)
         {
-            Vector3 rayvastLocalEndPoint = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0) * collisionProbeSize;
-            raycastPositions[i] = endPoint + (trans.rotation * rayvastLocalEndPoint);
+            Vector3 raycastLocalEndPoint = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0) * collisionProbeSize;
+            raycastPositions[i] = endPoint + (trans.rotation * raycastLocalEndPoint);
             Physics.Linecast(trans.position, raycastPositions[i], out hits[i], collisionLayerMask);
         }
     }
 
     private void OnDrawGizmosSelected()
     {
-        if (!visualDebbuging)
-        {
+        if (!visualDebugging)
             return;
-        }
 
         Handles.color = springArmColor;
-        if (showRaycasts)
+        if (showRayCasts)
         {
-            foreach(Vector3 raycastPosition in raycastPositions)
+            foreach (Vector3 raycastPosition in raycastPositions)
             {
                 Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, raycastPosition);
             }
@@ -225,25 +265,11 @@ public class SpringArm : MonoBehaviour
         {
             Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, endPoint);
         }
-        Handles.color = collisionProbeColor;
 
+        Handles.color = collisionProbeColor;
         if (showCollisionProbe)
         {
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
-        }
-    }
-
-    private void DistanceBetweenCamAndPlayer()
-    {
-        if (Vector3.Distance(transform.position ,target.position + targetOffset) <= distance)
-        {
-            Debug.Log("Cam dont mouv");
-            movementCamera = false;
-        }
-        else
-        {
-            Debug.Log("Cam can move");
-            movementCamera= true;
         }
     }
 }
