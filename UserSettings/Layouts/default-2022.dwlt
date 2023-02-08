@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 122
+  controlID: 82
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 123
+  controlID: 83
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 22
+  controlID: 84
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 242
     height: 529
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1255
     height: 529
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 423
     height: 1067
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -407,24 +407,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
-      m_SelectedIDs: 8a4efcff
-      m_LastClickedID: -242038
-      m_ExpandedIDs: 5c7ffeff741effff761effffb649ffff144fffffd84fffffda7bffff147dffffd6130100664d0100bc570100c8570100
+      scrollPos: {x: 0, y: 180}
+      m_SelectedIDs: 125e0000
+      m_LastClickedID: 24082
+      m_ExpandedIDs: 02f2ffff30fbffff3a5d0000185f0000b25f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: TB_Prop_Chair
+        m_OriginalName: TB_Prop_Chair
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -3934
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -692,9 +692,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -59.702377, y: -68.9165, z: 98.08609}
+    m_Target: {x: -54.531456, y: -62.839115, z: -3.614504}
     speed: 2
-    m_Value: {x: -59.702377, y: -68.9165, z: 98.08609}
+    m_Value: {x: -54.531456, y: -62.839115, z: -3.614504}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -740,20 +740,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3608937, y: 0.21057196, z: -0.07527734, w: -0.90568405}
+    m_Target: {x: 0.53149754, y: -0.42132348, z: 0.34519002, w: 0.6487227}
     speed: 2
-    m_Value: {x: -0.36102495, y: 0.20780045, z: -0.07417522, w: -0.9060784}
+    m_Value: {x: 0.53097904, y: -0.422296, z: 0.34598678, w: 0.6480898}
   m_Size:
-    m_Target: 56.58904
+    m_Target: 59.959984
     speed: 2
-    m_Value: 56.58904
+    m_Value: 57.377975
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.4602705
-    m_SpeedNormalized: 0.73000026
+    m_Speed: 1.0204899
+    m_SpeedNormalized: 0.51
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -905,10 +905,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 255}
-    m_SelectedIDs: 58fc0100
-    m_LastClickedID: 130136
-    m_ExpandedIDs: 000000003cfa000040fa000042fa00000ecd010024cd01002ecd01000ccf010084cf010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 403}
+    m_SelectedIDs: 9c6b0000
+    m_LastClickedID: 27548
+    m_ExpandedIDs: 00000000fc6a00006c6b00009e6b0000a06b0000a26b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -936,7 +936,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000fc6a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000078960000b02601005c9d0000e0250000fea7000062a10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
