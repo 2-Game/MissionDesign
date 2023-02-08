@@ -16,6 +16,8 @@ enum CameraStatus
 
 public class SpringArm : MonoBehaviour
 {
+    [SerializeField] public GameObject playerSprite;
+
     #region Rotation Settings
     [Space]
     [Header("Rotation Settings \n")]
@@ -142,13 +144,16 @@ public class SpringArm : MonoBehaviour
         {
             case CameraStatus.Camera1:
                 {
+                    playerSprite.SetActive(true);
                     targetPosition = Camera1.position;
                     transform.LookAt(target);
                     break;
                 }
 
             case CameraStatus.FirstPerson:
-                { 
+                {
+                    playerSprite.SetActive(false);
+
                     //targetArmLength = 0f;
                     /*angleClampZ = 20f;
                     cameraOffset = new Vector3(0f, 0, 0f);
@@ -165,6 +170,8 @@ public class SpringArm : MonoBehaviour
 
             case CameraStatus.ThirdPerson:
                 {
+                    playerSprite.SetActive(true);
+
                     targetArmLength = 3f;
                     cameraOffset = new Vector3(0.5f, 0, -0.3f);
                     angleClampZ = 50f;
