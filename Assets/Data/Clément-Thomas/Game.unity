@@ -21881,7 +21881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.23177558}
-  m_AnchoredPosition: {x: 0, y: 10.0000305}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: -40, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455179080
@@ -48901,7 +48901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.23177558}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -5.000038}
+  m_AnchoredPosition: {x: 0, y: -5.0000305}
   m_SizeDelta: {x: -40, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046017917
@@ -99387,33 +99387,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 2087154359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d0956220eb2a5469552908b8b8b3d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 008696ca14425fe43bf0385444d85f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   useControlRotation: 1
   mouseSensitivity: 500
-  minPitchValue: -90
-  maxPitchValue: 90
-  invertYaxis: 0
+  invertYAxis: 0
+  minAngle: -90
+  maxAngle: 90
   target: {fileID: 702000587}
-  movementSmoothTime: 0.2
-  targetOffset: {x: 0, y: 1.8, z: 0}
-  targetArmLenght: 3
+  movementSmoothTime: 0.5
+  targetOffset: {x: -0.4, y: 1.5, z: 0}
+  targetArmLength: 0
   cameraOffset: {x: 0.5, y: 0, z: -0.3}
-  sphereOffset: 0
-  deathZoneOffset: 1
-  visualDebugging: 1
-  springArmColor: {r: 0.75, g: 0.2, b: 0.2, a: 0.75}
-  springArmLineWidth: 6
-  showRaycasts: 1
-  showCollisionProbe: 1
+  deadZoneSize: 0
+  targetZoneSize: 0.1
   doCollisionTest: 1
-  collisionTestResolution: 4
+  collisiontestResolution: 4
   collisionProbeSize: 0.3
   collisionSmoothTime: 0.05
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  visualDebugging: 1
+  springArmColor: {r: 0.75, g: 0.2, b: 0.2, a: 0.75}
+  springArmLineWidth: 6
+  showRayCasts: 0
+  showCollisionProbe: 0
+  camera1: {fileID: 0}
 --- !u!4 &2087872445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4694779549219892, guid: ac0a76609b4bd12438ef0ddd8572234e, type: 3}

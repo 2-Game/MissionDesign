@@ -9,10 +9,16 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
-enum DeadZoneStatus
+enum deadZoneStatus
 {
     In, Out, CatchingUp
 }
+enum cameraStatus
+{
+    ThirdPerson, FirstPerson, Camera1
+}
+
+//pour le first personne il faut faire un set des valeur dans l'inspector 
 
 public class SpringCam : MonoBehaviour
 {
@@ -75,6 +81,15 @@ public class SpringCam : MonoBehaviour
 
     #endregion
 
+    #region Camera Transition
+
+    [Space]
+    [Header("Camera Transition \n------------")]
+    [Space]
+    [SerializeField] private Transform camera1;
+    private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
+
+    #endregion
 
     #region Collisions
 
@@ -140,12 +155,37 @@ public class SpringCam : MonoBehaviour
             return;
         }
 
-        //Collision check
-        if (doCollisionTest)
+        Vector3 targetPosition = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.Alpha1))
         {
-            CheckCollisions();
+            cameraStatus = CameraStatus.ThirdPerson;
         }
-        SetCameraTransform();
+        else if (Input.GetKey(KeyCode.Alpha1))
+        {
+            cameraStatus = CameraStatus.Camera1;
+
+        }
+
+        //switch(
+        if(cameraStatus == CameraStatus.Camera1)
+        {
+            targetPosition = camera1.position;
+            transform.LookAt(target);
+        }
+        else if(cameraStatus == CameraStatus.ThirdPerson)
+        {
+
+            //Collision check
+            if (doCollisionTest)
+            {
+                CheckCollisions();
+            }
+            SetCameraTransform();
+        }
+
+
+        
 
         // Handle mouse inputs for rotations
         if (useControlRotation && Application.isPlaying)
@@ -153,12 +193,18 @@ public class SpringCam : MonoBehaviour
             Rotate();
         }
 
+        
+
+            
+
+        
+
 
 
         // Follow the target applying targetOffset
         if (sphereOffset)
         {
-            Vector3 targetPosition = target.position + targetOffset;
+            //Vector3 targetosition = target.position + targetOffset;
             transform.position = Vector3.SmoothDamp(transform.position,
                 targetPosition, ref moveVelocity, movementSmoothTime);
         }
