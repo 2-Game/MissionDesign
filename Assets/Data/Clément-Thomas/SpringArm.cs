@@ -136,69 +136,80 @@ public class SpringArm : MonoBehaviour
         {
             cameraStatus = CameraStatus.ThirdPerson;
             targetArmLenght1 = targetArmLength;
-
-
         }
-
-        if (cameraStatus == CameraStatus.Camera1)
+        switch (cameraStatus)
         {
-            targetPosition = camera1.position;
-            transform.LookAt(target);
-        }
-       
-        if(cameraStatus == CameraStatus.FirstPerson)
-        {
-            targetPosition = target.position;
-            cameraPosition = Vector3.zero;
-            targetArmLenght1 = 0f;
-            
 
-
-
-        }
-        else if (cameraStatus == CameraStatus.ThirdPerson)
-        {
-            if (doCollisionTest)
-            {
-                CheckCollisions();
-            }
-            SetCameraTransform();
-            if (useControlRotation && Application.isPlaying)
-            {
-                Rotate();
-            }
-            float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
-            if (distanceToTarget > deadZoneSize)
-            {
-                deadZoneStatus = DeadZoneStatus.Out;
-                targetPosition = target.position + targetOffset;
-            }
-            else
-            {
-                switch (deadZoneStatus)
+            case CameraStatus.Camera1:
                 {
-                    case DeadZoneStatus.In:
-                        targetPosition = transform.position;
-                        break;
-                    case DeadZoneStatus.Out:
-                        targetPosition = target.position + targetOffset;
-                        deadZoneStatus = DeadZoneStatus.CatchingUp;
-                        break;
-                    case DeadZoneStatus.CatchingUp:
-                        targetPosition = target.position + targetOffset;
-                        if (distanceToTarget < targetZoneSize)
-                        {
-                            deadZoneStatus = DeadZoneStatus.In;
-                        }
-                        break;
+                    targetPosition = camera1.position;
+                    transform.LookAt(target);
+                    break;
                 }
-            }
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
+
+            case CameraStatus.FirstPerson:
+                {
+                    //targetArmLength = 0f;
+                    /*angleClampZ = 20f;
+                    cameraOffset = new Vector3(0f, 0, 0f);
+                    //targetPosition = target.position + targetOffset;*/
+                    targetPosition = FirstPerson.position;
+
+                    transform.position = new Vector3(target.position.x, target.position.y + 1.8f, 0);
+                    transform.GetChild(0).position = targetPosition;
+
+                    transform.forward = target.forward;
+
+                    break;
+                }
+
+            case CameraStatus.ThirdPerson:
+                {
+
+                    if (doCollisionTest)
+                    {
+                        CheckCollisions();
+                    }
+                    SetCameraTransform();
+                    if (useControlRotation && Application.isPlaying)
+                    {
+                        Rotate();
+                    }
+                    float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
+                    if (distanceToTarget > deadZoneSize)
+                    {
+                        deadZoneStatus = DeadZoneStatus.Out;
+                        targetPosition = target.position + targetOffset;
+                    }
+                    else
+                    {
+                        switch (deadZoneStatus)
+                        {
+                            case DeadZoneStatus.In:
+                                targetPosition = transform.position;
+                                break;
+                            case DeadZoneStatus.Out:
+                                targetPosition = target.position + targetOffset;
+                                deadZoneStatus = DeadZoneStatus.CatchingUp;
+                                break;
+                            case DeadZoneStatus.CatchingUp:
+                                targetPosition = target.position + targetOffset;
+                                if (distanceToTarget < targetZoneSize)
+                                {
+                                    deadZoneStatus = DeadZoneStatus.In;
+                                }
+                                break;
+                        }
+                    }
+                    
+                }
+                break;
         }
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
 
-       
 
-      
+
+
     }
 
     //Ca c'est de la documentation qu'on peut rajouter
