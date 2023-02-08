@@ -45,6 +45,7 @@ public class SpringArm : MonoBehaviour
 
     [SerializeField] private float targetArmLength = 3f;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0.5f, 0, -0.3f);
+    [SerializeField] private Vector3 zeroPos = new Vector3(0, 0, 0);
 
     private Vector3 endPoint;
     private Vector3 cameraPosition;
@@ -96,6 +97,7 @@ public class SpringArm : MonoBehaviour
     [Space]
 
     [SerializeField] private Transform Camera1;
+    [SerializeField] private Transform FPSView;
     private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
     #endregion
 
@@ -147,7 +149,9 @@ public class SpringArm : MonoBehaviour
                 //targetArmLength = 0f;
                 angleClampZ = 20f;
                 cameraOffset = new Vector3(0f, 0, 0f);
-                targetPosition = target.position + targetOffset;
+                //targetPosition = target.position + targetOffset;
+                targetPosition = FPSView.position;
+
                 transform.forward = target.forward;
                 
                 break;
