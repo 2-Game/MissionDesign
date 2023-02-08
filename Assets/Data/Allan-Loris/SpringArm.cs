@@ -141,70 +141,76 @@ public class SpringArm : MonoBehaviour
         switch (cameraStatus)
         {
             case CameraStatus.Camera1:
-                targetPosition = Camera1.position;
-                transform.LookAt(target);
-                break;
+                {
+                    targetPosition = Camera1.position;
+                    transform.LookAt(target);
+                    break;
+                }
 
             case CameraStatus.FirstPerson:
-                //targetArmLength = 0f;
-                angleClampZ = 20f;
-                cameraOffset = new Vector3(0f, 0, 0f);
-                //targetPosition = target.position + targetOffset;
-                targetPosition = FPSView.position;
+                { 
+                    //targetArmLength = 0f;
+                    /*angleClampZ = 20f;
+                    cameraOffset = new Vector3(0f, 0, 0f);
+                    //targetPosition = target.position + targetOffset;*/
+                    //targetPosition = FPSView.position;
+                    transform.GetChild(0).position =  Vector3.zero;
+                    transform.forward = target.forward;
 
-                transform.forward = target.forward;
-                
-                break;
+                    break;
+                }
 
             case CameraStatus.ThirdPerson:
-                targetArmLength = 3f;
-                cameraOffset = new Vector3(0.5f, 0, -0.3f);
-                angleClampZ = 50f;
-
-                //collision check
-                if (doCollisionTest)
                 {
-                    CheckCollisions();
-                }
+                    targetArmLength = 3f;
+                    cameraOffset = new Vector3(0.5f, 0, -0.3f);
+                    angleClampZ = 50f;
 
-                CheckCamPlayerDistance();
-
-                if (cameraCanMove)
-                {
-                    SetCameraTransform();
-                }
-
-                if (useControlRotation && Application.isPlaying)
-                {
-                    Rotate();
-                }
-
-                //follow target with offSet
-                float distancetotarget = Vector3.Distance(transform.position, targetPosition + targetOffset);
-                if (distancetotarget > circleSize)
-                {
-                    deadZoneStatus = DeadZoneStatus.Out;
-                    targetPosition = target.position + targetOffset;
-                }
-
-                else
-                {
-                    switch (deadZoneStatus)
+                    //collision check
+                    if (doCollisionTest)
                     {
-                        case DeadZoneStatus.In:
-                            targetPosition = transform.position;
-                            break;
-                        case DeadZoneStatus.Out:
-                            targetPosition = transform.position + targetOffset;
-                            deadZoneStatus = DeadZoneStatus.CatchingUp;
-                            break;
-                        case DeadZoneStatus.CatchingUp:
-                            targetPosition = transform.position + targetOffset;
-                            if (distancetotarget > circleSize)
-                            {
-                                deadZoneStatus = DeadZoneStatus.In;
-                            }
-                            break;
+                        CheckCollisions();
+                    }
+
+                    CheckCamPlayerDistance();
+
+                    if (cameraCanMove)
+                    {
+                        SetCameraTransform();
+                    }
+
+                    if (useControlRotation && Application.isPlaying)
+                    {
+                        Rotate();
+                    }
+
+                    //follow target with offSet
+                    float distancetotarget = Vector3.Distance(transform.position, targetPosition + targetOffset);
+                    if (distancetotarget > circleSize)
+                    {
+                        deadZoneStatus = DeadZoneStatus.Out;
+                        targetPosition = target.position + targetOffset;
+                    }
+
+                    else
+                    {
+                        switch (deadZoneStatus)
+                        {
+                            case DeadZoneStatus.In:
+                                targetPosition = transform.position;
+                                break;
+                            case DeadZoneStatus.Out:
+                                targetPosition = transform.position + targetOffset;
+                                deadZoneStatus = DeadZoneStatus.CatchingUp;
+                                break;
+                            case DeadZoneStatus.CatchingUp:
+                                targetPosition = transform.position + targetOffset;
+                                if (distancetotarget > circleSize)
+                                {
+                                    deadZoneStatus = DeadZoneStatus.In;
+                                }
+                                break;
+                        }
                     }
                 }
                 break;
