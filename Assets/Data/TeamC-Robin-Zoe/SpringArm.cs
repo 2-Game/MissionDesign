@@ -55,6 +55,16 @@ public class SpringArm : MonoBehaviour
 
     #endregion
 
+    #region Camera Deadzone
+    [Space]
+    [Header("Camera DeadZone Settings \n")]
+    [Space]
+
+    [SerializeField] private bool cameraCanMove = true;
+    [SerializeField] private float circleSize = 2.0f;
+
+    #endregion
+
     #region Collisions
 
     [Space]
@@ -95,6 +105,7 @@ public class SpringArm : MonoBehaviour
     [Space]
 
     [SerializeField] private Transform camera1;
+    [SerializeField] private Transform fpsView;
     private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
 
     #endregion
@@ -115,65 +126,109 @@ public class SpringArm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if target is null get out : nullref check
         if (!target)
+        {
             return;
+        }
 
         Vector3 targetPosition = Vector3.zero;
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1))
         {
-            cameraStatus = CameraStatus.ThirdPerson;
+            cameraStatus = CameraStatus.FirstPerson;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else
+        if (Input.GetKey(KeyCode.Alpha2))
         {
             cameraStatus = CameraStatus.Camera1;
         }
-
-        if (cameraStatus == CameraStatus.Camera1)
-        {
-            targetPosition = camera1.position;
-            transform.LookAt(target);
-        }
-        else if (cameraStatus == CameraStatus.ThirdPerson)
-        {
-            if (doCollisionTest)
-            {
-                CheckCollisions();
-            }
-            SetCameraTransform();
-            if (useControlRotation && Application.isPlaying)
-            {
-                Rotate();
-            }
-        }
-
-        float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
-        if (distanceToTarget > deadZoneSize)
-        {
-            deadZoneStatus = DeadZoneStatus.Out;
-            targetPosition = target.position + targetOffset;
-        }
         else
+        if (Input.GetKey(KeyCode.Alpha3))
         {
-            switch (deadZoneStatus)
-            {
-                case DeadZoneStatus.In:
-                    targetPosition = transform.position;
-                    break;
-                case DeadZoneStatus.Out:
-                    targetPosition = target.position + targetOffset;
-                    deadZoneStatus = DeadZoneStatus.CatchingUp;
-                    break;
-                case DeadZoneStatus.CatchingUp:
-                    targetPosition = target.position + targetOffset;
-                    if (distanceToTarget < targetZoneSize)
-                    {
-                        deadZoneStatus = DeadZoneStatus.In;
-                    }
-                    break;
-            }
+            cameraStatus = CameraStatus.ThirdPerson;
         }
 
+        switch (cameraStatus)
+        {
+            case CameraStatus.Camera1:
+                {
+                    targetPosition = camera1.position;
+                    transform.LookAt(target);
+                    break;
+                }
+
+            case CameraStatus.FirstPerson:
+                {
+                    //targetArmLength = 0f;
+                    /*angleClampZ = 20f;
+                    cameraOffset = new Vector3(0f, 0, 0f);
+                    //targetPosition = target.position + targetOffset;*/
+                    targetPosition = fpsView.position;
+
+                    transform.position = new Vector3(target.position.x, target.position.y + 1.8f, 0);
+                    transform.GetChild(0).position = targetPosition;
+
+                    transform.forward = target.forward;
+
+                    break;
+                }
+
+            case CameraStatus.ThirdPerson:
+                {
+                    targetArmLength = 3f;
+                    cameraOffset = new Vector3(0.5f, 0, -0.3f);
+                    maxAngle = 50f;
+
+                    //collision check
+                    if (doCollisionTest)
+                    {
+                        CheckCollisions();
+                    }
+
+                    CheckCamPlayerDistance();
+
+                    if (cameraCanMove)
+                    {
+                        SetCameraTransform();
+                    }
+
+                    if (useControlRotation && Application.isPlaying)
+                    {
+                        Rotate();
+                    }
+
+                    //follow target with offSet
+                    float distancetotarget = Vector3.Distance(transform.position, targetPosition + targetOffset);
+                    if (distancetotarget > circleSize)
+                    {
+                        deadZoneStatus = DeadZoneStatus.Out;
+                        targetPosition = target.position + targetOffset;
+                    }
+
+                    else
+                    {
+                        switch (deadZoneStatus)
+                        {
+                            case DeadZoneStatus.In:
+                                targetPosition = transform.position;
+                                break;
+                            case DeadZoneStatus.Out:
+                                targetPosition = transform.position + targetOffset;
+                                deadZoneStatus = DeadZoneStatus.CatchingUp;
+                                break;
+                            case DeadZoneStatus.CatchingUp:
+                                targetPosition = transform.position + targetOffset;
+                                if (distancetotarget > circleSize)
+                                {
+                                    deadZoneStatus = DeadZoneStatus.In;
+                                }
+                                break;
+                        }
+                    }
+                }
+                break;
+        }
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
     }
 
@@ -270,6 +325,19 @@ public class SpringArm : MonoBehaviour
         if (showCollisionProbe)
         {
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
+        }
+    }
+    private void CheckCamPlayerDistance()
+    {
+        if (Vector3.Distance(transform.position, target.position + targetOffset) <= circleSize)
+        {
+            Debug.Log("Cam doesnt't move");
+            cameraCanMove = false;
+        }
+        else
+        {
+            Debug.Log("Cam moves");
+            cameraCanMove = true;
         }
     }
 }
