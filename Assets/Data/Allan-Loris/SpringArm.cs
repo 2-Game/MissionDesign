@@ -144,15 +144,18 @@ public class SpringArm : MonoBehaviour
                 break;
 
             case CameraStatus.FirstPerson:
-                targetArmLength = 0f;
+                //targetArmLength = 0f;
+                angleClampZ = 20f;
                 cameraOffset = new Vector3(0f, 0, 0f);
-                targetOffset = new Vector3(0, 0f, 0);
+                targetPosition = target.position + targetOffset;
+                transform.forward = target.forward;
+                
                 break;
 
             case CameraStatus.ThirdPerson:
                 targetArmLength = 3f;
                 cameraOffset = new Vector3(0.5f, 0, -0.3f);
-                targetOffset = new Vector3(0, 1.8f, 0);
+                angleClampZ = 50f;
 
                 //collision check
                 if (doCollisionTest)
