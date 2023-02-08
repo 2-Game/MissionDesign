@@ -15582,7 +15582,10 @@ PrefabInstance:
       value: Woman
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 679574201}
   m_SourcePrefab: {fileID: 100100000, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
 --- !u!1 &327279690 stripped
 GameObject:
@@ -31713,12 +31716,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679574200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.36, y: 1.65, z: 0.47081542}
+  m_LocalPosition: {x: -0.15999985, y: 1.6132219, z: 0.37836957}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 702000587}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &681211524
 PrefabInstance:
@@ -99554,7 +99557,7 @@ MonoBehaviour:
   showCollisionProbe: 0
   camera1: {fileID: 1347373526}
   ThirdPerson: {fileID: 2070795942}
-  FirstPerson: {fileID: 0}
+  FirstPerson: {fileID: 679574201}
 --- !u!4 &2087872445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4694779549219892, guid: ac0a76609b4bd12438ef0ddd8572234e, type: 3}

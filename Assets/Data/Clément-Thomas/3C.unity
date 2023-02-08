@@ -963,8 +963,8 @@ MonoBehaviour:
   showRayCasts: 0
   showCollisionProbe: 0
   camera1: {fileID: 999282268}
-  ThirdPerson: {fileID: 0}
-  FirstPerson: {fileID: 0}
+  ThirdPerson: {fileID: 1209927302}
+  FirstPerson: {fileID: 1512640682}
 --- !u!4 &51936552
 Transform:
   m_ObjectHideFlags: 0
@@ -3186,7 +3186,10 @@ PrefabInstance:
       value: Woman
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1512640682}
   m_SourcePrefab: {fileID: 100100000, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
 --- !u!1001 &217443947
 PrefabInstance:
@@ -11455,7 +11458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999282267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.56, y: 3.5, z: -20.36}
+  m_LocalPosition: {x: -1.56, y: 6.62, z: -24.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17257,13 +17260,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512640681}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.700343, y: 0.52072585, z: -17.840204}
+  m_LocalRotation: {x: -0, y: 0.6761605, z: -0, w: 0.7367544}
+  m_LocalPosition: {x: 0.017, y: 1.691, z: 0.468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_Father: {fileID: 762298575}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514151357
 GameObject:
