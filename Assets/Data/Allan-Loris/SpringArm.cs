@@ -153,8 +153,11 @@ public class SpringArm : MonoBehaviour
                     /*angleClampZ = 20f;
                     cameraOffset = new Vector3(0f, 0, 0f);
                     //targetPosition = target.position + targetOffset;*/
-                    //targetPosition = FPSView.position;
-                    transform.GetChild(0).position =  Vector3.zero;
+                    targetPosition = FPSView.position;
+
+                    transform.position = new Vector3(target.position.x, target.position.y + 1.8f, 0);
+                    transform.GetChild(0).position = targetPosition;
+
                     transform.forward = target.forward;
 
                     break;
