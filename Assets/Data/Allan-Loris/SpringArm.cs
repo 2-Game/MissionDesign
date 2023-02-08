@@ -163,7 +163,10 @@ public class SpringArm : MonoBehaviour
                     transform.position = new Vector3(target.position.x, target.position.y + 1.8f, 0);
                     transform.GetChild(0).position = targetPosition;
 
-                    transform.forward = target.forward;
+                    if (useControlRotation && Application.isPlaying)
+                    {
+                        Rotate();
+                    }
 
                     break;
                 }
