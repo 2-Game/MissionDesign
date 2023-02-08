@@ -45,7 +45,6 @@ public class SpringArm : MonoBehaviour
 
     [SerializeField] private float targetArmLength = 3f;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0.5f, 0, -0.3f);
-    [SerializeField] private Vector3 firtPersonOffset = new Vector3(0f, 1.8f, 0f);
 
     private Vector3 endPoint;
     private Vector3 cameraPosition;
@@ -146,14 +145,17 @@ public class SpringArm : MonoBehaviour
 
             case CameraStatus.FirstPerson:
                 //targetArmLength = 0f;
-                //cameraOffset = new Vector3(0f, 0, 0f);
-                targetPosition = target.position + firtPersonOffset;
+                angleClampZ = 20f;
+                cameraOffset = new Vector3(0f, 0, 0f);
+                targetPosition = target.position + targetOffset;
                 transform.forward = target.forward;
+                
                 break;
 
             case CameraStatus.ThirdPerson:
                 targetArmLength = 3f;
                 cameraOffset = new Vector3(0.5f, 0, -0.3f);
+                angleClampZ = 50f;
 
                 //collision check
                 if (doCollisionTest)
