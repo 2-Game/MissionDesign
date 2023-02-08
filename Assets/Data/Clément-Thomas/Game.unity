@@ -49076,6 +49076,51 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2222b196dad5f4795919320ab22f3b, type: 3}
+--- !u!1 &1047124371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1047124373}
+  - component: {fileID: 1047124372}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: fpsCollider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1047124372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047124371}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.06217, y: 2.8775911, z: 1}
+  m_Center: {x: -0.60667896, y: -0.93879557, z: 0}
+--- !u!4 &1047124373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047124371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.832, y: 1.407, z: 3.509}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1047771322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99397,11 +99442,11 @@ MonoBehaviour:
   maxAngle: 90
   target: {fileID: 702000587}
   movementSmoothTime: 0.5
-  targetOffset: {x: -0.4, y: 1.5, z: 0}
-  targetArmLength: 0
+  targetOffset: {x: 0, y: 3, z: 0}
+  targetArmLength: 1
   cameraOffset: {x: 0.5, y: 0, z: -0.3}
-  deadZoneSize: 0
-  targetZoneSize: 0.1
+  deadZoneSize: 0.0001
+  targetZoneSize: 1
   doCollisionTest: 1
   collisiontestResolution: 4
   collisionProbeSize: 0.3

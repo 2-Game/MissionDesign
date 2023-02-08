@@ -43,6 +43,7 @@ public class SpringArm : MonoBehaviour
     [SerializeField] private Vector3 targetOffset = new Vector3(0, 1.8f, 0);
     [SerializeField] private float targetArmLength = 13f;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0.5f, 0, -0.3f);
+    private float targetArmLenght1;
 
     private Vector3 moveVelocity;
     private Vector3 endPoint;
@@ -95,6 +96,8 @@ public class SpringArm : MonoBehaviour
     [Space]
 
     [SerializeField] private Transform camera1;
+    [SerializeField] private Transform ThirdPerson;
+    [SerializeField] private Transform FirstPerson;
     private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
 
     #endregion
@@ -122,17 +125,36 @@ public class SpringArm : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            cameraStatus = CameraStatus.ThirdPerson;
+            cameraStatus = CameraStatus.FirstPerson;
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             cameraStatus = CameraStatus.Camera1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            cameraStatus = CameraStatus.ThirdPerson;
+            targetArmLenght1 = targetArmLength;
+
+
         }
 
         if (cameraStatus == CameraStatus.Camera1)
         {
             targetPosition = camera1.position;
             transform.LookAt(target);
+        }
+       
+        if(cameraStatus == CameraStatus.FirstPerson)
+        {
+            targetPosition = target.position;
+            cameraPosition = Vector3.zero;
+            targetArmLenght1 = 0f;
+            
+
+
+
         }
         else if (cameraStatus == CameraStatus.ThirdPerson)
         {
@@ -145,36 +167,38 @@ public class SpringArm : MonoBehaviour
             {
                 Rotate();
             }
-        }
-
-        float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
-        if (distanceToTarget > deadZoneSize)
-        {
-            deadZoneStatus = DeadZoneStatus.Out;
-            targetPosition = target.position + targetOffset;
-        }
-        else
-        {
-            switch (deadZoneStatus)
+            float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
+            if (distanceToTarget > deadZoneSize)
             {
-                case DeadZoneStatus.In:
-                    targetPosition = transform.position;
-                    break;
-                case DeadZoneStatus.Out:
-                    targetPosition = target.position + targetOffset;
-                    deadZoneStatus = DeadZoneStatus.CatchingUp;
-                    break;
-                case DeadZoneStatus.CatchingUp:
-                    targetPosition = target.position + targetOffset;
-                    if (distanceToTarget < targetZoneSize)
-                    {
-                        deadZoneStatus = DeadZoneStatus.In;
-                    }
-                    break;
+                deadZoneStatus = DeadZoneStatus.Out;
+                targetPosition = target.position + targetOffset;
             }
+            else
+            {
+                switch (deadZoneStatus)
+                {
+                    case DeadZoneStatus.In:
+                        targetPosition = transform.position;
+                        break;
+                    case DeadZoneStatus.Out:
+                        targetPosition = target.position + targetOffset;
+                        deadZoneStatus = DeadZoneStatus.CatchingUp;
+                        break;
+                    case DeadZoneStatus.CatchingUp:
+                        targetPosition = target.position + targetOffset;
+                        if (distanceToTarget < targetZoneSize)
+                        {
+                            deadZoneStatus = DeadZoneStatus.In;
+                        }
+                        break;
+                }
+            }
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
         }
 
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
+       
+
+      
     }
 
     //Ca c'est de la documentation qu'on peut rajouter
@@ -272,4 +296,19 @@ public class SpringArm : MonoBehaviour
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
         }
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (target.CompareTag("fpsCollider"))
+        {
+            Debug.Log("aha");
+            targetOffset = new Vector3(0f, 0f, 0f);
+            targetArmLength = 0.1f;
+
+        }
+    }
+
+
+
 }

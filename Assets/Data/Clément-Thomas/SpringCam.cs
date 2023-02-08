@@ -367,6 +367,17 @@ public class SpringCam : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (target.CompareTag("fpsCollider"))
+        {
+           targetOffset = new Vector3(0f, 0f, 0f);
+            targetArmLenght = 0.1f;
+            Debug.Log("aha");
+        }
+    }
+
 } 
 
 
