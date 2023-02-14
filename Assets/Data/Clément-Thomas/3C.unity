@@ -947,6 +947,7 @@ MonoBehaviour:
   movementSmoothTime: 0.5
   targetOffset: {x: 0, y: 1.8, z: 0}
   targetArmLength: 4
+  targetArmLengthTps: 4
   cameraOffset: {x: 0.5, y: 0, z: -0.3}
   deadZoneSize: 0
   targetZoneSize: 0.1
@@ -965,6 +966,7 @@ MonoBehaviour:
   camera1: {fileID: 624741956}
   ThirdPerson: {fileID: 1209927302}
   FirstPerson: {fileID: 1512640682}
+  cameraStatus: 0
 --- !u!4 &51936552
 Transform:
   m_ObjectHideFlags: 0
@@ -3128,7 +3130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.82
+      value: 21.38
       objectReference: {fileID: 0}
     - target: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3136,7 +3138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.42
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3170,7 +3172,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Woman
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6554688658298512456, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6299300708754610075, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
       insertIndex: -1
@@ -3259,6 +3262,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4335600020195858, guid: 8642bb96d3efe0841933bf4a3d93e6c3, type: 3}
   m_PrefabInstance: {fileID: 1801327469}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &224787201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224787203}
+  - component: {fileID: 224787202}
+  m_Layer: 0
+  m_Name: triggerTps1
+  m_TagString: tps1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &224787202
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224787201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25.3671, y: 7.745341, z: 31.39516}
+  m_Center: {x: -2.6674728, y: -1.9236715, z: 8.669741}
+--- !u!4 &224787203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224787201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.15, y: 1.11, z: 5.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &225344785
 GameObject:
   m_ObjectHideFlags: 0
@@ -25839,6 +25887,24 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: bfe2544215545134c8c18292fffd1d86, type: 3}
+--- !u!1 &2122327147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6638389628579548449, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
+  m_PrefabInstance: {fileID: 213685214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2122327148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122327147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28aea0ae0458f6b4ab3637120904b11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpringArm: {fileID: 51936551}
 --- !u!4 &2126872832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4065640362401136, guid: ca22b58d16102de45b137c129d049db5, type: 3}

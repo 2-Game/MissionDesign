@@ -9,9 +9,9 @@ enum DeadZoneStatus
     In, Out, CatchingUp
 }
 
-enum CameraStatus
+public enum CameraStatus
 {
-    ThirdPerson, FirstPerson, Camera1
+    ThirdPerson, FirstPerson, Camera1, ThirdPersonClose, ThirdPersonVeryClose
 }
 
 public class SpringArm : MonoBehaviour
@@ -42,6 +42,8 @@ public class SpringArm : MonoBehaviour
     [SerializeField] private float movementSmoothTime = 0.5f;
     [SerializeField] private Vector3 targetOffset = new Vector3(0, 1.8f, 0);
     [SerializeField] private float targetArmLength = 13f;
+    [SerializeField] private float targetArmLengthTps = 13f;
+
     [SerializeField] private Vector3 cameraOffset = new Vector3(0.5f, 0, -0.3f);
     private float targetArmLenght1;
 
@@ -98,7 +100,7 @@ public class SpringArm : MonoBehaviour
     [SerializeField] private Transform camera1;
     [SerializeField] private Transform ThirdPerson;
     [SerializeField] private Transform FirstPerson;
-    private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
+    public CameraStatus cameraStatus = CameraStatus.ThirdPerson;
 
     #endregion
 
@@ -147,34 +149,40 @@ public class SpringArm : MonoBehaviour
                     break;
                 }
 
+            case CameraStatus.ThirdPersonClose:
+                {
+                    cameraStatus = CameraStatus.ThirdPerson;
+                    targetOffset = new Vector3(0f, 0.8f, 0f);
+                   
+                    break;
+                }
+            case CameraStatus.ThirdPersonVeryClose:
+                {
+                    cameraStatus = CameraStatus.ThirdPerson;
+
+                    break;
+                }
+                
+
+
             case CameraStatus.FirstPerson:
                 {
-                    //targetArmLength = 0f;
-                    /*angleClampZ = 20f;
-                    cameraOffset = new Vector3(0f, 0, 0f);
-                    //targetPosition = target.position + targetOffset;*/
-                    targetPosition = FirstPerson.position;
-
-                    transform.position = new Vector3(target.position.x, target.position.y + 1.8f, 0);
-                    transform.GetChild(0).position = targetPosition;
-
-                    transform.forward = target.forward;
+                    
+                    targetArmLength = 0f;
+                    movementSmoothTime= 0f;
+                    doCollisionTest = false;
+                    cameraOffset = Vector3.zero;
+                    targetPosition = target.position + targetOffset;
 
                     break;
                 }
 
             case CameraStatus.ThirdPerson:
                 {
+                    targetArmLength = targetArmLengthTps;
+                    doCollisionTest = true;
 
-                    if (doCollisionTest)
-                    {
-                        CheckCollisions();
-                    }
-                    SetCameraTransform();
-                    if (useControlRotation && Application.isPlaying)
-                    {
-                        Rotate();
-                    }
+                   
                     float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
                     if (distanceToTarget > deadZoneSize)
                     {
@@ -204,6 +212,15 @@ public class SpringArm : MonoBehaviour
                     
                 }
                 break;
+        }
+        if (doCollisionTest)
+        {
+            CheckCollisions();
+        }
+        SetCameraTransform();
+        if (useControlRotation && Application.isPlaying)
+        {
+            Rotate();
         }
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
 
@@ -309,17 +326,8 @@ public class SpringArm : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (target.CompareTag("fpsCollider"))
-        {
-            Debug.Log("aha");
-            targetOffset = new Vector3(0f, 0f, 0f);
-            targetArmLength = 0.1f;
 
-        }
-    }
-
+    
 
 
 }

@@ -45929,6 +45929,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4694779549219892, guid: ac0a76609b4bd12438ef0ddd8572234e, type: 3}
   m_PrefabInstance: {fileID: 2005122165}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &977789647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6638389628579548449, guid: 27b42d8653e2743da83063ad6fbb65a6, type: 3}
+  m_PrefabInstance: {fileID: 327085177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &977789660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977789647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28aea0ae0458f6b4ab3637120904b11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpringArm: {fileID: 2087154361}
 --- !u!1001 &978028638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99497,7 +99515,7 @@ GameObject:
   - component: {fileID: 2087154360}
   - component: {fileID: 2087154361}
   m_Layer: 0
-  m_Name: spring cam
+  m_Name: springArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
