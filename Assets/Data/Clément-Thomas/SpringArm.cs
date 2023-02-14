@@ -159,7 +159,6 @@ public class SpringArm : MonoBehaviour
             case CameraStatus.ThirdPersonVeryClose:
                 {
                     cameraStatus = CameraStatus.ThirdPerson;
-
                     break;
                 }
                 
@@ -172,6 +171,7 @@ public class SpringArm : MonoBehaviour
                     movementSmoothTime= 0f;
                     doCollisionTest = false;
                     cameraOffset = Vector3.zero;
+                    targetOffset = new Vector3(0f, 1.8f, 0f);
                     targetPosition = target.position + targetOffset;
 
                     break;
