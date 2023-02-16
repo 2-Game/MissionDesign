@@ -188,6 +188,8 @@ public class SpringArm : MonoBehaviour
 
             case CameraStatus.ThirdPerson:
                 {
+
+                   
                     targetArmLength = targetArmLengthTps;
                     doCollisionTest = true;
 
@@ -333,6 +335,8 @@ public class SpringArm : MonoBehaviour
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
         }
     }
+
+
 
 
 
