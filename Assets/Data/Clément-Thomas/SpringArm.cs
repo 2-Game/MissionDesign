@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
+using Unity.VisualScripting;
 
 enum DeadZoneStatus
 {
@@ -146,6 +147,9 @@ public class SpringArm : MonoBehaviour
                 {
                     targetPosition = camera1.position;
                     transform.LookAt(target);
+                    
+
+                 
                     break;
                 }
 
@@ -173,6 +177,7 @@ public class SpringArm : MonoBehaviour
                     cameraOffset = Vector3.zero;
                     targetOffset = new Vector3(0f, 1.8f, 0f);
                     targetPosition = target.position + targetOffset;
+                    
 
                     break;
                 }

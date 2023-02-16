@@ -31,5 +31,7 @@ public class PlayerController : MonoBehaviour
         }
         _movement = ctx.ReadValue<Vector2>();
         _animator.SetFloat("Speed", _movement.sqrMagnitude == 0 ? 0 : 2);
+
+       
     }
 }
