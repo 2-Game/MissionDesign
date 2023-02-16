@@ -26,11 +26,11 @@ public class CameraManager : MonoBehaviour
     {
         if (other.CompareTag("tps1"))
         {
-            SpringArm.cameraStatus = CameraStatus.ThirdPersonVeryClose;
+            SpringArm.cameraStatus = CameraStatus.ThirdPerson;
         }
         if (other.CompareTag("fpsCollider"))
         {
-            SpringArm.cameraStatus = CameraStatus.Camera1;
+            SpringArm.cameraStatus = CameraStatus.ThirdPerson;
         }
     }
 

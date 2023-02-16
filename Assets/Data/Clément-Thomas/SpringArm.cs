@@ -146,17 +146,20 @@ public class SpringArm : MonoBehaviour
             case CameraStatus.Camera1:
                 {
                     targetPosition = camera1.position;
+                    movementSmoothTime = 0f;
                     transform.LookAt(target);
-                    
 
-                 
+
+
                     break;
                 }
 
             case CameraStatus.ThirdPersonClose:
                 {
                     cameraStatus = CameraStatus.ThirdPerson;
-                    targetOffset = new Vector3(0f, 0.8f, 0f);
+                    targetArmLenght1 = 1;
+                    targetOffset = new Vector3(2f, 1.8f, 0f);
+                    
                    
                     break;
                 }
@@ -171,12 +174,13 @@ public class SpringArm : MonoBehaviour
             case CameraStatus.FirstPerson:
                 {
                     
-                    targetArmLength = 0f;
+                    targetArmLength = -1f;
                     movementSmoothTime= 0f;
                     doCollisionTest = false;
                     cameraOffset = Vector3.zero;
                     targetOffset = new Vector3(0f, 1.8f, 0f);
                     targetPosition = target.position + targetOffset;
+
                     
 
                     break;
