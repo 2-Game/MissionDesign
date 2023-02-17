@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
 using Unity.VisualScripting;
+using TMPro;
 
 enum DeadZoneStatus
 {
@@ -12,7 +13,7 @@ enum DeadZoneStatus
 
 public enum CameraStatus
 {
-    ThirdPerson, FirstPerson, Camera1, ThirdPersonClose, ThirdPersonVeryClose
+    ThirdPerson, FirstPerson, ThirdPersonClose
 }
 
 public class SpringArm : MonoBehaviour
@@ -42,8 +43,8 @@ public class SpringArm : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private float movementSmoothTime = 0.5f;
     [SerializeField] private Vector3 targetOffset = new Vector3(0, 1.8f, 0);
-    [SerializeField] private float targetArmLength = 13f;
-    [SerializeField] private float targetArmLengthTps = 13f;
+    [SerializeField] private float targetArmLength;
+    
 
     [SerializeField] private Vector3 cameraOffset = new Vector3(0.5f, 0, -0.3f);
     private float targetArmLenght1;
@@ -51,6 +52,7 @@ public class SpringArm : MonoBehaviour
     private Vector3 moveVelocity;
     private Vector3 endPoint;
     private Vector3 cameraPosition;
+    private Vector3 targetPosition;
 
     [SerializeField] private float deadZoneSize;
     [SerializeField] private float targetZoneSize = 0.1f;
@@ -124,7 +126,7 @@ public class SpringArm : MonoBehaviour
         if (!target)
             return;
 
-        Vector3 targetPosition = Vector3.zero;
+        targetPosition = Vector3.zero;
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -133,44 +135,27 @@ public class SpringArm : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            cameraStatus = CameraStatus.Camera1;
+            cameraStatus = CameraStatus.ThirdPerson;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             cameraStatus = CameraStatus.ThirdPerson;
-            targetArmLenght1 = targetArmLength;
+            
         }
         switch (cameraStatus)
         {
 
-            case CameraStatus.Camera1:
-                {
-                    targetPosition = camera1.position;
-                    movementSmoothTime = 0f;
-                    transform.LookAt(target);
-
-
-
-                    break;
-                }
 
             case CameraStatus.ThirdPersonClose:
                 {
-                    cameraStatus = CameraStatus.ThirdPerson;
-                    targetArmLenght1 = 1;
-                    targetOffset = new Vector3(2f, 1.8f, 0f);
-                    
                    
+                    //targetArmLenght1 = 1;
+                    targetOffset = new Vector3(0f, 1.8f, 0f);
+                    cameraOffset = new Vector3(-0.3f, 0f, 8f);
+                    movementSmoothTime = 0.2f;
+                    ThirdPersonDefault();
                     break;
                 }
-            case CameraStatus.ThirdPersonVeryClose:
-                {
-                    cameraStatus = CameraStatus.ThirdPerson;
-                    break;
-                }
-                
-
-
             case CameraStatus.FirstPerson:
                 {
                     
@@ -181,8 +166,6 @@ public class SpringArm : MonoBehaviour
                     targetOffset = new Vector3(0f, 1.8f, 0f);
                     targetPosition = target.position + targetOffset;
 
-                    
-
                     break;
                 }
 
@@ -190,37 +173,14 @@ public class SpringArm : MonoBehaviour
                 {
 
                    
-                    targetArmLength = targetArmLengthTps;
-                    doCollisionTest = true;
-
                    
-                    float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
-                    if (distanceToTarget > deadZoneSize)
-                    {
-                        deadZoneStatus = DeadZoneStatus.Out;
-                        targetPosition = target.position + targetOffset;
-                    }
-                    else
-                    {
-                        switch (deadZoneStatus)
-                        {
-                            case DeadZoneStatus.In:
-                                targetPosition = transform.position;
-                                break;
-                            case DeadZoneStatus.Out:
-                                targetPosition = target.position + targetOffset;
-                                deadZoneStatus = DeadZoneStatus.CatchingUp;
-                                break;
-                            case DeadZoneStatus.CatchingUp:
-                                targetPosition = target.position + targetOffset;
-                                if (distanceToTarget < targetZoneSize)
-                                {
-                                    deadZoneStatus = DeadZoneStatus.In;
-                                }
-                                break;
-                        }
-                    }
                     
+                    doCollisionTest = true;
+                    ThirdPersonDefault();
+
+
+
+
                 }
                 break;
         }
@@ -339,8 +299,36 @@ public class SpringArm : MonoBehaviour
 
 
 
+    private void ThirdPersonDefault()
+    {
+        float distanceToTarget = Vector3.Distance(transform.position, target.position + targetOffset);
+        if (distanceToTarget > deadZoneSize)
+        {
+            deadZoneStatus = DeadZoneStatus.Out;
+            targetPosition = target.position + targetOffset;
+        }
+        else
+        {
+            switch (deadZoneStatus)
+            {
+                case DeadZoneStatus.In:
+                    targetPosition = transform.position;
+                    break;
+                case DeadZoneStatus.Out:
+                    targetPosition = target.position + targetOffset;
+                    deadZoneStatus = DeadZoneStatus.CatchingUp;
+                    break;
+                case DeadZoneStatus.CatchingUp:
+                    targetPosition = target.position + targetOffset;
+                    if (distanceToTarget < targetZoneSize)
+                    {
+                        deadZoneStatus = DeadZoneStatus.In;
+                    }
+                    break;
+            }
+        }
+    }
 
-    
 
 
 }
