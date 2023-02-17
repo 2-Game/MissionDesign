@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, _movement.x * Time.deltaTime * _rotationSpeed, 0);
         _rigidbody.MovePosition(transform.position + transform.forward * (_movement.y * _movementSpeed * Time.deltaTime));
         //transform.position += transform.forward * (_movement.y * _movementSpeed * Time.deltaTime);
-        
+
     }
 
     //Values are already normalized through the new Input System
@@ -32,4 +32,5 @@ public class PlayerController : MonoBehaviour
         _movement = ctx.ReadValue<Vector2>();
         _animator.SetFloat("Speed", _movement.sqrMagnitude == 0 ? 0 : 2);
     }
+
 }

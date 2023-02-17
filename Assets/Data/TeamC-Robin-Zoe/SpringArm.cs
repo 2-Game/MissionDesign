@@ -16,6 +16,7 @@ enum CameraStatus
 
 public class SpringArm : MonoBehaviour
 {
+    public static SpringArm Instance;
     #region Rotation Settings
     [Space]
     [Header("Rotation Settings \n-------------------------")]
@@ -108,11 +109,16 @@ public class SpringArm : MonoBehaviour
     [SerializeField] private Transform fpsView;
     private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
 
+    private bool isInPlace, isInStreet, isInside, isOnStair;
+
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
+        if (Instance) Destroy(this);
+        else Instance = this;
+
         raycastPositions = new Vector3[collisiontestResolution];
         hits = new RaycastHit[collisiontestResolution];
     }
@@ -134,17 +140,17 @@ public class SpringArm : MonoBehaviour
 
         Vector3 targetPosition = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1) || isInside)
         {
             cameraStatus = CameraStatus.FirstPerson;
         }
         else
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2) || isInPlace)
         {
             cameraStatus = CameraStatus.Camera1;
         }
         else
-        if (Input.GetKey(KeyCode.Alpha3))
+        if (Input.GetKey(KeyCode.Alpha3) || isInStreet || isOnStair)
         {
             cameraStatus = CameraStatus.ThirdPerson;
         }
@@ -170,7 +176,7 @@ public class SpringArm : MonoBehaviour
                     transform.GetChild(0).position = targetPosition;
 
                     transform.forward = target.forward;
-
+                    movementSmoothTime = 5;
                     break;
                 }
 
@@ -338,6 +344,46 @@ public class SpringArm : MonoBehaviour
         {
             Debug.Log("Cam moves");
             cameraCanMove = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Place")
+        {
+            isInPlace = true;
+        }
+        else if(other.gameObject.tag == "Street")
+        {
+            isInStreet = true;
+        }
+        else if(other.gameObject.tag == "Inside")
+        {
+            isInside = true;
+        }
+        else if(other.gameObject.tag == "Echelle")
+        {
+            isOnStair = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Place")
+        {
+            isInPlace = false;
+        }
+        else if (other.gameObject.tag == "Street")
+        {
+            isInStreet = false;
+        }
+        else if (other.gameObject.tag == "Inside")
+        {
+            isInside = false;
+        }
+        else if (other.gameObject.tag == "Echelle")
+        {
+            isOnStair = false;
         }
     }
 }
