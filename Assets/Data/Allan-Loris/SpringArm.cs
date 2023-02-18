@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
 
 enum DeadZoneStatus
 {
@@ -105,8 +106,13 @@ public class SpringArm : MonoBehaviour
 
     void Start()
     {
+        /*Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;*/
+
         raycastPositions = new Vector3[collisionTestResolution];
         hits = new RaycastHit[collisionTestResolution];
+
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     private void OnValidate()
