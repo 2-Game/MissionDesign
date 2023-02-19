@@ -29,7 +29,7 @@ public class SpringArm : MonoBehaviour
 
     private float pitch;
     private float yaw;
-    public bool invertAxe = true;
+    public bool invertAxe = false;
     [SerializeField][Range(-90.0f, 90)] public float angleClampY = -90f;
     [SerializeField][Range(90.0f, 0)] public float angleClampZ = 90f;
     #endregion
@@ -40,7 +40,7 @@ public class SpringArm : MonoBehaviour
     [Space]
 
     [SerializeField] private Transform target;
-    [SerializeField] private float movementSmothTime = 0.2f;
+    [SerializeField] private float movementSmoothTime = 0.4f;
     [SerializeField] private Vector3 targetOffset = new Vector3(0, 1.8f, 0);
 
     //refs for Smooth Damping
@@ -151,22 +151,23 @@ public class SpringArm : MonoBehaviour
             case CameraStatus.Camera1:
                 {
                     playerSprite.SetActive(true);
+
+                    ResetXRotation();
+
                     targetPosition = Camera1.position;
                     transform.LookAt(target);
                     break;
                 }
 
+            //you are working on this, it's down here, look
+
             case CameraStatus.FirstPerson:
                 {
                     playerSprite.SetActive(false);
 
-                    //targetArmLength = 0f;
-                    /*angleClampZ = 20f;
-                    cameraOffset = new Vector3(0f, 0, 0f);
-                    //targetPosition = target.position + targetOffset;*/
                     targetPosition = FPSView.position;
 
-                    transform.position = new Vector3(target.position.x, target.position.y + 1.8f, 0);
+                    transform.position = new Vector3(target.position.x, target.position.y + targetOffset.y, 0);
                     transform.GetChild(0).position = targetPosition;
 
                     if (useControlRotation && Application.isPlaying)
@@ -174,6 +175,7 @@ public class SpringArm : MonoBehaviour
                         Rotate();
                     }
 
+                    target.forward = transform.forward;
 
                     break;
                 }
@@ -182,9 +184,7 @@ public class SpringArm : MonoBehaviour
                 {
                     playerSprite.SetActive(true);
 
-                    targetArmLength = 3f;
-                    cameraOffset = new Vector3(0.5f, 0, -0.3f);
-                    angleClampZ = 50f;
+                    ResetXRotation();
 
                     //collision check
                     if (doCollisionTest)
@@ -235,7 +235,7 @@ public class SpringArm : MonoBehaviour
                 }
                 break;
         }
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref moveVelocity, movementSmoothTime);
     }
 
     private void CheckCamPlayerDistance()
@@ -276,12 +276,16 @@ public class SpringArm : MonoBehaviour
         if (doCollisionTest)
         {
             float minDistance = targetArmLength;
+
             foreach (RaycastHit hit in hits)
             {
-                if(!hit.collider)
-                    continue;
+                if (!hit.collider)
+                { 
+                    continue; 
+                }
 
                 float distance = Vector3.Distance(hit.point, trans.position);
+
                 if (minDistance > distance)
                 { 
                     minDistance = distance; 
@@ -309,9 +313,7 @@ public class SpringArm : MonoBehaviour
         }
     }
 
-    ///<summary>
-    ///Handle Rotation
-    ///</summary>
+    //Handles Rotation
     private void Rotate()
     {
         yaw += Input.GetAxisRaw("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -337,7 +339,8 @@ public class SpringArm : MonoBehaviour
         {
             return;
         }
-         //Draws main linesTrace or LineTrace of RaycastPositions, useful for debugging
+
+        //Draws main linesTrace or LineTrace of RaycastPositions, useful for debugging
         Handles.color = springArmColor;
         if (showRaycasts)
         {
@@ -357,5 +360,14 @@ public class SpringArm : MonoBehaviour
         {
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
         }
+    }
+
+    public void ResetXRotation()
+    {
+        //target.forward.x = 0;
+        //target.rotation.x = 0;
+
+        //target.rotation = Quaternion(0, target.rotation.y, target.rotation.z);
+
     }
 }
