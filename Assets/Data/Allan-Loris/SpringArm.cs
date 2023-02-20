@@ -242,7 +242,7 @@ public class SpringArm : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, target.position + targetOffset) <= circleSize)
         {
-            Debug.Log("Cam doesnt't move");
+            Debug.Log("Cam doesn't move");
             cameraCanMove = false;
         }
         else
@@ -354,7 +354,7 @@ public class SpringArm : MonoBehaviour
             Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, endPoint);
         }
 
-        //Draws collisionProbe, usefull for debugging
+        //Draws collisionProbe, useful for debugging
         Handles.color = collisionProbeColor;
         if (showCollisionProbe)
         {
@@ -368,6 +368,7 @@ public class SpringArm : MonoBehaviour
         //target.rotation.x = 0;
 
         //target.rotation = Quaternion(0, target.rotation.y, target.rotation.z);
+        target.rotation = Quaternion.Euler(0, target.rotation.y, 0);
 
     }
 }
