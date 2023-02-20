@@ -99,9 +99,9 @@ public class SpringArm : MonoBehaviour
     [Header("Camera Transition \n")]
     [Space]
 
-    [SerializeField] private Transform Camera1;
-    [SerializeField] private Transform Camera2;
-    [SerializeField] private Transform FPSView;
+    [SerializeField] public Transform Camera1;
+    [SerializeField] public Transform Camera2;
+    [SerializeField] public Transform FPSView;
     private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
     #endregion
 
@@ -391,10 +391,14 @@ public class SpringArm : MonoBehaviour
             //cinematic view 2
             cameraStatus = CameraStatus.Camera2;
         }
-        else
+        /*else
         {
             //third person
             cameraStatus = CameraStatus.ThirdPerson;
-        }
+        }*/
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        cameraStatus = CameraStatus.ThirdPerson;
     }
 }

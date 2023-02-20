@@ -8,6 +8,9 @@ TagManager:
   - Interactive
   - NPC
   - Ladder
+  - 1stperson
+  - Cinematic
+  - Cinematic2
   layers:
   - Default
   - TransparentFX
