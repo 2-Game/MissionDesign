@@ -54,7 +54,7 @@ public class SpringArm : MonoBehaviour
     private Vector3 cameraPosition;
     #endregion
 
-    #region Camera Deadzone
+    #region Camera Dead Zone
     [Space]
     [Header("Camera DeadZone Settings \n")]
     [Space]
@@ -112,7 +112,7 @@ public class SpringArm : MonoBehaviour
         raycastPositions = new Vector3[collisionTestResolution];
         hits = new RaycastHit[collisionTestResolution];
 
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        transform.rotation = Quaternion.Euler(zeroPos);
     }
 
     private void OnValidate()
@@ -123,7 +123,7 @@ public class SpringArm : MonoBehaviour
 
     void Update()
     {
-        //if target is null get out : nullref check
+        //if target is null get out : null ref check
         if (!target)
         {
             return;
@@ -152,7 +152,7 @@ public class SpringArm : MonoBehaviour
                 {
                     playerSprite.SetActive(true);
 
-                    ResetXZRotation();
+                    target.rotation = Quaternion.Euler(zeroPos);
 
                     targetPosition = Camera1.position;
                     transform.LookAt(target);
@@ -184,7 +184,7 @@ public class SpringArm : MonoBehaviour
                 {
                     playerSprite.SetActive(true);
 
-                    ResetXZRotation();
+                    target.rotation = Quaternion.Euler(0, target.transform.rotation.y, 0);
 
                     //collision check
                     if (doCollisionTest)
@@ -365,6 +365,6 @@ public class SpringArm : MonoBehaviour
     public void ResetXZRotation()
     {
         //resets the X & Z rotation of the target so they aren't facing the floor when they switch from 1st to 3rd person
-        target.rotation = Quaternion.Euler(0, target.rotation.y, 0);
+        target.rotation = Quaternion.Euler(0, target.transform.rotation.y, 0);
     }
 }
