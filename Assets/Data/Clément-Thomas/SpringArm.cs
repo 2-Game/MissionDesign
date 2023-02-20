@@ -128,28 +128,15 @@ public class SpringArm : MonoBehaviour
 
         targetPosition = Vector3.zero;
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            cameraStatus = CameraStatus.FirstPerson;
-
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            cameraStatus = CameraStatus.ThirdPerson;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            cameraStatus = CameraStatus.ThirdPerson;
-            
-        }
         switch (cameraStatus)
         {
 
 
             case CameraStatus.ThirdPersonClose:
                 {
-                   
+
                     //targetArmLenght1 = 1;
+                    doCollisionTest = false;
                     targetOffset = new Vector3(0f, 1.8f, 0f);
                     cameraOffset = new Vector3(-0.3f, 0f, 8f);
                     movementSmoothTime = 0.2f;
@@ -158,31 +145,27 @@ public class SpringArm : MonoBehaviour
                 }
             case CameraStatus.FirstPerson:
                 {
-                    
+                    Debug.Log("gjfjyfku");
                     targetArmLength = -1f;
                     movementSmoothTime= 0f;
                     doCollisionTest = false;
                     cameraOffset = Vector3.zero;
                     targetOffset = new Vector3(0f, 1.8f, 0f);
                     targetPosition = target.position + targetOffset;
-
                     break;
                 }
+                
 
             case CameraStatus.ThirdPerson:
                 {
-
-                   
-                   
-                    
+                    targetArmLength = 9f;
+                    cameraOffset = Vector3.zero;
+                    targetOffset = new Vector3(0f, 1.8f, 0f);
                     doCollisionTest = true;
                     ThirdPersonDefault();
-
-
-
-
                 }
-                break;
+                 break;
+                
         }
         if (doCollisionTest)
         {

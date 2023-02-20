@@ -18,7 +18,9 @@ public class CameraManager : MonoBehaviour
         if (other.CompareTag("fpsCollider"))
         {
             SpringArm.cameraStatus = CameraStatus.FirstPerson;
+
         }
+       
 
     }
 
@@ -30,16 +32,20 @@ public class CameraManager : MonoBehaviour
         }
         if (other.CompareTag("fpsCollider"))
         {
+            Debug.Log("exit");
             SpringArm.cameraStatus = CameraStatus.ThirdPerson;
+            Debug.Log(CameraStatus.ThirdPerson);
         }
     }
 
-
-
-
-
     
-    
+
+
+
+
+
+
+
 
 
 }
