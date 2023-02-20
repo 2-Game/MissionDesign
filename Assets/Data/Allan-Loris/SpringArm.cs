@@ -364,11 +364,6 @@ public class SpringArm : MonoBehaviour
 
     public void ResetXRotation()
     {
-        //target.forward.x = 0;
-        //target.rotation.x = 0;
-
-        //target.rotation = Quaternion(0, target.rotation.y, target.rotation.z);
         target.rotation = Quaternion.Euler(0, target.rotation.y, 0);
-
     }
 }
