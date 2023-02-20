@@ -361,10 +361,4 @@ public class SpringArm : MonoBehaviour
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
         }
     }
-
-    public void ResetXZRotation()
-    {
-        //resets the X & Z rotation of the target so they aren't facing the floor when they switch from 1st to 3rd person
-        target.rotation = Quaternion.Euler(0, target.transform.rotation.y, 0);
-    }
 }
