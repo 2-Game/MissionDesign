@@ -152,7 +152,7 @@ public class SpringArm : MonoBehaviour
                 {
                     playerSprite.SetActive(true);
 
-                    ResetXRotation();
+                    ResetXZRotation();
 
                     targetPosition = Camera1.position;
                     transform.LookAt(target);
@@ -184,7 +184,7 @@ public class SpringArm : MonoBehaviour
                 {
                     playerSprite.SetActive(true);
 
-                    ResetXRotation();
+                    ResetXZRotation();
 
                     //collision check
                     if (doCollisionTest)
@@ -362,8 +362,9 @@ public class SpringArm : MonoBehaviour
         }
     }
 
-    public void ResetXRotation()
+    public void ResetXZRotation()
     {
+        //resets the X & Z rotation of the target so they aren't facing the floor when they switch from 1st to 3rd person
         target.rotation = Quaternion.Euler(0, target.rotation.y, 0);
     }
 }
