@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SelectionMenu.unity
-    guid: 66e8f00bf83414932802c7c62db2f259
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: b6a7556cf682c4340b69fee4c7cb613c
+    path: "Assets/Data/Cl\xE9ment-Thomas/3C.unity"
+    guid: e03c38b57e2d0fe43b6fbb5fcce9f0fb
   m_configObjects: {}

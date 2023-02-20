@@ -1,10 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
-using UnityEngine.UIElements;
-using Unity.VisualScripting;
-using TMPro;
 
 enum DeadZoneStatus
 {
@@ -253,7 +248,7 @@ public class SpringArm : MonoBehaviour
             Physics.Linecast(trans.position, raycastPositions[i], out hits[i], collisionLayerMask);
         }
     }
-
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         if (!visualDebugging)
@@ -279,7 +274,7 @@ public class SpringArm : MonoBehaviour
         }
     }
 
-
+#endif
 
 
     private void ThirdPersonDefault()
