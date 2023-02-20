@@ -12,7 +12,7 @@ enum DeadZoneStatus
 
 enum CameraStatus
 {
-    ThirdPerson, FirstPerson, Camera1
+    ThirdPerson, FirstPerson, Camera1, Camera2
 }
 
 public class SpringArm : MonoBehaviour
@@ -100,6 +100,7 @@ public class SpringArm : MonoBehaviour
     [Space]
 
     [SerializeField] private Transform Camera1;
+    [SerializeField] private Transform Camera2;
     [SerializeField] private Transform FPSView;
     private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
     #endregion
@@ -136,11 +137,11 @@ public class SpringArm : MonoBehaviour
             cameraStatus = CameraStatus.FirstPerson;
         } 
         else 
-        if (Input.GetKey(KeyCode.Alpha2))
+        /*if (Input.GetKey(KeyCode.Alpha2))
         {
             cameraStatus = CameraStatus.Camera1;
         }
-        else
+        else*/
         if(Input.GetKey(KeyCode.Alpha3))
         {
             cameraStatus = CameraStatus.ThirdPerson;
@@ -155,6 +156,17 @@ public class SpringArm : MonoBehaviour
                     target.rotation = Quaternion.Euler(zeroPos);
 
                     targetPosition = Camera1.position;
+                    transform.LookAt(target);
+                    break;
+                }
+            
+            case CameraStatus.Camera2:
+                {
+                    playerSprite.SetActive(true);
+
+                    target.rotation = Quaternion.Euler(zeroPos);
+
+                    targetPosition = Camera2.position;
                     transform.LookAt(target);
                     break;
                 }
@@ -359,6 +371,30 @@ public class SpringArm : MonoBehaviour
         if (showCollisionProbe)
         {
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("1stperson")) 
+        {
+            //1st person
+            cameraStatus = CameraStatus.FirstPerson;
+        }
+        else if (other.CompareTag("Cinematic"))
+        {
+            //cinematic view 1
+            cameraStatus = CameraStatus.Camera1;
+        }
+        else if (other.CompareTag("Cinematic2"))
+        {
+            //cinematic view 2
+            cameraStatus = CameraStatus.Camera2;
+        }
+        else
+        {
+            //third person
+            cameraStatus = CameraStatus.ThirdPerson;
         }
     }
 }
