@@ -109,7 +109,7 @@ public class SpringArm : MonoBehaviour
     [SerializeField] private Transform fpsView;
     private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
 
-    private bool isInPlace, isInStreet, isInside, isOnStair;
+    public bool isInPlace, isInStreet, isInside, isOnStair;
 
     #endregion
 
@@ -176,7 +176,7 @@ public class SpringArm : MonoBehaviour
                     transform.GetChild(0).position = targetPosition;
 
                     transform.forward = target.forward;
-                    movementSmoothTime = 5;
+                    movementSmoothTime = 10;
                     break;
                 }
 

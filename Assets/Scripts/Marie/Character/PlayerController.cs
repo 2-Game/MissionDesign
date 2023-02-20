@@ -18,7 +18,16 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, _movement.x * Time.deltaTime * _rotationSpeed, 0);
         _rigidbody.MovePosition(transform.position + transform.forward * (_movement.y * _movementSpeed * Time.deltaTime));
         //transform.position += transform.forward * (_movement.y * _movementSpeed * Time.deltaTime);
-
+        if (PlayerInteraction.Instance.isLadder)
+        {
+            _rigidbody.mass = 0f;
+            _rigidbody.MovePosition(transform.position + transform.up * (_movement.y * _movementSpeed * Time.deltaTime));
+        }
+        else if(PlayerInteraction.Instance.isEnHaut)
+        {
+            _rigidbody.mass = 1f;
+            _rigidbody.MovePosition(transform.position + transform.forward * (_movement.y * _movementSpeed * Time.deltaTime));
+        }
     }
 
     //Values are already normalized through the new Input System

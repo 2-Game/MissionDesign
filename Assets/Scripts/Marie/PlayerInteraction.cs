@@ -10,7 +10,8 @@ public class PlayerInteraction : MonoBehaviour
     private Pickable _possiblePickable;
     private Interactive _possibleInteractive;
 
-
+    public Animator plateformeAnim;
+    public bool isLadder, isEnHaut;
     private bool isPickingUp = false;
     private void Start()
     {
@@ -18,7 +19,10 @@ public class PlayerInteraction : MonoBehaviour
         else Instance = this;
 
         _anim = GetComponent<PlayerInteractionAnim>();
+        plateformeAnim = GetComponent<Animator>();
         Invoke("SetInventory", 0.1f);
+
+        isLadder = false;
     }
 
     private void SetInventory()
@@ -49,6 +53,18 @@ public class PlayerInteraction : MonoBehaviour
             else if (_possibleInteraction != InteractionType.Pickup)
             {
                 Invoke("Interact", 1f);
+            }
+        }
+
+        else if (isLadder && ctx.performed)
+        {
+            if (Plateform.instance.isUp)
+            {
+                plateformeAnim.SetBool("Up", true);
+            }
+            else if (Plateform.instance.isDown)
+            {
+                plateformeAnim.SetBool("Down", true);
             }
         }
     }
@@ -127,6 +143,18 @@ public class PlayerInteraction : MonoBehaviour
                 }
 
             }
+        }
+
+        if(other.gameObject.tag == "Ladder")
+        {
+            Debug.Log("ECHEEEEEEEEEEELLE");
+            isLadder = true;
+            SpringArm.Instance.isOnStair = true;
+        }
+        else if(other.gameObject.tag == "Up")
+        {
+            isEnHaut = false;
+            isLadder = false;
         }
     }
 
