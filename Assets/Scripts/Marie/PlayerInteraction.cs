@@ -156,6 +156,22 @@ public class PlayerInteraction : MonoBehaviour
             isEnHaut = false;
             isLadder = false;
         }
+        if (other.gameObject.tag == "Place")
+        {
+            SpringArm.Instance.isInPlace = true;
+        }
+        else if (other.gameObject.tag == "Street")
+        {
+            SpringArm.Instance.isInStreet = true;
+        }
+        else if (other.gameObject.tag == "Inside")
+        {
+            SpringArm.Instance.isInside = true;
+        }
+        else if (other.gameObject.tag == "Echelle")
+        {
+            SpringArm.Instance.isOnStair = true;
+        }
     }
 
     private void OnFail()
@@ -172,6 +188,22 @@ public class PlayerInteraction : MonoBehaviour
             {
                 StopInteractive();
             }
+        }
+        if (other.gameObject.tag == "Place")
+        {
+            SpringArm.Instance.isInPlace = false;
+        }
+        else if (other.gameObject.tag == "Street")
+        {
+            SpringArm.Instance.isInStreet = false;
+        }
+        else if (other.gameObject.tag == "Inside")
+        {
+            SpringArm.Instance.isInside = false;
+        }
+        else if (other.gameObject.tag == "Echelle")
+        {
+            SpringArm.Instance.isOnStair = false;
         }
     }
 

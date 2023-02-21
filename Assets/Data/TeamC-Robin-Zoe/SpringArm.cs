@@ -309,30 +309,30 @@ public class SpringArm : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        if (!visualDebugging)
-            return;
+    //private void OnDrawGizmosSelected()
+    //{
+    //    if (!visualDebugging)
+    //        return;
 
-        Handles.color = springArmColor;
-        if (showRayCasts)
-        {
-            foreach (Vector3 raycastPosition in raycastPositions)
-            {
-                Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, raycastPosition);
-            }
-        }
-        else
-        {
-            Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, endPoint);
-        }
+    //    Handles.color = springArmColor;
+    //    if (showRayCasts)
+    //    {
+    //        foreach (Vector3 raycastPosition in raycastPositions)
+    //        {
+    //            Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, raycastPosition);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Handles.DrawAAPolyLine(springArmLineWidth, 2, transform.position, endPoint);
+    //    }
 
-        Handles.color = collisionProbeColor;
-        if (showCollisionProbe)
-        {
-            Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
-        }
-    }
+    //    Handles.color = collisionProbeColor;
+    //    if (showCollisionProbe)
+    //    {
+    //        Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
+    //    }
+    //}
     private void CheckCamPlayerDistance()
     {
         if (Vector3.Distance(transform.position, target.position + targetOffset) <= circleSize)
