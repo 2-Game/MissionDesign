@@ -10,15 +10,13 @@ enum DeadZoneStatus
     In, Out, CatchingUp
 }
 
-enum CameraStatus
+public enum CameraStatus
 {
     ThirdPerson, FirstPerson, Camera1, Camera2
 }
 
 public class SpringArm : MonoBehaviour
 {
-    [SerializeField] public GameObject playerSprite;
-
     #region Rotation Settings
     [Space]
     [Header("Rotation Settings \n")]
@@ -102,7 +100,7 @@ public class SpringArm : MonoBehaviour
     [SerializeField] public Transform Camera1;
     [SerializeField] public Transform Camera2;
     [SerializeField] public Transform FPSView;
-    private CameraStatus cameraStatus = CameraStatus.ThirdPerson;
+    public CameraStatus cameraStatus = CameraStatus.ThirdPerson;
     #endregion
 
     void Start()
@@ -132,28 +130,30 @@ public class SpringArm : MonoBehaviour
 
         Vector3 targetPosition = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.Alpha1))
+        /*if (Input.GetKey(KeyCode.Alpha1))
         {
             cameraStatus = CameraStatus.FirstPerson;
         } 
         else 
-        /*if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2))
         {
             cameraStatus = CameraStatus.Camera1;
         }
-        else*/
+        else
         if(Input.GetKey(KeyCode.Alpha3))
         {
             cameraStatus = CameraStatus.ThirdPerson;
-        }
+        }*/
 
         switch (cameraStatus)
         {
             case CameraStatus.Camera1:
                 {
-                    playerSprite.SetActive(true);
+                    Debug.Log("Cam 1");
 
-                    target.rotation = Quaternion.Euler(zeroPos);
+                    //target.rotation = Quaternion.Euler(zeroPos);
+
+                    //transform.GetChild(0).position = zeroPos;
 
                     targetPosition = Camera1.position;
                     transform.LookAt(target);
@@ -162,9 +162,11 @@ public class SpringArm : MonoBehaviour
             
             case CameraStatus.Camera2:
                 {
-                    playerSprite.SetActive(true);
+                    Debug.Log("Cam 2");
 
-                    target.rotation = Quaternion.Euler(zeroPos);
+                    //transform.GetChild(0).position = zeroPos;
+
+                    //target.rotation = Quaternion.Euler(zeroPos);
 
                     targetPosition = Camera2.position;
                     transform.LookAt(target);
@@ -175,11 +177,11 @@ public class SpringArm : MonoBehaviour
 
             case CameraStatus.FirstPerson:
                 {
-                    playerSprite.SetActive(false);
+                    Debug.Log("First Person Cam");
 
                     targetPosition = FPSView.position;
 
-                    transform.position = new Vector3(target.position.x, target.position.y + targetOffset.y, 0);
+                    transform.position = new Vector3(target.position.x, target.position.y + targetOffset.y, target.position.z);
                     transform.GetChild(0).position = targetPosition;
 
                     if (useControlRotation && Application.isPlaying)
@@ -194,9 +196,11 @@ public class SpringArm : MonoBehaviour
 
             case CameraStatus.ThirdPerson:
                 {
-                    playerSprite.SetActive(true);
+                    Debug.Log("Third Person Cam");
 
-                    target.rotation = Quaternion.Euler(0, target.transform.rotation.y, 0);
+                    //target.rotation = Quaternion.Euler(0, target.rotation.y, 0);
+
+                    //transform.GetChild(0).position = cameraOffset - new Vector3(0, 0, targetArmLength);
 
                     //collision check
                     if (doCollisionTest)
@@ -337,7 +341,6 @@ public class SpringArm : MonoBehaviour
         else 
         { 
             pitch -= Input.GetAxisRaw("Mouse Y") * mouseSensitivity * Time.deltaTime; 
-
         }
 
         pitch = Mathf.Clamp(pitch, -angleClampY, angleClampZ);
@@ -372,33 +375,5 @@ public class SpringArm : MonoBehaviour
         {
             Handles.SphereHandleCap(0, cameraPosition, Quaternion.identity, 2 * collisionProbeSize, EventType.Repaint);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("1stperson")) 
-        {
-            //1st person
-            cameraStatus = CameraStatus.FirstPerson;
-        }
-        else if (other.CompareTag("Cinematic"))
-        {
-            //cinematic view 1
-            cameraStatus = CameraStatus.Camera1;
-        }
-        else if (other.CompareTag("Cinematic2"))
-        {
-            //cinematic view 2
-            cameraStatus = CameraStatus.Camera2;
-        }
-        /*else
-        {
-            //third person
-            cameraStatus = CameraStatus.ThirdPerson;
-        }*/
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        cameraStatus = CameraStatus.ThirdPerson;
     }
 }
